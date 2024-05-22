@@ -59,7 +59,7 @@ export default function HeroSection() {
   return (
     <>
       <motion.section variants={homeAnimate} ref={constraintsRef} whileInView="view" initial="initial" animate="animate" className=" relative overflow-hidden " id="home">
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 max-md:grid-cols-1">
           <motion.img variants={imageAnimate} drag dragConstraints={constraintsRef} src="images/liluo.svg" alt="" className="w-[70%] mx-40" />
           <motion.div variants={titleAnimate} className="my-auto">
             <p className="font-statliches">welcome to my site</p>
@@ -67,7 +67,7 @@ export default function HeroSection() {
               <span className="text-sky-700">L</span>I<span className="text-sky-700">L</span>UO
               <motion.div variants={wrapAnimate} className="h-[145px] mr-40 absolute top-0 right-0 bg-sky-800 z-20"></motion.div>
             </h1>
-            <div className="relative">
+            <div className="relative bg-slate-600">
               <p className="font-statliches mt-[-24px] text-2xl">"The man who failed to enter the Faculty of Fine Arts and Design."</p>
               <motion.div variants={wrapAnimate} className="h-[32px] mr-40 absolute top-0 right-0 bg-sky-800 z-20"></motion.div>
             </div>
