@@ -61,7 +61,7 @@ export default function NavigationBar() {
         </ul>
 
         <MainButton className="px-6 text-[20px] bg-sky-700 max-md:hidden">Recruit</MainButton>
-        <button onClick={handleNavMobile}>
+        <button onClick={handleNavMobile} className="hidden max-md:block">
           <img src={isOpen ? "images/close.svg" : "images/Hamburger.svg"} alt="" />
         </button>
       </nav>
