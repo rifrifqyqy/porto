@@ -72,7 +72,7 @@ export default function HeroSection() {
     <>
       <motion.section variants={homeAnimate} ref={constraintsRef} whileInView="view" initial="initial" animate="animate" className=" relative overflow-hidden max-md:py-2 " id="home">
         <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:mx-8">
-          <motion.img variants={imageAnimate} drag dragConstraints={constraintsRef} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" />
+          <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" />
           <motion.div variants={titleAnimate} className="my-auto">
             <p className="font-statliches">welcome to my site</p>
             <h1 className="text-[180px] max-md:text-[52px] relative leading-[100%] font-valorant tracking-[20px] -ml-2 max-md:ml-0">
