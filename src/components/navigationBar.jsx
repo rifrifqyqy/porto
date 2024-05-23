@@ -66,7 +66,7 @@ export default function NavigationBar() {
         </button>
       </nav>
       {isOpen && (
-        <nav className="w-full h-[100vh] sticky top-[65px] bg-gray-900 bg-opacity-55 z-50">
+        <nav className="w-full h-[100vh] fixed top-[65px] bg-gray-900 bg-opacity-55 z-50">
           <ul className="flex flex-col gap-4 bg-white px-4 pt-4 h-[100vh] w-[60%]">
             {menuNav.map((menu) => (
               <li className="flex flex-col h-[26px] overflow-y-hidden">
