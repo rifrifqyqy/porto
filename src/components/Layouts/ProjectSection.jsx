@@ -7,7 +7,7 @@ export default function ProjectSection() {
     {
       id: 1,
       title: "SMAKO LANDING PAGE",
-      date: "22 Januari 2024",
+      date: "22 Februari 2024",
       imageUrl: "images/porto1.png",
       description:
         "SMAKO is an application owned by a single company or wholesale groceries store. This application serves customers who wish to purchase groceries in large quantities. The SMAKO app is an ideal solution for grocery store owners looking to expand their business and for customers seeking a steady supply of groceries in bulk.",
@@ -18,18 +18,19 @@ export default function ProjectSection() {
       id: 2,
       title: "BHARACODE WEB (GDSC)",
       date: "22 Januari 2024",
-      imageUrl: "images/porto1.png",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate consequuntur illo eligendi sed fugit. Aut ducimus excepturi non illum autem.",
+      imageUrl: "images/portoBharacode.png",
+      description: "Bharacode web, website mengenai ekstrakulikuler kampus dengan ranah IT nya seperti frontend, UIUX, Backend",
       label: "Website",
-      webUrl: "https://rifrifqyqy.github.io/Smako-wholesale/",
+      webUrl: "https://rifrifqyqy.github.io/Tugas-Akhir-RifqyHamdani/",
     },
     {
       id: 3,
       title: "tbn indonesia web revamp",
-      date: "22 Januari 2024",
-      videoUrl: "videos/tbn.mp4",
-      description: "Lountur illo eligendi sed fugit. Aut ducimus excepturi non illum autem.",
+      date: "20 Mei 2024",
+      imageUrl: "images/portoTBN.png",
+      description: "TBNIndonesia merupakan perusahaan yang mengadakan event workshop berkaitan dengan bisnis",
       label: "Website",
+      webUrl: "https://tbn-indonesia.vercel.app/",
     },
     {
       id: 4,
@@ -69,7 +70,7 @@ export default function ProjectSection() {
   return (
     <>
       <motion.div variants={containerMotion} initial="initial" whileHover="whileHover" whileInView="view" className="relative overflow-x-hidden">
-        <main className="mx-32 max-md:mx-8 mt-24 max-md:mt-8 flex flex-col gap-8  " id="porto">
+        <main className="mx-32 max-md:items-center max-md:mx-8 mt-24 max-md:mt-8 flex flex-col gap-8  " id="porto">
           <header className="grid items-end content-between grid-cols-3 max-md:grid-cols-1">
             <motion.article variants={headerMotion} className=" col-span-2 max-md:col-span-1">
               <h1 className="font-statliches text-[48px] max-md:text-[24px] ">Projects Gallery</h1>

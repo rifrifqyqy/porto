@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function FooterSection() {
   const headerStyle = "font-statliches text-[20px] max-md:text-[16px]";
+  const sosmedStyl = "w-[48px] h-[48px] max-md:w-[32px]";
   let menuFooter = "hover:text-gray-50 transition-all duration-300";
   // fungsi email
   const [message, setMessage] = useState("Hello, I'm interested in hiring you");
@@ -16,10 +18,10 @@ export default function FooterSection() {
 
   return (
     <>
-      <footer className="grid grid-cols-2 max-md:grid-cols-1 text-white bg-[#0D1A22] justify-between px-24 max-md:px-8 py-10 max-md:py-8 mt-16" id="contact">
-        <h1 className={`${headerStyle} text-[32px] bg-red-400 max-md:col-span-2`}>RIFQY HAMDANI</h1>
-        <section className="grid grid-cols-2 max-md:grid-cols-1">
-          <div className="flex flex-col justify-self-center max-md:justify-self-start gap-2 bg-red-300">
+      <footer className="grid grid-cols-2 max-md:grid-cols-1 text-white bg-[#0D1A22] justify-between px-24 max-md:px-8 py-10 max-md:py-8 mt-16 gap-4" id="contact">
+        <h1 className={twMerge(headerStyle, "text-[32px] max-md:text-[24px] max-md:col-span-2")}>RIFQY HAMDANI</h1>
+        <section className="grid grid-cols-2 max-md:grid-cols-2">
+          <div className="flex flex-col justify-self-center max-md:justify-self-start gap-2">
             <h1 className={`${headerStyle}`}>Quicklines</h1>
             <div className="flex flex-col gap-2 text-gray-300">
               <a href="#home" className={menuFooter}>
@@ -40,10 +42,10 @@ export default function FooterSection() {
             <div className="flex flex-col gap-2">
               <h1 className={`${headerStyle}`}>CONTACT ME</h1>
               <div className="flex gap-3">
-                <img src="images/sosmed/facebook.svg" alt="" />
-                <img src="images/sosmed/insta.svg" alt="" />
-                <img src="images/sosmed/whatsapp.svg" alt="" />
-                <img src="images/sosmed/gmail.svg" alt="" />
+                <img src="images/sosmed/facebook.svg" alt="" className={sosmedStyl} />
+                <img src="images/sosmed/insta.svg" alt="" className={sosmedStyl} />
+                <img src="images/sosmed/whatsapp.svg" alt="" className={sosmedStyl} />
+                <img src="images/sosmed/gmail.svg" alt="" className={sosmedStyl} />
               </div>
             </div>
             <div className="flex flex-col gap-2">
