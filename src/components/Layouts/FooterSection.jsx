@@ -3,22 +3,23 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
 export default function FooterSection() {
-  const headerStyle = "font-statliches text-[20px]";
+  const headerStyle = "font-statliches text-[20px] max-md:text-[16px]";
   let menuFooter = "hover:text-gray-50 transition-all duration-300";
   // fungsi email
   const [message, setMessage] = useState("Hello, I'm interested in hiring you");
   const handleEmailButtonClick = () => {
     const subject = "Kami Tertarik Menyambut Anda di Tim Kami";
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=rifqyh22@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    const body = encodeURIComponent(message);
+    const gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rifqyh22@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
     window.open(gmailLink, "_blank");
   };
 
   return (
     <>
-      <footer className="grid grid-cols-2 text-white bg-[#0D1A22] justify-between px-24 py-10 mt-16" id="contact">
-        <h1 className={`${headerStyle} text-[32px]`}>RIFQY HAMDANI</h1>
-        <section className="grid grid-cols-2">
-          <div className="flex flex-col justify-self-center gap-2">
+      <footer className="grid grid-cols-2 max-md:grid-cols-1 text-white bg-[#0D1A22] justify-between px-24 max-md:px-8 py-10 max-md:py-8 mt-16" id="contact">
+        <h1 className={`${headerStyle} text-[32px] bg-red-400 max-md:col-span-2`}>RIFQY HAMDANI</h1>
+        <section className="grid grid-cols-2 max-md:grid-cols-1">
+          <div className="flex flex-col justify-self-center max-md:justify-self-start gap-2 bg-red-300">
             <h1 className={`${headerStyle}`}>Quicklines</h1>
             <div className="flex flex-col gap-2 text-gray-300">
               <a href="#home" className={menuFooter}>

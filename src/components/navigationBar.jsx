@@ -43,7 +43,7 @@ export default function NavigationBar() {
   };
   return (
     <>
-      <nav className="flex sticky top-0 z-50 bg-white justify-between px-12 max-md:px-4 py-4 border-b-[1px] items-center border-slate-800 ">
+      <nav className="flex sticky top-0 z-50 bg-white justify-between px-12 max-md:px-4 py-4 W-full border-b-[1px] items-center border-slate-800 ">
         <h1 className="font-statliches text-xl">Rifqy Hamdani</h1>
         <ul className="flex gap-10 max-md:hidden">
           {menuNav.map((menu) => (

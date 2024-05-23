@@ -68,18 +68,18 @@ export default function ProjectSection() {
 
   return (
     <>
-      <motion.div variants={containerMotion} initial="initial" whileHover="whileHover" whileInView="view" className="relative">
-        <main className="mx-32 mt-24 flex flex-col gap-8 " id="porto">
-          <header className="grid items-end content-between grid-cols-3">
-            <motion.article variants={headerMotion} className=" col-span-2">
-              <h1 className="font-statliches text-[48px] ">Projects Gallery</h1>
-              <p className="text-gray-500">Selamat datang di GALLERY Imajinasi saya! Di sini, saya akan menampilkan hasil kreativitas saya. Mulai dari karya pixel hingga website dengan barisan code, yang menunjukkan kreativitas saya dalam desain UI/UX dan pengembangan web.</p>
+      <motion.div variants={containerMotion} initial="initial" whileHover="whileHover" whileInView="view" className="relative overflow-x-hidden">
+        <main className="mx-32 max-md:mx-8 mt-24 max-md:mt-8 flex flex-col gap-8  " id="porto">
+          <header className="grid items-end content-between grid-cols-3 max-md:grid-cols-1">
+            <motion.article variants={headerMotion} className=" col-span-2 max-md:col-span-1">
+              <h1 className="font-statliches text-[48px] max-md:text-[24px] ">Projects Gallery</h1>
+              <p className="text-gray-500 max-md:text-[14px]">
+                Selamat datang di GALLERY Imajinasi saya! Di sini, saya akan menampilkan hasil kreativitas saya. Mulai dari karya pixel hingga website dengan barisan code, yang menunjukkan kreativitas saya dalam desain UI/UX dan
+                pengembangan web.
+              </p>
             </motion.article>
-            <div className=" max-w-fit col-span-1 justify-self-end">
-              <Link className="text-sky-700 hover:bg-gray-100 px-5 py-2">Lihat Gallery</Link>
-            </div>
           </header>
-          <motion.section className="flex gap-4">
+          <motion.section className="flex max-md:flex-col gap-4">
             {dataCard.slice(0, 3).map((data, index) => {
               const cardMotion = [
                 {
@@ -104,7 +104,7 @@ export default function ProjectSection() {
                 </motion.div>
               );
             })}
-            <Link to="/projects" className="w-[220px] flex">
+            <Link to="/projects" className="w-[220px] flex max-md:hidden">
               <motion.div
                 initial={{ x: "-100px", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1, transition: { delay: 1, duration: 0.5, type: "spring", stiffness: 100, damping: 10 } }}

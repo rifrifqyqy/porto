@@ -76,6 +76,17 @@ export default function AboutSection() {
       },
     },
   };
+  const coverAnimateMobile = {
+    initial: {
+      width: "100%",
+    },
+    view: {
+      width: "0%",
+      transition: {
+        duration: 1,
+      },
+    },
+  };
   const textShow = {
     initial: {
       opacity: 0,
@@ -124,7 +135,8 @@ export default function AboutSection() {
                 "Passionate about art and design, Rifqy Hamdani is an enthusiastic college student pursuing his dreams in the world of design. With a fondness for UI design and a keen interest in UX research, Rifqy brings dedication and
                 creativity to every project he faces. With arts thinking and logic as his foundation, he delves into the complexities of frontend web design diligently, crafting captivating user experiences and stunning aesthetics.
               </motion.p>
-              <motion.div variants={coverAnimate} className="bg-sky-700 w-[110%] h-full absolute top-0 left-0 z-10"></motion.div>
+              <motion.div variants={coverAnimate} className="bg-sky-700 h-full absolute top-0 left-0 z-10 max-md:hidden"></motion.div>
+              <motion.div variants={coverAnimateMobile} className="bg-sky-700 h-full absolute top-0 left-0 z-10 hidden max-md:block"></motion.div>
             </motion.div>
 
             <div className="w-[350px] max-md:w-[300px] mx-auto mt-16 max-md:mt-4 gap-4 overflow-hidden whitespace-nowrap">
