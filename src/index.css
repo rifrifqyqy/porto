@@ -101,8 +101,6 @@ html {
   }
 }
 
-.marquee {
-}
 .marquee::after {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, #c90000 100%);
 }
@@ -110,7 +108,7 @@ html {
 .marquee-content {
   display: inline-block;
   white-space: nowrap;
-  padding-left: 16px;
+  padding-left: 0;
   animation: marquee 5s linear infinite;
   -webkit-animation: marquee 5s linear infinite;
 
@@ -129,16 +127,15 @@ html {
       -o-transform: translateY(-16px);
       filter: grayscale(0);
     }
-    
   }
   img {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
-}
+  }
 }
 
 .marquee-content span {
-  padding-right: 0; /* Tambahkan padding kanan yang besar untuk menghindari gap */
+  padding-right: 12px; /* Tambahkan padding kanan yang besar untuk menghindari gap */
 }
 
 @keyframes marquee {
@@ -155,5 +152,25 @@ html {
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
+  }
+}
+@layer utilities {
+  .init-width-max-md\:w-\[400px\] {
+    @apply w-[400px];
+  }
+
+  @media (min-width: 720px) {
+    .init-width\:w-\[600px\] {
+      @apply w-[600px];
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-content {
+    margin-left: -28px;
+  }
+  .marquee-content.code {
+    margin-left: -32px;
   }
 }
