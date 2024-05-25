@@ -3,7 +3,8 @@ import HeroSection from "@/components/Layouts/HeroSection";
 import AboutSection from "@/components/Layouts/AboutSection";
 import ProjectSection from "@/components/Layouts/ProjectSection";
 import FooterSection from "@/components/Layouts/FooterSection";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import NavigationBar from "@/components/navigationBar";
 
 export default function HomePage() {
   const aboutRef = useRef(null);
@@ -17,21 +18,24 @@ export default function HomePage() {
   const containVariants = {
     hidden: {
       opacity: 0,
+      x: "-100vw",
     },
     visible: {
+      x: 0,
       opacity: 1,
-      transition: { duration: 1.5 },
     },
     exit: {
-      x: "-100vw",
-      transition: {
-        ease: "easeInOut",
-      },
+      opacity: 0,
+      x: "100vw",
+    },
+    transition: {
+      duration: 1.5,
     },
   };
   return (
     <>
-      <motion.div variants={containVariants} initial="hidden" animate="visible" exit="exit">
+      <NavigationBar />
+      <motion.div variants={containVariants} initial="hidden" animate="visible" exit={{ x: "100vw", opacity: 0 }} transition="transition">
         <HeroSection aboutScroll={aboutScroll} />
         <AboutSection ref={aboutRef} />
         <ProjectSection />
