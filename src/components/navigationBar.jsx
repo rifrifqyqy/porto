@@ -1,5 +1,5 @@
 import MainButton from "./Elements/Button/MainButton";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function NavigationBar() {
@@ -23,7 +23,10 @@ export default function NavigationBar() {
       href: "#contact",
     },
   ];
-
+  const [showTitle, setShowTitle] = useState(true);
+  setTimeout(() => {
+    setShowTitle(false);
+  }, 4000);
   const handleNavMobile = () => {
     setIsOpen(!isOpen);
   };
@@ -46,6 +49,7 @@ export default function NavigationBar() {
       <div className="w-full bg-gray-200 flex justify-center py-1">
         <p className="text-amber-500">This web is under development</p>
       </div>
+
       <nav className="flex sticky top-0 z-50 bg-white justify-between px-12 max-md:px-4 py-4 W-full border-b-[1px] items-center border-slate-800 ">
         <h1 className="font-statliches text-xl">Rifqy Hamdani</h1>
         <ul className="flex gap-10 max-md:hidden">
@@ -62,11 +66,12 @@ export default function NavigationBar() {
             </li>
           ))}
         </ul>
-
-        <MainButton className="px-6 text-[20px] bg-transparent border-t-2 border-l-2 border-b-4 border-r-4 border-gray-900 text-black bg-[#F8CC76] max-md:hidden active:scale-95 active:bg-[#ffc043]">Recruit</MainButton>
-        <button onClick={handleNavMobile} className="hidden bg-[#F8CC76] max-md:block border-[2px] border-gray-800">
-          <img src={isOpen ? "images/close.svg" : "images/Hamburger.svg"} alt="" />
-        </button>
+        <AnimatePresence>
+          <MainButton className="px-6 text-[20px] bg-transparent border-t-2 border-l-2 border-b-4 border-r-4 border-gray-900 text-black bg-[#F8CC76] max-md:hidden active:scale-95 active:bg-[#ffc043]">Recruit</MainButton>
+          <motion.button initial={{ scale: 1 }} whileTap={{ scale: 0, rotate: "180deg" }} exit={{ scale: 1 }} onClick={handleNavMobile} className="hidden bg-[#F8CC76] max-md:block border-[2px] border-gray-800">
+            <img src={isOpen ? "images/close.svg" : "images/Hamburger.svg"} alt="" />
+          </motion.button>
+        </AnimatePresence>
       </nav>
       {isOpen && (
         <nav className="w-full h-[100vh] fixed top-[65px] bg-gray-900 bg-opacity-55 z-10">
