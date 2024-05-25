@@ -66,7 +66,7 @@ export default function NavigationBar() {
         </ul>
         <MainButton className="px-6 text-[20px] bg-transparent border-t-2 border-l-2 border-b-4 border-r-4 border-gray-900 text-black bg-[#F8CC76] max-md:hidden active:scale-95 active:bg-[#ffc043]">Recruit</MainButton>
         <AnimatePresence>
-          <motion.div initial={{ scale: 1, opacity: 1 }} whileTap={{ scale: 0.6, rotate: "180deg", opacity: 0 }}>
+          <motion.div initial={{ scale: 1, opacity: 1 }} whileTap={{ scale: 0.8, rotate: "180deg", opacity: 0 }}>
             <motion.button onClick={handleNavMobile} className="hidden bg-[#F8CC76] max-md:block border-[2px] border-gray-800">
               <img src={isOpen ? "images/close.svg" : "images/Hamburger.svg"} alt="" />
             </motion.button>
