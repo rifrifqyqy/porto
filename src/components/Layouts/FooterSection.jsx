@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
+import { Link } from "react-router-dom";
 
 export default function FooterSection() {
   const headerStyle = "font-statliches text-[20px] max-md:text-[16px]";
@@ -43,7 +44,10 @@ export default function FooterSection() {
               <h1 className={`${headerStyle}`}>CONTACT ME</h1>
               <div className="flex gap-3">
                 <img src="images/sosmed/facebook.svg" alt="" className={sosmedStyl} />
-                <img src="images/sosmed/insta.svg" alt="" className={sosmedStyl} />
+                <Link to="https://www.instagram.com/rifrifqyqy/">
+                  <img src="images/sosmed/insta.svg" alt="" className={sosmedStyl} />
+                </Link>
+
                 <img src="images/sosmed/whatsapp.svg" alt="" className={sosmedStyl} />
                 <img src="images/sosmed/gmail.svg" alt="" className={sosmedStyl} />
               </div>
@@ -51,7 +55,13 @@ export default function FooterSection() {
             <div className="flex flex-col gap-2">
               <h1 className={`${headerStyle}`}>SEND US LETTER</h1>
               <form className="flex w-full items-center space-x-2">
-                <Input id="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Hello, I'm interested in hiring you" className="focus-visible:ring-sky-700 rounded-none h-full text-gray-600 max-md:text-[12px] px-4 max-md:px-1" />
+                <Input
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Hello, I'm interested in hiring you"
+                  className="focus-visible:ring-sky-700 rounded-none h-full text-gray-600 max-md:text-[12px] px-4 max-md:px-1"
+                />
                 <Button onClick={handleEmailButtonClick} className="group h-fit bg-sky-700 rounded-none hover:bg-sky-600 max-md:px-2 max-md:py-1">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-45 group-hover:rotate-0 transition-all duration-300 w-[28px] h-[34px] max-md:w-[12px] max-md:h-[24px]">
                     <path
