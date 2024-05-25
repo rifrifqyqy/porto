@@ -63,13 +63,13 @@ export default function NavigationBar() {
           ))}
         </ul>
 
-        <MainButton className="px-6 text-[20px] bg-sky-700 max-md:hidden">Recruit</MainButton>
-        <button onClick={handleNavMobile} className="hidden max-md:block">
+        <MainButton className="px-6 text-[20px] bg-transparent border-t-2 border-l-2 border-b-4 border-r-4 border-gray-900 text-black bg-[#F8CC76] max-md:hidden active:scale-95 active:bg-[#ffc043]">Recruit</MainButton>
+        <button onClick={handleNavMobile} className="hidden bg-[#F8CC76] max-md:block border-[2px] border-gray-800">
           <img src={isOpen ? "images/close.svg" : "images/Hamburger.svg"} alt="" />
         </button>
       </nav>
       {isOpen && (
-        <nav className="w-full h-[100vh] fixed top-[65px] bg-gray-900 bg-opacity-55 z-50">
+        <nav className="w-full h-[100vh] fixed top-[65px] bg-gray-900 bg-opacity-55 z-10">
           <ul className="flex flex-col gap-4 bg-white px-4 pt-4 h-[100vh] w-[60%]">
             {menuNav.map((menu) => (
               <li className="flex flex-col h-[26px] overflow-y-hidden">

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import MainButton from "../Elements/Button/MainButton";
-export default function HeroSection() {
+export default function HeroSection({ aboutScroll }) {
   // animate logic
   const constraintsRef = useRef(null);
   const homeAnimate = {
@@ -65,7 +65,7 @@ export default function HeroSection() {
         delay: 1,
       },
     },
-  }
+  };
   //   animate logic end
 
   return (
@@ -74,7 +74,9 @@ export default function HeroSection() {
         <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:mx-8">
           <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" />
           <motion.div variants={titleAnimate} className="my-auto">
-            <p className="font-statliches">welcome to my site</p>
+            <p onClick={aboutScroll} className="font-statliches">
+              welcome to my site
+            </p>
             <h1 className="text-[180px] max-md:text-[52px] relative leading-[100%] font-valorant tracking-[20px] -ml-2 max-md:ml-0">
               <span className="text-sky-700">L</span>I<span className="text-sky-700">L</span>UO
               <motion.div variants={wrapAnimate} className="h-[145px] max-md:h-[50px] mr-40 max-md:mr-0 absolute top-0 right-0 max-md:left-0 bg-sky-700 z-20 max-md:hidden"></motion.div>
@@ -87,7 +89,9 @@ export default function HeroSection() {
             </div>
 
             <div className="mt-4 max-md:mt-2">
-              <MainButton className="py-3 max-md:py-2 bg-slate-800 text-xl max-md:text-[14px] max-md:px-4 ">Start Journey</MainButton>
+              <MainButton onClick={aboutScroll} className="px-6 text-[20px] border-t-2 border-l-2 border-b-4 border-r-4 border-gray-900 text-black bg-[#F8CC76] active:bg-[#ffc043] max-md:text-[14px]">
+                Start Journey
+              </MainButton>
             </div>
           </motion.div>
         </div>

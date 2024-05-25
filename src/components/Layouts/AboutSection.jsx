@@ -1,7 +1,7 @@
 import { delay, motion } from "framer-motion";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import "../../index.css";
-export default function AboutSection() {
+function AboutSection(props, ref) {
   const [img, setImg] = useState("images/seongje.svg");
   const imgAnimate = {
     initial: {
@@ -116,7 +116,7 @@ export default function AboutSection() {
 
   return (
     <>
-      <main className="relative" id="about">
+      <main className="relative" id="about" ref={ref}>
         <div className="grid grid-cols-2 max-md:grid-cols-1 mx-32 max-md:mx-8 mt-24 max-md:mt-8 ">
           <section className="my-auto max-md:order-2">
             <motion.div variants={""} initial="initial" whileInView="view" className="flex flex-col max-w-fit items-end max-md:mt-4">
@@ -207,3 +207,5 @@ export default function AboutSection() {
     </>
   );
 }
+
+export default forwardRef(AboutSection);
