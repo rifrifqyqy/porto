@@ -51,7 +51,7 @@ export default function FooterSection() {
             <div className="flex flex-col gap-2">
               <h1 className={`${headerStyle}`}>SEND US LETTER</h1>
               <form className="flex w-full items-center space-x-2">
-                <Input id="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Hello, I'm interested in hiring you" className="focus-visible:ring-sky-700 rounded-none h-full text-gray-600 max-md:text-[12px] px-1" />
+                <Input id="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Hello, I'm interested in hiring you" className="focus-visible:ring-sky-700 rounded-none h-full text-gray-600 max-md:text-[12px] px-4 max-md:px-1" />
                 <Button onClick={handleEmailButtonClick} className="group h-fit bg-sky-700 rounded-none hover:bg-sky-600 max-md:px-2 max-md:py-1">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-45 group-hover:rotate-0 transition-all duration-300 w-[28px] h-[34px] max-md:w-[12px] max-md:h-[24px]">
                     <path
