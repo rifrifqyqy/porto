@@ -1,17 +1,18 @@
-import NavigationBar from "./components/navigationBar";
-import HeroSection from "./components/Layouts/HeroSection";
-import AboutSection from "./components/Layouts/AboutSection";
-import ProjectSection from "./components/Layouts/ProjectSection";
-import FooterSection from "./components/Layouts/FooterSection";
-
+import HomePage from "./pages/HomePage";
+import ProjectPage from "./pages/projectPage";
+import { AnimatePresence, motion } from "framer-motion";
+import { Routes, Route, useLocation } from "react-router-dom";
 function App() {
+  const location = useLocation();
   return (
     <>
-      <NavigationBar />
-      <HeroSection />
-      <AboutSection />
-      <ProjectSection/>
-      <FooterSection/>
+      <AnimatePresence mode="wait" initial="hidden">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/project-details" element={<ProjectPage />} />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }

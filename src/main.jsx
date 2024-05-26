@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
 import App from "./App";
@@ -43,14 +43,8 @@ import { AnimatePresence, delay, motion } from "framer-motion";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Router>
-      <AnimatePresence mode="wait"  initial="hidden" >
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectPage />} />
-          <Route path="/project-details" element={<ProjectPage />} />
-        </Routes>
-      </AnimatePresence>
-    </Router>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );

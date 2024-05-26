@@ -70,7 +70,7 @@ export default function HeroSection({ aboutScroll }) {
 
   return (
     <>
-      <motion.section variants={homeAnimate} ref={constraintsRef} whileInView="view" initial="initial" animate="animate" className=" relative overflow-hidden max-md:py-2 " id="home">
+      <motion.section variants={homeAnimate} ref={constraintsRef} whileInView="view" initial="initial" animate="animate" className=" relative overflow-hidden max-md:py-2" id="home">
         <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:mx-8">
           <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" />
           <motion.div variants={titleAnimate} className="my-auto">
@@ -109,6 +109,7 @@ export default function HeroSection({ aboutScroll }) {
         <div className="w-[100vw] overflow-x-hidden text-[280px] text-white -ml-24  translate-x-28 opacity-60 absolute top-[30%] -z-20">
           <img src="images/EGAMEDIEV.svg" alt="" />
         </div>
+        <div className="w-[100%] h-[100%] fixed z-[-99] top-0 left-0 bg-white"></div>
       </motion.section>
     </>
   );

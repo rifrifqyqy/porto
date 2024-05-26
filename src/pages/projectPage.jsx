@@ -3,16 +3,16 @@ export default function ProjectPage() {
   const containVariants = {
     hidden: {
       opacity: 0,
-      x: "-100vw",
+      y: "100vh",
     },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
-      transition: { duration: 1.5, delay: 5 },
+      transition: { duration: 1 },
     },
     exit: {
       opacity: 0,
-      x: "-100vw",
+      y: "-100vh",
       transition: {
         ease: "easeInOut",
         duration: 2,
@@ -20,8 +20,8 @@ export default function ProjectPage() {
     },
   };
   return (
-    <motion.div variants={containVariants} initial="hidden" animate="visible" exit={{ opacity: 0, y: "100vh" }} className="bg-red-400 -z-50 opacity-15">
-      <div>Project Page</div>
+    <motion.div variants={containVariants} initial="hidden" animate="visible" exit={{ opacity: 0, y: "100vh" }} className=" w-full h-full bg-red-400 -z-50 opacity-15 flex ">
+      <div className="flex self-center m-auto text-center text-5xl">Project Page</div>
     </motion.div>
   );
 }
