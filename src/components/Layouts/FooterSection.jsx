@@ -43,13 +43,13 @@ export default function FooterSection() {
             <div className="flex flex-col gap-2 max-md:gap-0">
               <h1 className={`${headerStyle}`}>CONTACT ME</h1>
               <div className="flex gap-3">
-                <img src="images/sosmed/facebook.svg" alt="" className={sosmedStyl} />
+                <img src="/images/sosmed/facebook.svg" alt="" className={sosmedStyl} />
                 <Link to="https://www.instagram.com/rifrifqyqy/">
-                  <img src="images/sosmed/insta.svg" alt="" className={sosmedStyl} />
+                  <img src="/images/sosmed/insta.svg" alt="" className={sosmedStyl} />
                 </Link>
 
-                <img src="images/sosmed/whatsapp.svg" alt="" className={sosmedStyl} />
-                <img src="images/sosmed/gmail.svg" alt="" className={sosmedStyl} />
+                <img src="/images/sosmed/whatsapp.svg" alt="" className={sosmedStyl} />
+                <img src="/images/sosmed/gmail.svg" alt="" className={sosmedStyl} />
               </div>
             </div>
             <div className="flex flex-col gap-2">

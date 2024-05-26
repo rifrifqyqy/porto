@@ -1,13 +1,18 @@
 import MainButton from "@/components/Elements/Button/MainButton";
-import NavigationBar from "@/components/navigationBar";
-import { AnimatePresence, delay, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../index.css";
 import NavigationPage from "@/components/navigationPage";
+import PortoCardLayout from "@/components/Layouts/PortoCardLayout/PortoCardLayout";
+import FooterSection from "@/components/Layouts/FooterSection";
 export default function ProjectPage() {
   let { id } = useParams();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const containVariants = {
     hidden: {
       opacity: 0,
@@ -237,6 +242,17 @@ export default function ProjectPage() {
             </article>
           </section>
         </main>
+
+        {/* section card recomend */}
+        <section className="mx-32 mt-24 flex flex-col gap-8 items-center border-t border-zinc-900 pt-16">
+          <h1 className="text-4xl font-statliches">you may also like</h1>
+          <div className="flex max-md:flex-col gap-4">
+            {/* portolayout */}
+            <PortoCardLayout />
+          </div>
+        </section>
+
+        <FooterSection/>
       </motion.div>
     </>
   );
