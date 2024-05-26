@@ -29,7 +29,7 @@ export default function ProjectPage() {
     },
     exit: {
       opacity: 0,
-      y: "100vh",
+      y: "-100vh",
       transition: {
         ease: [0.76, 0, 0.24, 1],
         duration: 2,
