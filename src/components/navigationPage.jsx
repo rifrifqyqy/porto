@@ -3,7 +3,7 @@ import MainButton from "./Elements/Button/MainButton";
 export default function NavigationPage({ projectTitle, to }) {
   return (
     <>
-      <nav className="flex sticky top-0 z-40 bg-white justify-between px-12 max-md:px-4 py-4 W-full border-b-[1px] items-center border-slate-800 ">
+      <nav className="flex sticky top-0 z-40 bg-white/80 backdrop-blur justify-between px-12 max-md:px-4 py-4 W-full border-b-[1px] items-center border-slate-800 ">
         <MainButton to={to} className=" bg-transparent text-zinc-900 flex gap-4 items-center hover:text-amber-500 group">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
