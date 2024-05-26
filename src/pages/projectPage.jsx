@@ -1,3 +1,4 @@
+import MainButton from "@/components/Elements/Button/MainButton";
 import { delay, motion } from "framer-motion";
 export default function ProjectPage() {
   const containVariants = {
@@ -22,6 +23,7 @@ export default function ProjectPage() {
   return (
     <motion.div variants={containVariants} initial="hidden" animate="visible" exit={{ opacity: 0, y: "100vh" }} className=" w-full h-full bg-red-400 -z-50 opacity-15 flex ">
       <div className="flex self-center m-auto text-center text-5xl">Project Page</div>
+      <MainButton to="/">ssadasd</MainButton>
     </motion.div>
   );
 }
