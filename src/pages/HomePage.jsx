@@ -17,12 +17,17 @@ export default function HomePage() {
 
   const containVariants = {
     hidden: {
-      opacity: 0,
-      scale: 1,
+      scale: 0.9,
+      y: -100,
+      opacity: 0.5,
     },
     visible: {
       opacity: 1,
       scale: 1,
+      transition: {
+        duration: 1,
+        ease: [0.76, 0, 0.24, 1],
+      },
     },
     exit: {
       scale: 0.9,

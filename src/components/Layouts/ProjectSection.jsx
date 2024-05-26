@@ -13,6 +13,12 @@ export default function ProjectSection() {
         "SMAKO is an application owned by a single company or wholesale groceries store. This application serves customers who wish to purchase groceries in large quantities. The SMAKO app is an ideal solution for grocery store owners looking to expand their business and for customers seeking a steady supply of groceries in bulk.",
       label: "Website",
       webUrl: "https://rifrifqyqy.github.io/Smako-wholesale/",
+      tabs: [
+        { id: 0, image: "images/porto1.png" },
+        { id: 1, image: "images/portoBharacode.png" },
+        { id: 2, image: "images/portoTBN.png" },
+        { id: 3, image: "images/portoTBN.png" },
+      ],
     },
     {
       id: 2,
@@ -95,7 +101,7 @@ export default function ProjectSection() {
               const animation = cardMotion[index % cardMotion.length];
               return (
                 <motion.div key={index} initial={animation.initial} whileInView={animation.view} className="flex">
-                  <CardProject key={index}>
+                  <CardProject key={data.id} to={`/projects/${data.id}`}>
                     <CardProject.CardHeader labelTag={data.label} labelLink={data.webUrl}>
                       {data.date}
                     </CardProject.CardHeader>

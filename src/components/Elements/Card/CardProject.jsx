@@ -3,13 +3,17 @@ import MainButton from "../Button/MainButton";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-
-export default function CardProject({ children, className, buttonStyle }) {
+export default function CardProject({ children, className, buttonStyle, to }) {
   return (
     <>
       <main className={twMerge("p-4 max-md:p-2 bg-white border-[1px] flex flex-col border-gray-800 max-w-min gap-4 max-md:gap-2 hover:bg-sky-700 justify-between group", className, transitionStyle)}>
         <div className="gap-4 max-md:gap-2 flex flex-col">{children}</div>
-        <MainButton to="/projects" className={twMerge(" bg-sky-700 text-center font-statliches text-[20px] max-md:text-[14px] tracking-wider group-hover:bg-white hover:opacity-100 group-hover:text-gray-900 border-retro", buttonStyle, transitionStyle)}>Lihat Detail</MainButton>
+        <MainButton
+          to={to}
+          className={twMerge(" bg-sky-700 text-center font-statliches text-[20px] max-md:text-[14px] tracking-wider group-hover:bg-white hover:opacity-100 group-hover:text-gray-900 border-retro", buttonStyle, transitionStyle)}
+        >
+          Lihat Detail
+        </MainButton>
       </main>
     </>
   );
@@ -18,7 +22,12 @@ const transitionStyle = "transition-all duration-500";
 function CardHeader({ children, styleHeader, labelLink, labelTag }) {
   return (
     <div className="flex justify-between items-center">
-      <div className={twMerge("flex gap-2 bg-[#fff5e0] border-retro-sm items-center group-hover:bg-white h-[38px] max-md:h-[28px] w-[42px] max-md:w-[36px] group-hover:w-fit group-hover:pr-4 max-md:group-hover:pr-1 cursor-pointer", transitionStyle)}>
+      <div
+        className={twMerge(
+          "flex gap-2 bg-[#fff5e0] border-retro-sm items-center group-hover:bg-white h-[38px] max-md:h-[28px] w-[42px] max-md:w-[36px] group-hover:w-fit group-hover:pr-4 max-md:group-hover:pr-1 cursor-pointer",
+          transitionStyle
+        )}
+      >
         <div className="flex w-fit gap-2 items-center pl-1 h-full">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-45 group-hover:rotate-0 transition-all duration-300 peer w-[28px] h-[34px] max-md:w-[20px] max-md:h-[24px]">
             <path
@@ -26,7 +35,9 @@ function CardHeader({ children, styleHeader, labelLink, labelTag }) {
               className="fill-[#ffc043]  "
             />
           </svg>
-          <Link to={labelLink} className={twMerge("text-[16px] max-md:text-[12px] opacity-0 group-hover:opacity-100 text-[#1a1a1a] font-semibold hidden group-hover:block", transitionStyle)}>{labelTag}</Link>
+          <Link to={labelLink} className={twMerge("text-[16px] max-md:text-[12px] opacity-0 group-hover:opacity-100 text-[#1a1a1a] font-semibold hidden group-hover:block", transitionStyle)}>
+            {labelTag}
+          </Link>
         </div>
       </div>
       <p className={twMerge("group-hover:text-white max-md:text-[14px]", styleHeader, transitionStyle)}>{children}</p>

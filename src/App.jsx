@@ -9,7 +9,7 @@ function App() {
       <AnimatePresence mode="wait" initial="hidden">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/projects/:id" element={<ProjectPage />} />
           <Route path="/project-details" element={<ProjectPage />} />
         </Routes>
       </AnimatePresence>
