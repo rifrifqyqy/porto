@@ -158,9 +158,16 @@ html {
 .border-retro {
   @apply border-t-2 border-l-2 border-b-4 border-r-4 border-black;
 }
-.border-retro-sm {
-  @apply border-t-[1px] border-l-[1px] border-b-2 border-r-2 border-black;
+.border-retro-org {
+  @apply border-t-2 border-l-2 border-b-4 border-r-4;
 }
+.border-retro-sm {
+  @apply border-t-[1px] border-l-[1px] border-b-2 border-r-2;
+}
+.accordion-title {
+  @apply text-[20px] hover:no-underline;
+}
+
 @layer utilities {
   .init-width-max-md\:w-\[400px\] {
     @apply w-[400px];
