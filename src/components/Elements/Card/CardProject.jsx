@@ -9,7 +9,7 @@ export default function CardProject({ children, className, buttonStyle }) {
     <>
       <main className={twMerge("p-4 max-md:p-2 bg-white border-[1px] flex flex-col border-gray-800 max-w-min gap-4 max-md:gap-2 hover:bg-sky-700 justify-between group", className, transitionStyle)}>
         <div className="gap-4 max-md:gap-2 flex flex-col">{children}</div>
-        <MainButton className={twMerge(" bg-sky-700 text-center font-statliches text-[20px] max-md:text-[14px] tracking-wider group-hover:bg-white hover:opacity-100 group-hover:text-gray-900 border-retro", buttonStyle, transitionStyle)}>Lihat Detail</MainButton>
+        <MainButton to="/projects" className={twMerge(" bg-sky-700 text-center font-statliches text-[20px] max-md:text-[14px] tracking-wider group-hover:bg-white hover:opacity-100 group-hover:text-gray-900 border-retro", buttonStyle, transitionStyle)}>Lihat Detail</MainButton>
       </main>
     </>
   );
