@@ -1,8 +1,6 @@
-
 import { motion } from "framer-motion";
-import PortoCardLayout from "./PortoCardLayout/PortoCardLayout";
+import PortoCardLayout from "./PortoDetailsLayout/PortoDetailsLayout";
 export default function ProjectSection() {
-
   // animation
   const containerMotion = {
     initial: {},
