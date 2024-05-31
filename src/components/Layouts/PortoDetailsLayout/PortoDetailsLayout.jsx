@@ -8,12 +8,32 @@ export default function PortoCardLayout() {
       {dataCard.slice(0, 3).map((data, index) => {
         const cardMotion = [
           {
-            initial: { opacity: 0, y: "-100px" },
-            view: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 10, duration: 0.3, delay: 0.3 * index } },
+            initial: {
+              opacity: 0,
+              y: "-100px",
+            },
+            view: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                duration: 0.3,
+                delay: 0.3 * index,
+              },
+            },
           },
           {
-            initial: { opacity: 0, y: "100px" },
-            view: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 10, duration: 0.3, delay: 0.3 * index } },
+            initial: {
+              opacity: 0,
+              y: "100px",
+            },
+            view: {
+              opacity: 1,
+              y: 0,
+              transition: { type: "spring", stiffness: 100, damping: 10, duration: 0.3, delay: 0.3 * index },
+            },
           },
         ];
         const animation = cardMotion[index % cardMotion.length];
