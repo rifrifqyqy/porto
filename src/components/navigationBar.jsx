@@ -44,7 +44,7 @@ export default function NavigationBar({ aboutScroll }) {
   };
   return (
     <>
-      <div className="w-full bg-gray-200 flex justify-center py-1">
+      <div className="w-full bg-gray-200 flex justify-center py-1 shadow-inset1">
         <p className="text-amber-500">This web is under development</p>
       </div>
 
@@ -79,8 +79,8 @@ export default function NavigationBar({ aboutScroll }) {
         </AnimatePresence>
       </nav>
       {isOpen && (
-        <nav className="w-full h-[100vh] fixed top-[65px] bg-gray-900 bg-opacity-55 z-10">
-          <ul className="flex flex-col gap-4 bg-white px-4 pt-4 h-[100vh] w-[60%]">
+        <nav className="w-full h-[100vh] fixed top-[65px] bg-gray-400 bg-opacity-55 z-10 backdrop-blur-sm">
+          <ul className="flex flex-col gap-4 bg-white m-4 px-4 pt-4 h-[650px] w-[60%] border-retro">
             {menuNav.map((menu) => (
               <li className="flex flex-col h-[26px] overflow-y-hidden">
                 <motion.div className="flex flex-col" initital={{ y: 0 }} whileHover={{ y: -24 }}>

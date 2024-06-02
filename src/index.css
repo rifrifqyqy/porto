@@ -167,7 +167,9 @@ html {
 .accordion-title {
   @apply text-[20px] hover:no-underline;
 }
-
+.adsbanner {
+  box-shadow: 
+}
 @layer utilities {
   .init-width-max-md\:w-\[400px\] {
     @apply w-[400px];
