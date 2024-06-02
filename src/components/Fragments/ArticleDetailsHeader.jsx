@@ -32,9 +32,9 @@ export default function ArticleProject({ toolIcon, portoData }) {
           <AccordionItem value="item-2" className=" border-zinc-900">
             <AccordionTrigger className="accordion-title hover:no-underline [&[data-state=open]>svg]:rotate-45 [&[data-state=open]>svg>path]:fill-[#FFBA34] hover:bg-zinc-100 px-4 max-md:px-2 max-md:py-3 max-md:text-lg">Project Tools</AccordionTrigger>
             <AccordionContent className="px-4 max-md:px-2 pt-4">
-              <div className="flex gap-4">
+              <div className="flex gap-4 max-md:gap-2">
                 {toolIcon.map((tool) => (
-                  <img src={tool.toolthumb} alt="" className="" />
+                  <img src={tool.toolthumb} alt="" className=" max-md:w-[28px]" />
                 ))}
               </div>
             </AccordionContent>

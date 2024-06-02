@@ -117,7 +117,7 @@ function AboutSection(props, ref) {
   return (
     <>
       <main className="relative" id="about" ref={ref}>
-        <div className="grid grid-cols-2 max-md:grid-cols-1 mx-32 max-md:mx-8 mt-24 max-md:mt-8 ">
+        <div className="grid grid-cols-2 max-md:grid-cols-1 mx-32 max-md:mx-4 mt-24 max-md:mt-8 ">
           <section className="my-auto max-md:order-2">
             <motion.div variants={""} initial="initial" whileInView="view" className="flex flex-col max-w-fit items-end max-md:mt-4">
               <motion.div className="relative">

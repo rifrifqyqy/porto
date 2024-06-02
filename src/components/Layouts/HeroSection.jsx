@@ -71,7 +71,7 @@ export default function HeroSection({ aboutScroll }) {
   return (
     <>
       <motion.section variants={homeAnimate} ref={constraintsRef} whileInView="view" initial="initial" animate="animate" className=" relative overflow-hidden max-md:py-2" id="home">
-        <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:mx-8">
+        <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:mx-4">
           <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" />
           <motion.div variants={titleAnimate} className="my-auto">
             <p onClick={aboutScroll} className="font-statliches">
