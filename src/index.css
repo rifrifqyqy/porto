@@ -112,31 +112,31 @@ html {
   padding-left: 0;
   animation: marquee 5s linear infinite;
   -webkit-animation: marquee 5s linear infinite;
+}
+.Marquee img {
+  cursor: pointer;
+  transition: all ease 500ms;
+  -webkit-transition: all ease 500ms;
+  -moz-transition: all ease 500ms;
+  -ms-transition: all ease 500ms;
+  -o-transition: all ease 500ms;
+  &:hover {
+    transform: translateY(-16px);
+    -webkit-transform: translateY(-16px);
+    -moz-transform: translateY(-16px);
+    -ms-transform: translateY(-16px);
+    -o-transform: translateY(-16px);
+    rotate: -15deg;
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+  }
 
-  img {
-    cursor: pointer;
-    transition: all ease 500ms;
-    -webkit-transition: all ease 500ms;
-    -moz-transition: all ease 500ms;
-    -ms-transition: all ease 500ms;
-    -o-transition: all ease 500ms;
-    &:hover {
-      transform: translateY(-16px);
-      -webkit-transform: translateY(-16px);
-      -moz-transform: translateY(-16px);
-      -ms-transform: translateY(-16px);
-      -o-transform: translateY(-16px);
-      filter: grayscale(0);
-    }
-  }
-  img {
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-  }
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 
 .marquee-content span {
-  padding-right: 12px; /* Tambahkan padding kanan yang besar untuk menghindari gap */
+  padding-right: 24px; /* Tambahkan padding kanan yang besar untuk menghindari gap */
 }
 
 @keyframes marquee {
@@ -167,9 +167,7 @@ html {
 .accordion-title {
   @apply text-[20px] hover:no-underline;
 }
-.adsbanner {
-  box-shadow: 
-}
+
 @layer utilities {
   .init-width-max-md\:w-\[400px\] {
     @apply w-[400px];

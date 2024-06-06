@@ -1,6 +1,7 @@
 import { delay, motion } from "framer-motion";
 import { forwardRef, useState } from "react";
 import "../../index.css";
+import Marquee from "react-fast-marquee";
 function AboutSection(props, ref) {
   const [img, setImg] = useState("images/seongje.svg");
   const imgAnimate = {
@@ -139,48 +140,32 @@ function AboutSection(props, ref) {
               <motion.div variants={coverAnimateMobile} className="bg-sky-700 h-full absolute top-0 left-0 z-10 hidden max-md:block"></motion.div>
             </motion.div>
 
-            <div className="w-[350px] max-md:w-[300px] mx-auto mt-16 max-md:mt-4 gap-4 overflow-hidden whitespace-nowrap">
-              <div class="marquee py-5">
-                <div class="marquee-content">
-                  <span className="flex gap-4">
-                    <img src="images/skill/framermotion.svg" alt="" />
-                    <img src="images/skill/framer.svg" alt="" />
-                    <img src="images/skill/figma.svg" alt="" />
-                    <img src="images/skill/illustrator.svg" alt="" />
-                    <img src="images/skill/photoshop.svg" alt="" />
-                  </span>
+            <div className="w-[350px] max-md:w-[300px] mx-auto mt-16 max-md:mt-4">
+              <Marquee loop={0} speed={50} play className="overflow-y-visible py-6" autoFill>
+                <div className="flex gap-4 Marquee mr-4">
+                  <img src="images/skill/framermotion.svg" alt="" />
+                  <img src="images/skill/framer.svg" alt="" />
+                  <img src="images/skill/figma.svg" alt="" />
+                  <img src="images/skill/illustrator.svg" alt="" />
+                  <img src="images/skill/photoshop.svg" alt="" />
+                  <img src="images/skill/clipstudio.svg" alt="" />
                 </div>
-                <div class="marquee-content max-md:pl-8" aria-hidden="true">
-                  <span className="flex gap-4">
-                    <img src="images/skill/framermotion.svg" alt="" />
-                    <img src="images/skill/framer.svg" alt="" />
-                    <img src="images/skill/figma.svg" alt="" />
-                    <img src="images/skill/illustrator.svg" alt="" />
-                    <img src="images/skill/photoshop.svg" alt="" />
-                  </span>
+              </Marquee>
+              <Marquee loop={0} speed={50} play className="py-6" autoFill>
+                <div className="flex gap-4 mr-4 Marquee">
+                  <img src="images/skill/react.svg" alt="" />
+                  <img src="images/skill/vitejs.svg" alt="" />
+                  <img src="images/skill/shadcn.svg" alt="" />
+                  <img src="images/skill/css.svg" alt="" />
+                  <img src="images/skill/tailwind.svg" alt="" />
+                  <img src="images/skill/butstrep.svg" alt="" />
+                  <img src="images/skill/nuxt.svg" alt="" />
+                  <img src="images/skill/next.svg" alt="" />
+                  <img src="images/skill/cignater.svg" alt="" />
                 </div>
-              </div>
+              </Marquee>
+
               {/* marquee2 */}
-              <div class="marquee py-5">
-                <div class="marquee-content code">
-                  <span className="flex gap-5">
-                    <img src="images/skill/react.svg" alt="" />
-                    <img src="images/skill/vitejs.svg" alt="" />
-                    <img src="images/skill/shadcn.svg" alt="" />
-                    <img src="images/skill/css.svg" alt="" />
-                    <img src="images/skill/tailwind.svg" alt="" />
-                  </span>
-                </div>
-                <div class="marquee-content code max-md:pl-8" aria-hidden="true">
-                  <span className="flex gap-5">
-                    <img src="images/skill/react.svg" alt="" />
-                    <img src="images/skill/vitejs.svg" alt="" />
-                    <img src="images/skill/shadcn.svg" alt="" />
-                    <img src="images/skill/css.svg" alt="" />
-                    <img src="images/skill/tailwind.svg" alt="" />
-                  </span>
-                </div>
-              </div>
             </div>
           </section>
           <section className=" max-md:order-1">
