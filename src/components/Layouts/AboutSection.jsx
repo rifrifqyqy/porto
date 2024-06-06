@@ -159,8 +159,9 @@ function AboutSection(props, ref) {
                   <img src="images/skill/css.svg" alt="" />
                   <img src="images/skill/tailwind.svg" alt="" />
                   <img src="images/skill/butstrep.svg" alt="" />
+                  <img src="images/skill/vue.svg" alt="" />
                   <img src="images/skill/nuxt.svg" alt="" />
-                  <img src="images/skill/next.svg" alt="" />
+                  <img src="images/skill/nextjs.svg" alt="" />
                   <img src="images/skill/cignater.svg" alt="" />
                 </div>
               </Marquee>
