@@ -1,5 +1,5 @@
 import MainButton from "./Elements/Button/MainButton";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function NavigationBar({ aboutScroll }) {
@@ -42,13 +42,37 @@ export default function NavigationBar({ aboutScroll }) {
   const handleMenuMobile = () => {
     setIsOpen(false);
   };
+
+  // nav hidden on scroll
+  const { scrollY } = useScroll();
+  const [navHidden, setNavHidden] = useState(false);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setNavHidden(true);
+    } else {
+      setNavHidden(false);
+    }
+  });
+
   return (
     <>
       <div className="w-full bg-gray-200 flex justify-center py-1 shadow-inset1">
         <p className="text-amber-500">This web is under development</p>
       </div>
 
-      <nav className="flex sticky top-0 z-40 bg-white/80 backdrop-blur justify-between px-12 max-md:px-4 py-4 W-full border-b-[1px] items-center border-slate-800 ">
+      <motion.nav
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: "-100vh" },
+        }}
+        animate={navHidden ? "hidden" : "visible"}
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
+        className="flex sticky top-0 z-40 bg-white/80 backdrop-blur justify-between px-12 max-md:px-4 py-4 W-full border-b-[1px] items-center border-slate-800 "
+      >
         <h1 className="font-statliches text-xl">Rifqy Hamdani</h1>
         <ul className="flex gap-10 max-md:hidden">
           {menuNav.map((menu) => (
@@ -77,7 +101,7 @@ export default function NavigationBar({ aboutScroll }) {
             <img src={isOpen ? "images/close.svg" : "images/Hamburger.svg"} alt="" />
           </motion.button>
         </AnimatePresence>
-      </nav>
+      </motion.nav>
       {isOpen && (
         <nav className="w-full h-[100vh] fixed top-[65px] bg-gray-400 bg-opacity-55 z-10 backdrop-blur-sm">
           <ul className="flex flex-col gap-4 bg-white m-4 px-4 pt-4 h-[650px] w-[60%] border-retro">

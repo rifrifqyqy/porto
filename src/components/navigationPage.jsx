@@ -1,9 +1,31 @@
 import MainButton from "./Elements/Button/MainButton";
-
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
 export default function NavigationPage({ projectTitle, to }) {
+  const { scrollY } = useScroll();
+  const [navHidden, setNavHidden] = useState(false);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setNavHidden(true);
+    } else {
+      setNavHidden(false);
+    }
+  });
   return (
     <>
-      <nav className="flex sticky top-0 z-40 bg-white/80 backdrop-blur justify-between px-12 max-md:px-4 py-4 w-full border-b-[1px] items-center border-slate-800 ">
+      <motion.nav
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: "-100vh" },
+        }}
+        animate={navHidden ? "hidden" : "visible"}
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
+        className="flex sticky top-0 z-40 bg-white/80 backdrop-blur justify-between px-12 max-md:px-4 py-4 w-full border-b-[1px] items-center border-slate-800 "
+      >
         <MainButton to={to} className=" bg-transparent text-zinc-900 flex gap-4 items-center hover:text-amber-500 group max-md:text-[16px] max-md:px-0 max-md:gap-2">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -15,7 +37,7 @@ export default function NavigationPage({ projectTitle, to }) {
         </MainButton>
 
         <h2 className="text-2xl max-md:text-lg font-statliches bg-amber-400 px-4 py-1 border-retro active:scale-110 cursor-pointer">{projectTitle}</h2>
-      </nav>
+      </motion.nav>
     </>
   );
 }
