@@ -17,7 +17,7 @@ export default function NavigationPage({ projectTitle, to }) {
       <motion.nav
         variants={{
           visible: { y: 0 },
-          hidden: { y: "-100vh" },
+          hidden: { y: "-100%" },
         }}
         animate={navHidden ? "hidden" : "visible"}
         transition={{

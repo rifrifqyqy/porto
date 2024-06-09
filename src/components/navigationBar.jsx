@@ -64,7 +64,7 @@ export default function NavigationBar({ aboutScroll }) {
       <motion.nav
         variants={{
           visible: { y: 0 },
-          hidden: { y: "-100vh" },
+          hidden: { y: "-100%" },
         }}
         animate={navHidden ? "hidden" : "visible"}
         transition={{
