@@ -29,9 +29,9 @@
     "webUrl": "https://nuxtsubway.vercel.app",
     "tabs": [
       { "id": 0, "image": "/images/porto/subway1.png" },
-      { "id": 1, "image": "/images/porto/smakothumb.jpg" },
-      { "id": 2, "image": "/images/porto/smako1.png" },
-      { "id": 3, "image": "/images/porto/smako2.png" }
+      { "id": 1, "image": "/images/porto/subway2.png" },
+      { "id": 2, "image": "/images/porto/subway3.png" },
+      { "id": 3, "image": "/images/porto/subway4.png" }
     ],
     "tools": [
       { "id": 1, "toolthumb": "/images/skill/nuxt.svg" },

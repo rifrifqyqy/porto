@@ -29,6 +29,7 @@ export default function HomePage() {
         ease: [0.76, 0, 0.24, 1],
       },
     },
+    // hompage kebelakang layar
     exit: {
       scale: 0.9,
       y: -100,
@@ -60,7 +61,9 @@ export default function HomePage() {
   return (
     <>
       <div className="">
+        {/* bg black menjadi tatakan homepage yang di scale 0.9 */}
         <div className="w-[100vw] h-[100vh] fixed z-[-9999] top-0 left-0 bg-black"></div>
+        {/* bg putih diseret keatas */}
         <motion.div variants={wrapAnimate} initial="hidden" animate="visible " exit="exit" className="w-[100vw] h-[100vh] bg-white/100 fixed z-50 top-0 left-0" />
         <motion.div variants={containVariants} exit="exit">
           <NavigationBar />
