@@ -75,7 +75,16 @@ export default function FooterSection() {
           </div>
         </section>
         <div className="border-t-2 h-full flex justify-center items-center col-span-2 mt-8">
-          <h1 className="text-center max-md:text-[12px]">© 2024 Rifqy Portfolio. All rights reserved</h1>
+          <h1 className="text-center max-md:text-[12px] flex items-center">
+            © 2024 Rifqy Portfolio. All rights reserved
+            <span className="mx-4">|</span>
+            <span className="flex items-center">
+              Made w Reactjs
+              <img src="/images/skill/react.svg" alt="" className="mx-2 w-8 h-8" />
+              <span className="mx-4">|</span> Animation by FramerMotion
+              <img src="/images/skill/framermotion.svg" alt="" className="mx-2 w-8 h-8" />
+            </span>
+          </h1>
         </div>
       </footer>
     </>
