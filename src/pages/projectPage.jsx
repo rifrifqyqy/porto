@@ -52,7 +52,7 @@ export default function ProjectPage() {
       <motion.div variants={containVariants} initial="hidden" animate="visible" exit="exit" className="w-full h-full -z-50 opacity-15">
         <NavigationPage projectTitle={portoData.title} to="/" />
         <main className="mx-32 max-md:mx-4 mt-16 max-md:mt-4 ">
-          <section className="grid grid-cols-2 max-md:grid-cols-1 gap-16  divide-x max-md:divide-x-0 max-md:divide-y divide-zinc-800">
+          <section className="grid grid-cols-2 max-md:grid-cols-1 gap-16 max-sm:gap-0  divide-x max-md:divide-x-0 max-md:divide-y divide-zinc-800">
             <TabsProject tabData={tabData} handleTabClick={handleTabClick} activeTab={activeTab} />
             <ArticleProject portoData={portoData} toolIcon={toolIcon} />
           </section>
@@ -67,7 +67,7 @@ export default function ProjectPage() {
           </div>
         </section>
       </motion.div>
-     
+
       <FooterSection />
     </>
   );
