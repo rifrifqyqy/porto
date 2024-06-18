@@ -4,7 +4,7 @@ import MainButton from "../Elements/Button/MainButton";
 export default function ArticleProject({ toolIcon, portoData }) {
   return (
     <>
-      <article className="pl-16 max-md:pl-0 flex flex-col gap-4 max-md:mt-4 max-md:pt-4">
+      <article className="pl-12 max-md:pl-0 flex flex-col gap-4 max-md:mt-4 max-md:pt-4">
         <header className="flex flex-col gap-4">
           <div>
             <h1 className="font-statliches text-[36px] max-md:text-2xl">{portoData.title}</h1>

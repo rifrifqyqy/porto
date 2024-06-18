@@ -23,8 +23,7 @@ export default function TabsProject({ tabData, handleTabClick, activeTab }) {
             <AnimatePresence key={tab.id}>
               <motion.div
                 className={`tabheader bg-[#FFBA34] w-16 max-md:w-14 h-16 max-md:h-14 transition-all duration-300 cursor-pointer border-zinc-800 ${activeTab === index ? " border-retro-org  scale-110 -translate-y-2" : "border-retro-sm"}`}
-                onClick={() => handleTabClick(index)}
-              >
+                onClick={() => handleTabClick(index)}>
                 <img src={tab.image} alt={`Thumbnail ${index}`} className={`w-full h-full object-cover transition-all duration-400 hover:opacity-100  ${activeTab === index ? "opacity-100  " : "opacity-60"}`} />
               </motion.div>
             </AnimatePresence>
