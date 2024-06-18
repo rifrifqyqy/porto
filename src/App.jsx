@@ -1,6 +1,6 @@
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/projectPage";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 function App() {
   const location = useLocation();
