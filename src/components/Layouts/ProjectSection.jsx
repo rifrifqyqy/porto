@@ -29,8 +29,8 @@ export default function ProjectSection() {
   return (
     <>
       <motion.div variants={containerMotion} initial="initial" whileHover="whileHover" whileInView="view" className="relative">
-        <main className="mx-32 max-md:items-center max-md:mx-4 mt-24 max-md:mt-8 flex flex-col gap-8  " id="porto">
-          <header className="grid items-end content-between grid-cols-3 max-md:grid-cols-1">
+        <main className="2xl:mx-32 max-md:items-center max-sm:mx-4 mt-24 max-md:mt-8 flex flex-col gap-8 " id="porto">
+          <header className="grid items-end content-between grid-cols-3 max-md:grid-cols-1 xl:px-20 2xl:px-0">
             <motion.article variants={headerMotion} className=" col-span-2 max-md:col-span-1">
               <h1 className="font-statliches text-[48px] max-md:text-[24px] ">Projects Gallery</h1>
               <p className="text-gray-500 max-md:text-[14px]">
@@ -39,7 +39,7 @@ export default function ProjectSection() {
               </p>
             </motion.article>
           </header>
-          <section className="flex max-md:flex-col gap-4">
+          <section className="flex max-md:flex-col gap-4 justify-center">
             {/* portolayout */}
             <PortoCardLayout />
           </section>

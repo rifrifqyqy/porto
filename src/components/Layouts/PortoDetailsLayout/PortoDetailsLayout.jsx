@@ -71,7 +71,7 @@ export default function PortoCardLayout() {
 export function PortoDetailsLayout() {
   return (
     <>
-      <div>safdhjld</div>
+      <div>safddasdasdhjld</div>
     </>
   );
 }

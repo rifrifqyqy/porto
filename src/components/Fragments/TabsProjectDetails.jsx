@@ -3,7 +3,8 @@ export default function TabsProject({ tabData, handleTabClick, activeTab }) {
   return (
     <>
       <aside>
-        <div className="tabcontent border-retro h-[390px] max-md:h-[249px] w-[560px] max-md:w-full overflow-hidden bg-amber-400 ">
+        <div className="tabcontent border-retro h-[390px] max-md:h-[249px] aspect-video w-full max-md:w-full overflow-hidden bg-amber-400 ">
+          <div></div>
           <AnimatePresence mode="wait">
             <motion.img
               key={tabData[activeTab].image}

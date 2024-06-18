@@ -10,8 +10,7 @@ export default function CardProject({ children, className, buttonStyle, to }) {
         <div className="gap-4 max-md:gap-2 flex flex-col">{children}</div>
         <MainButton
           to={to}
-          className={twMerge(" bg-sky-700 text-center font-statliches text-[20px] max-md:text-[14px] tracking-wider group-hover:bg-white hover:opacity-100 group-hover:text-gray-900 border-retro", buttonStyle, transitionStyle)}
-        >
+          className={twMerge(" bg-sky-700 text-center font-statliches text-[20px] max-md:text-[14px] tracking-wider group-hover:bg-white hover:opacity-100 group-hover:text-gray-900 border-retro", buttonStyle, transitionStyle)}>
           Lihat Detail
         </MainButton>
       </main>
@@ -26,8 +25,7 @@ function CardHeader({ children, styleHeader, labelLink, labelTag }) {
         className={twMerge(
           "flex gap-2 bg-[#fff5e0] border-retro-sm items-center group-hover:bg-white h-[38px] max-md:h-[28px] w-[42px] max-md:w-[36px] group-hover:w-fit group-hover:pr-4 max-md:group-hover:pr-1 cursor-pointer",
           transitionStyle
-        )}
-      >
+        )}>
         <div className="flex w-fit gap-2 items-center pl-1 h-full">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-45 group-hover:rotate-0 transition-all duration-300 peer w-[28px] h-[34px] max-md:w-[20px] max-md:h-[24px]">
             <path
@@ -66,7 +64,7 @@ function CardImg({ imgFilter, imageUrl, imgBox, videoUrl }) {
   };
 
   return (
-    <div className={twMerge("w-[300px] h-[300px] max-md:w-[280px] max-md:h-[200px] border-[1px] border-gray-800 relative overflow-hidden", imgBox, transitionStyle)}>
+    <div className={twMerge("2xl:w-[300px] xl:w-[250px] aspect-square max-md:w-[280px] max-md:h-[200px] border-[1px] border-gray-800 relative overflow-hidden", imgBox, transitionStyle)}>
       <img src={imageUrl} alt="" />
 
       <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
