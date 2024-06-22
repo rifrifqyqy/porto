@@ -65,7 +65,7 @@ function CardImg({ imgFilter, imageUrl, imgBox, videoUrl }) {
 
   return (
     <div className={twMerge("2xl:w-[300px] xl:w-[250px] aspect-square max-md:w-[280px] max-md:h-[200px] border-[1px] border-gray-800 relative overflow-hidden", imgBox, transitionStyle)}>
-      <img src={imageUrl} alt="" />
+      <img src={imageUrl} alt="" className=" w-full h-full object-cover"/>
 
       <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <video ref={videoRef} autoPlay controls className="w-full h-full aspect-[1/1] group-hover:z-40">
