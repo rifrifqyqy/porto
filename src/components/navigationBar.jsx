@@ -99,7 +99,7 @@ export default function NavigationBar({ aboutScroll }) {
         </ul>
         <MainButton
           onClick={aboutScroll}
-          className="border-b-4 border-l-2 border-r-4 border-t-2 border-gray-900 bg-[#F8CC76] bg-transparent px-6 text-[20px] text-black active:scale-95 active:bg-[#ffc043] max-md:hidden"
+          className="border-b-4 border-l-2 border-r-4 border-t-2 border-gray-900 bg-[#F8CC76] px-6 text-[20px] text-black active:scale-95 active:bg-[#ffc043] max-md:hidden"
         >
           Recruit
         </MainButton>
