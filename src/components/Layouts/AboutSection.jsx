@@ -141,7 +141,7 @@ function AboutSection(props, ref) {
             </motion.div>
 
             <div className="w-[350px] max-md:w-[300px] mx-auto mt-16 max-md:mt-4">
-              <Marquee loop={0} speed={50} play className="overflow-y-visible py-6" autoFill>
+              <Marquee loop={0} speed={50} play className="overflow-y-visible py-4 border-t-2 border-b-2 border-amber-500" autoFill>
                 <div className="flex gap-4 Marquee mr-4">
                   <img src="images/skill/framermotion.svg" alt="" />
                   <img src="images/skill/framer.svg" alt="" />
@@ -151,7 +151,7 @@ function AboutSection(props, ref) {
                   <img src="images/skill/clipstudio.svg" alt="" />
                 </div>
               </Marquee>
-              <Marquee loop={0} speed={50} play className="py-6" autoFill>
+              <Marquee loop={0} speed={50} play className="mt-8 py-4 border-t-2 border-b-2 border-amber-500" autoFill>
                 <div className="flex gap-4 mr-4 Marquee">
                   <img src="images/skill/react.svg" alt="" />
                   <img src="images/skill/vitejs.svg" alt="" />

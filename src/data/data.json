@@ -3,15 +3,16 @@
     "id": 1,
     "title": "SMAKO LANDING PAGE",
     "date": "22 Februari 2024",
-    "imageUrl": "/images/porto1.png",
+    "imageUrl": "/images/porto/instasmako.jpg",
     "description": "SMAKO is an application owned by a single company or wholesale groceries store. This application serves customers who wish to purchase groceries in large quantities. The SMAKO app is an ideal solution for grocery store owners looking to expand their business and for customers seeking a steady supply of groceries in bulk.",
     "label": "Website",
     "webUrl": "https://rifrifqyqy.github.io/Smako-wholesale/",
     "tabs": [
-      { "id": 0, "image": "/images/porto1.png" },
-      { "id": 1, "image": "/images/porto/smakothumb.jpg" },
-      { "id": 2, "image": "/images/porto/smako1.png" },
-      { "id": 3, "image": "/images/porto/smako2.png" }
+      { "id": 1, "image": "/images/porto/instasmako.jpg" },
+      { "id": 2, "image": "/images/porto1.png" },
+      { "id": 3, "image": "/images/porto/smakothumb.jpg" },
+      { "id": 4, "image": "/images/porto/smako1.png" },
+      { "id": 5, "image": "/images/porto/smako2.png" }
     ],
     "tools": [
       { "id": 1, "toolthumb": "/images/skill/css.svg" },
@@ -23,12 +24,12 @@
     "id": 2,
     "title": "SUBWAY web revamp",
     "date": "09 June 2024",
-    "imageUrl": "/images/porto/subway1.png",
+    "imageUrl": "/images/porto/instasubway.jpg",
     "description": "Subway adalah resto food and beverages yang menyediakan makanan seperti sandwich, burger dan olahan roti dan beef daging.",
     "label": "Website",
     "webUrl": "https://nuxtsubway.vercel.app",
     "tabs": [
-      { "id": 0, "image": "/images/porto/subway1.png" },
+      { "id": 0, "image": "/images/porto/instasubway.jpg" },
       { "id": 1, "image": "/images/porto/subway2.png" },
       { "id": 2, "image": "/images/porto/subway3.png" },
       { "id": 3, "image": "/images/porto/subway4.png" }
@@ -46,16 +47,17 @@
     "id": 3,
     "title": "tbn indonesia web revamp",
     "date": "20 Mei 2024",
-    "imageUrl": "/images/portoTBN.png",
+    "imageUrl": "/images/porto/instatbn.jpg",
     "description": "TBNIndonesia merupakan perusahaan yang mengadakan event workshop berkaitan dengan bisnis.",
     "label": "Website",
     "webUrl": "https://tbn-indonesia.vercel.app/",
     "tabs": [
-      { "id": 0, "image": "/images/portoTBN.png" },
-      { "id": 1, "image": "/images/porto/tbn3.png" },
-      { "id": 2, "image": "/images/porto/tbn2.png" },
-      { "id": 3, "image": "/images/porto/tbn4.png" },
-      { "id": 3, "image": "/images/porto/tbn5.png" }
+      { "id": 1, "image": "/images/porto/instatbn.jpg" },
+      { "id": 2, "image": "/images/portoTBN.png" },
+      { "id": 3, "image": "/images/porto/tbn3.png" },
+      { "id": 4, "image": "/images/porto/tbn2.png" },
+      { "id": 5, "image": "/images/porto/tbn4.png" },
+      { "id": 6, "image": "/images/porto/tbn5.png" }
     ],
     "tools": [
       { "id": 1, "toolthumb": "/images/skill/figma.svg" },

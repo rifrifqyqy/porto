@@ -18,7 +18,7 @@ export default function TabsProject({ tabData, handleTabClick, activeTab }) {
             />
           </AnimatePresence>
         </div>
-        <div className="flex gap-2 mt-4">
+        <div className="flex gap-2 mt-4 flex-wrap">
           {tabData.map((tab, index) => (
             <AnimatePresence key={tab.id}>
               <motion.div
