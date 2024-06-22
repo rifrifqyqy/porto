@@ -100,8 +100,8 @@ export default function HeroSection({ aboutScroll }) {
           {/* <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" /> */}
           <main className="flex justify-end py-12 max-sm:justify-center max-sm:py-4">
             <motion.section variants={imageAnimate} className="relative">
-              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:mr-0">
-                <div className="h-[300px] w-[250px] border-2 border-zinc-800">
+              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:pb-12 max-sm:mr-0">
+                <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
                     src="/images/furina.jpg"
                     alt=""
@@ -111,9 +111,9 @@ export default function HeroSection({ aboutScroll }) {
               </div>
               <motion.div
                 variants={polaroidRotate}
-                className="absolute bottom-[38px] -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16"
+                className="absolute bottom-[38px] -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12"
               >
-                <div className="h-[300px] w-[250px] border-2 border-zinc-800">
+                <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
                     src="/images/wolfkeum.jpg"
                     alt=""
