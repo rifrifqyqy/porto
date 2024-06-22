@@ -1,10 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
-import "../../index.css"
+import "../../index.css";
 export default function TabsProject({ tabData, handleTabClick, activeTab }) {
   return (
     <>
       <aside>
-        <div className="tabcontent border-retro h-[390px] max-md:h-[249px] aspect-video w-full max-md:w-full overflow-hidden bg-amber-400 ">
+        <div className="tabcontent border-retro aspect-video h-[390px] w-full overflow-hidden bg-amber-400 max-md:h-[249px] max-md:w-full">
           <div></div>
           <AnimatePresence mode="wait">
             <motion.img
@@ -15,18 +15,23 @@ export default function TabsProject({ tabData, handleTabClick, activeTab }) {
               transition={{ duration: 0.2 }}
               src={tabData[activeTab].image}
               alt=""
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
           </AnimatePresence>
         </div>
-        <div className="w-full overflow-x-scroll h-fit no-scrollbar">
-          <div className="flex gap-2 mt-4 w-max ml-1">
+        <div className="no-scrollbar h-fit w-full overflow-x-scroll">
+          <div className="ml-1 mt-4 flex w-max gap-2">
             {tabData.map((tab, index) => (
               <AnimatePresence key={tab.id}>
                 <motion.div
-                  className={`tabheader bg-[#FFBA34] w-16 max-md:w-14 h-16 max-md:h-14 transition-all duration-300 cursor-pointer border-zinc-800 ${activeTab === index ? " border-retro-org  scale-110 -translate-y-2" : "border-retro-sm"}`}
-                  onClick={() => handleTabClick(index)}>
-                  <img src={tab.image} alt={`Thumbnail ${index}`} className={`w-full h-full object-cover transition-all duration-400 hover:opacity-100  ${activeTab === index ? "opacity-100  " : "opacity-60"}`} />
+                  className={`tabheader h-16 w-16 cursor-pointer border-zinc-800 bg-[#FFBA34] transition-all duration-300 max-md:h-14 max-md:w-14 ${activeTab === index ? "border-retro-org -translate-y-2 scale-110" : "border-retro-sm"}`}
+                  onClick={() => handleTabClick(index)}
+                >
+                  <img
+                    src={tab.image}
+                    alt={`Thumbnail ${index}`}
+                    className={`duration-400 h-full w-full object-cover transition-all hover:opacity-100 ${activeTab === index ? "opacity-100" : "opacity-60"}`}
+                  />
                 </motion.div>
               </AnimatePresence>
             ))}

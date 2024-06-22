@@ -118,31 +118,71 @@ function AboutSection(props, ref) {
   return (
     <>
       <main className="relative" id="about" ref={ref}>
-        <div className="grid grid-cols-2 max-md:grid-cols-1 mx-32 max-md:mx-4 mt-24 max-md:mt-8 ">
+        <div className="mx-32 mt-24 grid grid-cols-2 max-md:mx-4 max-md:mt-8 max-md:grid-cols-1">
           <section className="my-auto max-md:order-2">
-            <motion.div variants={""} initial="initial" whileInView="view" className="flex flex-col max-w-fit items-end max-md:mt-4">
+            <motion.div
+              variants={""}
+              initial="initial"
+              whileInView="view"
+              className="flex max-w-fit flex-col items-end max-md:mt-4"
+            >
               <motion.div className="relative">
-                <motion.h1 variants={textShow} className="font-statliches text-[48px] max-md:text-[24px] leading-tight">
+                <motion.h1
+                  variants={textShow}
+                  className="font-statliches text-[48px] leading-tight max-md:text-[24px]"
+                >
                   RIFQY HAMDANI
                 </motion.h1>
-                <motion.div variants={coverAnimate} className="w-[120%] h-[90px] max-md:h-[32px] bg-sky-700 absolute z-10 top-0 left-0"></motion.div>
+                <motion.div
+                  variants={coverAnimate}
+                  className="absolute left-0 top-0 z-10 h-[90px] w-[120%] bg-sky-700 max-md:h-[32px]"
+                ></motion.div>
               </motion.div>
-              <motion.h1 variants={textShow} className="font-statliches text-[20px] max-md:text-[14px] text-white bg-sky-700 max-w-fit px-6 max-md:px-2 mt-[-8px] max-md:mt-[-4px]">
+              <motion.h1
+                variants={textShow}
+                className="mt-[-8px] max-w-fit bg-sky-700 px-6 font-statliches text-[20px] text-white max-md:mt-[-4px] max-md:px-2 max-md:text-[14px]"
+              >
                 21 Years old
               </motion.h1>
             </motion.div>
-            <motion.div variants={""} initial="initial" whileInView="view" className="relative">
-              <motion.p variants={textShow} className="mt-8 max-md:mt-4 w-[570px] max-md:w-fit text-slate-500 max-md:text-[14px]">
-                "Passionate about art and design, Rifqy Hamdani is an enthusiastic college student pursuing his dreams in the world of design. With a fondness for UI design and a keen interest in UX research, Rifqy brings dedication and
-                creativity to every project he faces. With arts thinking and logic as his foundation, he delves into the complexities of frontend web design diligently, crafting captivating user experiences and stunning aesthetics.
+            <motion.div
+              variants={""}
+              initial="initial"
+              whileInView="view"
+              className="relative"
+            >
+              <motion.p
+                variants={textShow}
+                className="mt-8 w-[570px] text-slate-500 max-md:mt-4 max-md:w-fit max-md:text-[14px]"
+              >
+                "Passionate about art and design, Rifqy Hamdani is an
+                enthusiastic college student pursuing his dreams in the world of
+                design. With a fondness for UI design and a keen interest in UX
+                research, Rifqy brings dedication and creativity to every
+                project he faces. With arts thinking and logic as his
+                foundation, he delves into the complexities of frontend web
+                design diligently, crafting captivating user experiences and
+                stunning aesthetics.
               </motion.p>
-              <motion.div variants={coverAnimate} className="bg-sky-700 h-full absolute top-0 left-0 z-10 max-md:hidden"></motion.div>
-              <motion.div variants={coverAnimateMobile} className="bg-sky-700 h-full absolute top-0 left-0 z-10 hidden max-md:block"></motion.div>
+              <motion.div
+                variants={coverAnimate}
+                className="absolute left-0 top-0 z-10 h-full bg-sky-700 max-md:hidden"
+              ></motion.div>
+              <motion.div
+                variants={coverAnimateMobile}
+                className="absolute left-0 top-0 z-10 hidden h-full bg-sky-700 max-md:block"
+              ></motion.div>
             </motion.div>
 
-            <div className="w-[350px] max-md:w-[300px] mx-auto mt-16 max-md:mt-4">
-              <Marquee loop={0} speed={50} play className="overflow-y-visible py-4 border-t-2 border-b-2 border-amber-500" autoFill>
-                <div className="flex gap-4 Marquee mr-4">
+            <div className="mx-auto mt-16 w-[350px] max-md:mt-4 max-md:w-[300px]">
+              <Marquee
+                loop={0}
+                speed={50}
+                play
+                className="overflow-y-visible border-b-2 border-t-2 border-amber-500 py-4"
+                autoFill
+              >
+                <div className="Marquee mr-4 flex gap-4">
                   <img src="images/skill/framermotion.svg" alt="" />
                   <img src="images/skill/framer.svg" alt="" />
                   <img src="images/skill/figma.svg" alt="" />
@@ -151,8 +191,14 @@ function AboutSection(props, ref) {
                   <img src="images/skill/clipstudio.svg" alt="" />
                 </div>
               </Marquee>
-              <Marquee loop={0} speed={50} play className="mt-8 py-4 border-t-2 border-b-2 border-amber-500" autoFill>
-                <div className="flex gap-4 mr-4 Marquee">
+              <Marquee
+                loop={0}
+                speed={50}
+                play
+                className="mt-8 border-b-2 border-t-2 border-amber-500 py-4"
+                autoFill
+              >
+                <div className="Marquee mr-4 flex gap-4">
                   <img src="images/skill/react.svg" alt="" />
                   <img src="images/skill/vitejs.svg" alt="" />
                   <img src="images/skill/shadcn.svg" alt="" />
@@ -171,25 +217,59 @@ function AboutSection(props, ref) {
               {/* marquee2 */}
             </div>
           </section>
-          <section className=" max-md:order-1">
+          <section className="max-md:order-1">
             <div className="relative">
-              <motion.div variants={imgAnimate} initial="initial" whileInView="view" onMouseEnter="" onMouseLeave="" className="ml-16 max-md:ml-0">
-                <motion.img onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} src={img} alt="" className="transition duration-500 max-md:h-[300px] max-md:mx-auto" />
-                <motion.img variants={russo} src="images/russo.svg" alt="" className="absolute bottom-0 -z-10 left-16 max-md:left-0 max-md:right-0 max-md:mx-auto max-md:h-[330px]" />
+              <motion.div
+                variants={imgAnimate}
+                initial="initial"
+                whileInView="view"
+                onMouseEnter=""
+                onMouseLeave=""
+                className="ml-16 max-md:ml-0"
+              >
+                <motion.img
+                  onMouseEnter={handleHover}
+                  onMouseLeave={handleMouseLeave}
+                  src={img}
+                  alt=""
+                  className="transition duration-500 max-md:mx-auto max-md:h-[300px]"
+                />
+                <motion.img
+                  variants={russo}
+                  src="images/russo.svg"
+                  alt=""
+                  className="absolute bottom-0 left-16 -z-10 max-md:left-0 max-md:right-0 max-md:mx-auto max-md:h-[330px]"
+                />
               </motion.div>
 
-              <motion.div variants={boxAnimate} initial="initial" whileInView="view" className="w-[300px] max-md:w-[150px] h-[120px] max-md:h-[60px] bg-sky-100 absolute top-[50%] right-0 flex overflow-y-hidden">
-                <p className="font-statliches text-white bottom-0 right-0 text-2xl max-md:text-[14px] max-md:h-[16px] max-md:w-[80px] text-nowrap bg-sky-700 px-6 max-md:px-1 leading-[120%] absolute z-10">RIFQY HAMDANI</p>
-                <div className=" h-[100%] w-[100%] relative overflow-hidden">
-                  <motion.img variants={boxImg} src="images/seongcrop.svg" alt="" className="absolute top-0 left-[-24px] max-md:left-[-8px] scale-[180%]" />
+              <motion.div
+                variants={boxAnimate}
+                initial="initial"
+                whileInView="view"
+                className="absolute right-0 top-[50%] flex h-[120px] w-[300px] overflow-y-hidden bg-sky-100 max-md:h-[60px] max-md:w-[150px]"
+              >
+                <p className="absolute bottom-0 right-0 z-10 text-nowrap bg-sky-700 px-6 font-statliches text-2xl leading-[120%] text-white max-md:h-[16px] max-md:w-[80px] max-md:px-1 max-md:text-[14px]">
+                  RIFQY HAMDANI
+                </p>
+                <div className="relative h-[100%] w-[100%] overflow-hidden">
+                  <motion.img
+                    variants={boxImg}
+                    src="images/seongcrop.svg"
+                    alt=""
+                    className="absolute left-[-24px] top-0 scale-[180%] max-md:left-[-8px]"
+                  />
                 </div>
               </motion.div>
             </div>
           </section>
         </div>
-        <aside className="absolute top-[40%] max-md:top-[-100px] left-0 -z-20">
+        <aside className="absolute left-0 top-[40%] -z-20 max-md:top-[-100px]">
           <img src="images/dotpattern.png" alt="" />
-          <img src="images/text-vertical.png" alt="" className="ml-16 -mt-24 max-md:ml-4" />
+          <img
+            src="images/text-vertical.png"
+            alt=""
+            className="-mt-24 ml-16 max-md:ml-4"
+          />
         </aside>
       </main>
     </>

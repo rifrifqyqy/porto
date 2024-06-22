@@ -1,5 +1,10 @@
 import MainButton from "./Elements/Button/MainButton";
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function NavigationBar({ aboutScroll }) {
@@ -57,7 +62,7 @@ export default function NavigationBar({ aboutScroll }) {
 
   return (
     <>
-      <div className="w-full bg-gray-200 flex justify-center py-1 shadow-inset1">
+      <div className="flex w-full justify-center bg-gray-200 py-1 shadow-inset1">
         <p className="text-amber-500">This web is under development</p>
       </div>
 
@@ -71,24 +76,31 @@ export default function NavigationBar({ aboutScroll }) {
           duration: 0.5,
           ease: "easeInOut",
         }}
-        className="flex sticky top-0 z-40 bg-white/80 backdrop-blur justify-between px-12 max-md:px-4 py-4 W-full border-b-[1px] items-center border-slate-800 "
+        className="W-full sticky top-0 z-40 flex items-center justify-between border-b-[1px] border-slate-800 bg-white/80 px-12 py-4 backdrop-blur max-md:px-4"
       >
         <h1 className="font-statliches text-xl">Rifqy Hamdani</h1>
         <ul className="flex gap-10 max-md:hidden">
           {menuNav.map((menu) => (
-            <li className="flex flex-col h-[26px] overflow-y-hidden">
-              <motion.div className="flex flex-col" initital={{ y: 0 }} whileHover={{ y: -24 }}>
-                <a href="" className=" uppercase">
+            <li className="flex h-[26px] flex-col overflow-y-hidden">
+              <motion.div
+                className="flex flex-col"
+                initital={{ y: 0 }}
+                whileHover={{ y: -24 }}
+              >
+                <a href="" className="uppercase">
                   {menu.menu}
                 </a>
-                <a href={menu.href} className="text-sky-700 uppercase">
+                <a href={menu.href} className="uppercase text-sky-700">
                   {menu.menu}
                 </a>
               </motion.div>
             </li>
           ))}
         </ul>
-        <MainButton onClick={aboutScroll} className="px-6 text-[20px] bg-transparent border-t-2 border-l-2 border-b-4 border-r-4 border-gray-900 text-black bg-[#F8CC76] max-md:hidden active:scale-95 active:bg-[#ffc043]">
+        <MainButton
+          onClick={aboutScroll}
+          className="border-b-4 border-l-2 border-r-4 border-t-2 border-gray-900 bg-[#F8CC76] bg-transparent px-6 text-[20px] text-black active:scale-95 active:bg-[#ffc043] max-md:hidden"
+        >
           Recruit
         </MainButton>
         <AnimatePresence>
@@ -96,22 +108,37 @@ export default function NavigationBar({ aboutScroll }) {
             initial={{ scale: 1, opacity: 1 }}
             whileTap={{ scale: 0.8, rotate: "180deg", opacity: 0 }}
             onClick={handleNavMobile}
-            className={`hidden ${isOpen ? "bg-red-400" : "bg-[#F8CC76]"}  max-md:block border-[2px] border-gray-800`}
+            className={`hidden ${isOpen ? "bg-red-400" : "bg-[#F8CC76]"} border-[2px] border-gray-800 max-md:block`}
           >
-            <img src={isOpen ? "images/close.svg" : "images/Hamburger.svg"} alt="" />
+            <img
+              src={isOpen ? "images/close.svg" : "images/Hamburger.svg"}
+              alt=""
+            />
           </motion.button>
         </AnimatePresence>
       </motion.nav>
       {isOpen && (
-        <nav className="w-full h-[100vh] fixed top-[65px] bg-gray-400 bg-opacity-55 z-10 backdrop-blur-sm">
-          <ul className="flex flex-col gap-4 bg-white m-4 px-4 pt-4 h-[650px] w-[60%] border-retro">
+        <nav className="fixed top-[65px] z-10 h-[100vh] w-full bg-gray-400 bg-opacity-55 backdrop-blur-sm">
+          <ul className="border-retro m-4 flex h-[650px] w-[60%] flex-col gap-4 bg-white px-4 pt-4">
             {menuNav.map((menu) => (
-              <li className="flex flex-col h-[26px] overflow-y-hidden">
-                <motion.div className="flex flex-col" initital={{ y: 0 }} whileHover={{ y: -24 }}>
-                  <a href={menu.href} onClick={handleMenuMobile} className=" uppercase">
+              <li className="flex h-[26px] flex-col overflow-y-hidden">
+                <motion.div
+                  className="flex flex-col"
+                  initital={{ y: 0 }}
+                  whileHover={{ y: -24 }}
+                >
+                  <a
+                    href={menu.href}
+                    onClick={handleMenuMobile}
+                    className="uppercase"
+                  >
                     {menu.menu}
                   </a>
-                  <a href={menu.href} onClick={handleMenuMobile} className="text-sky-700 uppercase">
+                  <a
+                    href={menu.href}
+                    onClick={handleMenuMobile}
+                    className="uppercase text-sky-700"
+                  >
                     {menu.menu}
                   </a>
                 </motion.div>

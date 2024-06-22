@@ -62,9 +62,15 @@ export default function HomePage() {
     <>
       <div className="">
         {/* bg black menjadi tatakan homepage yang di scale 0.9 */}
-        <div className="w-[100vw] h-[100vh] fixed z-[-9999] top-0 left-0 bg-black"></div>
+        <div className="fixed left-0 top-0 z-[-9999] h-[100vh] w-[100vw] bg-black"></div>
         {/* bg putih diseret keatas */}
-        <motion.div variants={wrapAnimate} initial="hidden" animate="visible " exit="exit" className="w-[100vw] h-[100vh] bg-white/100 fixed z-50 top-0 left-0" />
+        <motion.div
+          variants={wrapAnimate}
+          initial="hidden"
+          animate="visible "
+          exit="exit"
+          className="fixed left-0 top-0 z-50 h-[100vh] w-[100vw] bg-white/100"
+        />
         <motion.div variants={containVariants} exit="exit">
           <NavigationBar />
           <HeroSection aboutScroll={aboutScroll} />

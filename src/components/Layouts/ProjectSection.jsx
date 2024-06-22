@@ -28,25 +28,45 @@ export default function ProjectSection() {
 
   return (
     <>
-      <motion.div variants={containerMotion} initial="initial" whileHover="whileHover" whileInView="view" className="relative">
-        <main className="2xl:mx-32 max-md:items-center max-sm:mx-4 mt-24 max-md:mt-8 flex flex-col gap-8 " id="porto">
-          <header className="grid items-end content-between grid-cols-3 max-md:grid-cols-1 xl:px-20 2xl:px-0">
-            <motion.article variants={headerMotion} className=" col-span-2 max-md:col-span-1">
-              <h1 className="font-statliches text-[48px] max-md:text-[24px] ">Projects Gallery</h1>
+      <motion.div
+        variants={containerMotion}
+        initial="initial"
+        whileHover="whileHover"
+        whileInView="view"
+        className="relative"
+      >
+        <main
+          className="mt-24 flex flex-col gap-8 max-md:mt-8 max-md:items-center max-sm:mx-4 2xl:mx-32"
+          id="porto"
+        >
+          <header className="grid grid-cols-3 content-between items-end max-md:grid-cols-1 xl:px-20 2xl:px-0">
+            <motion.article
+              variants={headerMotion}
+              className="col-span-2 max-md:col-span-1"
+            >
+              <h1 className="font-statliches text-[48px] max-md:text-[24px]">
+                Projects Gallery
+              </h1>
               <p className="text-gray-500 max-md:text-[14px]">
-                Selamat datang di GALLERY Imajinasi saya! Di sini, saya akan menampilkan hasil kreativitas saya. Mulai dari karya pixel hingga website dengan barisan code, yang menunjukkan kreativitas saya dalam desain UI/UX dan
-                pengembangan web.
+                Selamat datang di GALLERY Imajinasi saya! Di sini, saya akan
+                menampilkan hasil kreativitas saya. Mulai dari karya pixel
+                hingga website dengan barisan code, yang menunjukkan kreativitas
+                saya dalam desain UI/UX dan pengembangan web.
               </p>
             </motion.article>
           </header>
-          <section className="flex max-md:flex-col gap-4 justify-center">
+          <section className="flex justify-center gap-4 max-md:flex-col">
             {/* portolayout */}
             <PortoCardLayout />
           </section>
         </main>
-        <aside className="absolute top-[40%] left-0 -z-20">
+        <aside className="absolute left-0 top-[40%] -z-20">
           <img src="images/dotpattern.png" alt="" />
-          <img src="images/text-vertical2.png" alt="" className="ml-16 -mt-24" />
+          <img
+            src="images/text-vertical2.png"
+            alt=""
+            className="-mt-24 ml-16"
+          />
         </aside>
       </motion.div>
     </>

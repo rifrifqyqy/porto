@@ -27,16 +27,28 @@ export default function TestingPage() {
         <aside className="sidebar">
           <h1 className="w-fit">Menu</h1>
           <ul className="menu-wrapper">
-            <li className={`menu ${activeContent === "Dashboard" ? "active" : ""}`} onClick={() => setActiveContent("Dashboard")}>
+            <li
+              className={`menu ${activeContent === "Dashboard" ? "active" : ""}`}
+              onClick={() => setActiveContent("Dashboard")}
+            >
               <DashboardIcon className="icon" />
               <p>Dashboard</p>
             </li>
-            <li className={`menu ${activeContent === "Shipment" ? "active" : ""}`} onClick={() => setActiveContent("Shipment")}>
-              <ShipmentIcon className="icon" isActive={activeContent === "Shipment"} />
+            <li
+              className={`menu ${activeContent === "Shipment" ? "active" : ""}`}
+              onClick={() => setActiveContent("Shipment")}
+            >
+              <ShipmentIcon
+                className="icon"
+                isActive={activeContent === "Shipment"}
+              />
               <p>Shipment</p>
             </li>
-            <li className={`menu ${activeContent === "Support" ? "active" : ""}`} onClick={() => setActiveContent("Support")}>
-              <DashboardIcon/>
+            <li
+              className={`menu ${activeContent === "Support" ? "active" : ""}`}
+              onClick={() => setActiveContent("Support")}
+            >
+              <DashboardIcon />
               <p>Help & Support</p>
             </li>
           </ul>

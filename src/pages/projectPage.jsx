@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../index.css";
 import NavigationPage from "@/components/navigationPage";
-import PortoCardLayout, { PortoDetailsLayout } from "@/components/Layouts/PortoDetailsLayout/PortoDetailsLayout";
+import PortoCardLayout, {
+  PortoDetailsLayout,
+} from "@/components/Layouts/PortoDetailsLayout/PortoDetailsLayout";
 import FooterSection from "@/components/Layouts/FooterSection";
 import TabsProject from "@/components/Fragments/TabsProjectDetails";
 import ArticleProject from "@/components/Fragments/ArticleDetailsHeader";
@@ -49,19 +51,31 @@ export default function ProjectPage() {
   console.log(toolIcon);
   return (
     <>
-      <motion.div variants={containVariants} initial="hidden" animate="visible" exit="exit" className="w-full h-full -z-50 opacity-15">
+      <motion.div
+        variants={containVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="-z-50 h-full w-full opacity-15"
+      >
         <NavigationPage projectTitle={portoData.title} to="/" />
-        <main className="mx-32 max-md:mx-4 mt-16 max-md:mt-4 ">
-          <section className="grid grid-cols-2 max-md:grid-cols-1 gap-16 max-sm:gap-0  divide-x max-md:divide-x-0 max-md:divide-y divide-zinc-800">
-            <TabsProject tabData={tabData} handleTabClick={handleTabClick} activeTab={activeTab} />
+        <main className="mx-32 mt-16 max-md:mx-4 max-md:mt-4">
+          <section className="grid grid-cols-2 gap-16 divide-x divide-zinc-800 max-md:grid-cols-1 max-md:divide-x-0 max-md:divide-y max-sm:gap-0">
+            <TabsProject
+              tabData={tabData}
+              handleTabClick={handleTabClick}
+              activeTab={activeTab}
+            />
             <ArticleProject portoData={portoData} toolIcon={toolIcon} />
           </section>
         </main>
 
         {/* section card recomend */}
-        <section className="mx-32 max-md:mx-4 mt-24 max-md:mt-4 flex flex-col gap-8 max-md:gap-4 items-center border-t max-md:border-0 border-zinc-900 pt-16 max-md:pt-4">
-          <h1 className="text-4xl font-statliches max-md:text-2xl">you may also like</h1>
-          <div className="flex max-md:flex-col gap-4">
+        <section className="mx-32 mt-24 flex flex-col items-center gap-8 border-t border-zinc-900 pt-16 max-md:mx-4 max-md:mt-4 max-md:gap-4 max-md:border-0 max-md:pt-4">
+          <h1 className="font-statliches text-4xl max-md:text-2xl">
+            you may also like
+          </h1>
+          <div className="flex gap-4 max-md:flex-col">
             {/* portolayout */}
             <PortoCardLayout />
           </div>

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import { delay, motion, stagger } from "framer-motion";
 import MainButton from "../Elements/Button/MainButton";
 export default function HeroSection({ aboutScroll }) {
   // animate logic
@@ -26,6 +26,7 @@ export default function HeroSection({ aboutScroll }) {
       y: 0,
       transition: {
         duration: 1,
+        when: "beforeChildren",
       },
     },
   };
@@ -66,50 +67,127 @@ export default function HeroSection({ aboutScroll }) {
       },
     },
   };
+  const polaroidRotate = {
+    initial: {
+      rotate: 0,
+      left: "0",
+      bottom: "0",
+    },
+    view: {
+      rotate: "-15deg",
+      transition: {
+        duration: 0.5,
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
   //   animate logic end
 
   return (
     <>
-      <motion.section variants={homeAnimate} ref={constraintsRef} whileInView="view" initial="initial" animate="animate" className=" relative overflow-hidden max-md:py-2" id="home">
-        <div className="grid grid-cols-2 max-md:grid-cols-1 max-md:mx-4">
-          <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" />
+      <motion.section
+        variants={homeAnimate}
+        ref={constraintsRef}
+        whileInView="view"
+        initial="initial"
+        animate="animate"
+        className="relative overflow-hidden max-md:py-2"
+        id="home"
+      >
+        <div className="grid grid-cols-2 max-md:mx-4 max-md:grid-cols-1">
+          {/* <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" /> */}
+          <main className="flex justify-end py-12 max-sm:justify-center max-sm:py-4">
+            <motion.section variants={imageAnimate} className="relative">
+              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:mr-0">
+                <div className="h-[300px] w-[250px] border-2 border-zinc-800">
+                  <img
+                    src="/images/furina.jpg"
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              <motion.div
+                variants={polaroidRotate}
+                className="absolute bottom-[38px] -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16"
+              >
+                <div className="h-[300px] w-[250px] border-2 border-zinc-800">
+                  <img
+                    src="/images/wolfkeum.jpg"
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                  s
+                </div>
+              </motion.div>
+            </motion.section>
+          </main>
           <motion.div variants={titleAnimate} className="my-auto">
             <p onClick={aboutScroll} className="font-statliches">
               welcome to my site
             </p>
-            <h1 className="text-[180px] max-md:text-[52px] relative leading-[100%] font-valorant tracking-[20px] -ml-2 max-md:ml-0">
-              <span className="text-sky-700">L</span>I<span className="text-sky-700">L</span>UO
-              <motion.div variants={wrapAnimate} className="h-[145px] max-md:h-[50px] mr-40 max-md:mr-0 absolute top-0 right-0 max-md:left-0 bg-sky-700 z-20 max-md:hidden"></motion.div>
-              <motion.div variants={wrapAnimateMobile} className="h-[45px] absolute top-0 right-0 max-md:left-0 bg-sky-700 z-20 hidden max-md:block"></motion.div>
+            <h1 className="relative -ml-2 font-valorant text-[180px] leading-[100%] tracking-[20px] max-md:ml-0 max-md:text-[52px]">
+              <span className="text-sky-700">L</span>I
+              <span className="text-sky-700">L</span>UO
+              <motion.div
+                variants={wrapAnimate}
+                className="absolute right-0 top-0 z-20 mr-40 h-[145px] bg-sky-700 max-md:left-0 max-md:mr-0 max-md:hidden max-md:h-[50px]"
+              ></motion.div>
+              <motion.div
+                variants={wrapAnimateMobile}
+                className="absolute right-0 top-0 z-20 hidden h-[45px] bg-sky-700 max-md:left-0 max-md:block"
+              ></motion.div>
             </h1>
             <div className="relative">
-              <p className="font-statliches mt-[-24px] max-md:mt-0 text-2xl max-md:text-lg max-md:leading-tight">"The man who failed to enter the Faculty of Fine Arts and Design."</p>
-              <motion.div variants={wrapAnimate} className="h-[32px] mr-40 absolute top-0 right-0 bg-sky-700 z-20 max-md:hidden"></motion.div>
-              <motion.div variants={wrapAnimateMobile} className="h-[45px] absolute top-0 left-0 bg-sky-700 z-20 max-md:block hidden"></motion.div>
+              <p className="mt-[-24px] font-statliches text-2xl max-md:mt-0 max-md:text-lg max-md:leading-tight">
+                "The man who failed to enter the Faculty of Fine Arts and
+                Design."
+              </p>
+              <motion.div
+                variants={wrapAnimate}
+                className="absolute right-0 top-0 z-20 mr-40 h-[32px] bg-sky-700 max-md:hidden"
+              ></motion.div>
+              <motion.div
+                variants={wrapAnimateMobile}
+                className="absolute left-0 top-0 z-20 hidden h-[45px] bg-sky-700 max-md:block"
+              ></motion.div>
             </div>
 
             <div className="mt-4 max-md:mt-2">
-              <MainButton onClick={aboutScroll} className="px-6 text-[20px] border-t-2 border-l-2 border-b-4 border-r-4 border-gray-900 text-black bg-[#F8CC76] active:bg-[#ffc043] max-md:text-[14px]">
+              <MainButton
+                onClick={aboutScroll}
+                className="border-b-4 border-l-2 border-r-4 border-t-2 border-gray-900 bg-[#F8CC76] px-6 text-[20px] text-black active:bg-[#ffc043] max-md:text-[14px]"
+              >
                 Start Journey
               </MainButton>
             </div>
           </motion.div>
         </div>
-        <div className="w-[100%] max-md:w-[600px] h-12 border-[1px] border-gray-800 absolute top-96 max-md:top-40 left-0 max-md:-left-20 rotate-45 -z-10">
+        <div className="absolute left-0 top-96 -z-10 h-12 w-[100%] rotate-45 border-[1px] border-gray-800 max-md:-left-20 max-md:top-40 max-md:w-[600px]">
           <marquee className="pt-2 opacity-30" scrollamount="20" loop="-1">
             Rifqy Hamdani. 21 years old Enthusiast in design
-            <span className="mx-96">Rifqy Hamdani. 21 years old Enthusiast in design </span>
-            <span className="mx-96">Rifqy Hamdani. 21 years old Enthusiast in design </span>
-            <span className="mx-96">Rifqy Hamdani. 21 years old Enthusiast in design </span>
-            <span className="mx-96">Rifqy Hamdani. 21 years old Enthusiast in design </span>
+            <span className="mx-96">
+              Rifqy Hamdani. 21 years old Enthusiast in design{" "}
+            </span>
+            <span className="mx-96">
+              Rifqy Hamdani. 21 years old Enthusiast in design{" "}
+            </span>
+            <span className="mx-96">
+              Rifqy Hamdani. 21 years old Enthusiast in design{" "}
+            </span>
+            <span className="mx-96">
+              Rifqy Hamdani. 21 years old Enthusiast in design{" "}
+            </span>
           </marquee>
         </div>
-        <div className="w-[2200px] max-md:w-[600px] flex justify-center h-12 bg-gray-800 opacity-30 -rotate-[15deg] max-md:rotate-[-30deg] translate-x-28 absolute top-72 max-md:top-40 right-0 -z-10"></div>
+        <div className="absolute right-0 top-72 -z-10 flex h-12 w-[2200px] translate-x-28 -rotate-[15deg] justify-center bg-gray-800 opacity-30 max-md:top-40 max-md:w-[600px] max-md:rotate-[-30deg]"></div>
 
-        <div className="w-[100vw] overflow-x-hidden text-[280px] text-white -ml-24  translate-x-28 opacity-60 absolute top-[30%] -z-20">
+        <div className="absolute top-[30%] -z-20 -ml-24 w-[100vw] translate-x-28 overflow-x-hidden text-[280px] text-white opacity-60">
           <img src="images/EGAMEDIEV.svg" alt="" />
         </div>
-        <div className="w-[100%] h-[100%] fixed z-[-99] top-0 left-0 bg-white"></div>
+        <div className="fixed left-0 top-0 z-[-99] h-[100%] w-[100%] bg-white"></div>
       </motion.section>
     </>
   );
