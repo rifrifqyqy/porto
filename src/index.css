@@ -188,3 +188,7 @@ html {
     margin-left: -32px;
   }
 }
+
+.no-scrollbar {
+  scrollbar-width: none;
+}

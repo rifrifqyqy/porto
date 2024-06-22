@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import "../../index.css"
 export default function TabsProject({ tabData, handleTabClick, activeTab }) {
   return (
     <>
@@ -18,7 +19,7 @@ export default function TabsProject({ tabData, handleTabClick, activeTab }) {
             />
           </AnimatePresence>
         </div>
-        <div className="w-full max-sm:overflow-x-scroll h-fit">
+        <div className="w-full overflow-x-scroll h-fit no-scrollbar">
           <div className="flex gap-2 mt-4 w-max">
             {tabData.map((tab, index) => (
               <AnimatePresence key={tab.id}>
