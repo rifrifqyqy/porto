@@ -118,7 +118,7 @@ export default function NavigationBar({ aboutScroll }) {
         </AnimatePresence>
       </motion.nav>
       {isOpen && (
-        <nav className="fixed top-[65px] z-10 h-[100vh] w-full bg-gray-400 bg-opacity-55 backdrop-blur-sm">
+        <nav className="fixed top-[65px] z-20 h-[100vh] w-full bg-gray-400 bg-opacity-55 backdrop-blur-sm">
           <ul className="border-retro m-4 flex h-[650px] w-[60%] flex-col gap-4 bg-white px-4 pt-4">
             {menuNav.map((menu) => (
               <li className="flex h-[26px] flex-col overflow-y-hidden">

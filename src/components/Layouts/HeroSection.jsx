@@ -30,8 +30,8 @@ export default function HeroSection({ aboutScroll }) {
       },
     },
     tap: {
-      rotate: "15deg"
-    }
+      rotate: "15deg",
+    },
   };
   const titleAnimate = {
     initial: {
@@ -89,6 +89,25 @@ export default function HeroSection({ aboutScroll }) {
       rotate: "-35deg",
     },
   };
+  const polaroidRotate2 = {
+    initial: {
+      rotate: 0,
+      left: "0",
+      bottom: "0",
+    },
+    view: {
+      rotate: "-30deg",
+      transition: {
+        duration: 0.5,
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+    tap: {
+      rotate: "-75deg",
+    },
+  };
   //   animate logic end
 
   return (
@@ -106,7 +125,10 @@ export default function HeroSection({ aboutScroll }) {
         <div className="grid grid-cols-2 max-md:mx-4 max-md:grid-cols-1">
           {/* <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" /> */}
           <main className="flex justify-end py-12 max-sm:justify-center max-sm:py-4">
-            <motion.section variants={imageAnimate} className="relative origin-bottom-left z-10">
+            <motion.section
+              variants={imageAnimate}
+              className="relative z-10 origin-bottom-left"
+            >
               <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:mr-0 max-sm:pb-12">
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
@@ -123,6 +145,18 @@ export default function HeroSection({ aboutScroll }) {
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
                     src="/images/wolfkeum.jpg"
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </motion.div>
+              <motion.div
+                variants={polaroidRotate2}
+                className="absolute -z-[3] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12"
+              >
+                <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
+                  <img
+                    src="/images/furina2.jpg"
                     alt=""
                     className="h-full w-full object-cover"
                   />
