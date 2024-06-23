@@ -29,6 +29,9 @@ export default function HeroSection({ aboutScroll }) {
         when: "beforeChildren",
       },
     },
+    tap: {
+      rotate: "15deg"
+    }
   };
   const titleAnimate = {
     initial: {
@@ -82,6 +85,9 @@ export default function HeroSection({ aboutScroll }) {
         damping: 10,
       },
     },
+    tap: {
+      rotate: "-35deg",
+    },
   };
   //   animate logic end
 
@@ -93,14 +99,15 @@ export default function HeroSection({ aboutScroll }) {
         whileInView="view"
         initial="initial"
         animate="animate"
+        whileTap="tap"
         className="relative overflow-hidden max-md:py-2"
         id="home"
       >
         <div className="grid grid-cols-2 max-md:mx-4 max-md:grid-cols-1">
           {/* <motion.img variants={imageAnimate} src="images/liluo.svg" alt="" className="w-[70%] mx-40 max-md:mx-4" /> */}
           <main className="flex justify-end py-12 max-sm:justify-center max-sm:py-4">
-            <motion.section variants={imageAnimate} className="relative">
-              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:pb-12 max-sm:mr-0">
+            <motion.section variants={imageAnimate} className="relative origin-bottom-left z-10">
+              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:mr-0 max-sm:pb-12">
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
                     src="/images/furina.jpg"
@@ -111,7 +118,7 @@ export default function HeroSection({ aboutScroll }) {
               </div>
               <motion.div
                 variants={polaroidRotate}
-                className="absolute bottom-[38px] -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12"
+                className="absolute -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12"
               >
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
@@ -119,7 +126,6 @@ export default function HeroSection({ aboutScroll }) {
                     alt=""
                     className="h-full w-full object-cover"
                   />
-                  s
                 </div>
               </motion.div>
             </motion.section>
