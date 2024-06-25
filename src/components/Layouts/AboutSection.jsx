@@ -207,6 +207,7 @@ function AboutSection(props, ref) {
                   <img src="images/skill/swiperjs.svg" alt="" />
                   <img src="images/skill/butstrep.svg" alt="" />
                   <img src="images/skill/nuxtui.svg" alt="" />
+                  <img src="images/skill/svelte.svg" alt="" />
                   <img src="images/skill/vue.svg" alt="" />
                   <img src="images/skill/nuxt.svg" alt="" />
                   <img src="images/skill/nextjs.svg" alt="" />

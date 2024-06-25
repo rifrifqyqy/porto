@@ -68,7 +68,7 @@ export default function PortoCardLayout() {
           </motion.div>
         );
       })}
-      <Link to="/projects" className="flex w-[220px] max-md:hidden">
+      <Link to="/gallery" className="flex w-[220px] max-md:hidden">
         <motion.div
           initial={{ x: "-100px", opacity: 0 }}
           whileInView={{

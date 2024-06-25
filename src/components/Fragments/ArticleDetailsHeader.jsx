@@ -29,7 +29,7 @@ export default function ArticleProject({ toolIcon, portoData }) {
             </div>
           </div>
 
-          <p className="text-gray-500 max-md:text-[14px]">
+          <p className="text-gray-500 max-md:text-[14px] line-clamp-4">
             {portoData.description}
           </p>
         </header>
