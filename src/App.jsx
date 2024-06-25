@@ -3,6 +3,7 @@ import ProjectPage from "./pages/projectPage";
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import TestingPage from "./pages/testingPage";
+import GalleryPorto from "./pages/galleryPorto";
 function App() {
   const location = useLocation();
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/projects/:id" element={<ProjectPage />} />
           <Route path="/project-details" element={<ProjectPage />} />
           <Route path="/testing" element={<TestingPage />} />
+          <Route path="/gallery" element={<GalleryPorto />} />
         </Routes>
       </AnimatePresence>
     </>

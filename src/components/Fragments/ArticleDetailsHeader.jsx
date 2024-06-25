@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import MainButton from "../Elements/Button/MainButton";
+import { twMerge } from "tailwind-merge";
 
 export default function ArticleProject({ toolIcon, portoData }) {
   return (
@@ -33,14 +34,27 @@ export default function ArticleProject({ toolIcon, portoData }) {
           </p>
         </header>
         <div className="flex flex-col gap-2">
-          <MainButton className="border-retro bg-transparent text-center text-[20px] text-sky-700 hover:bg-zinc-950 hover:text-white max-md:text-sm">
-            Lihat Figma
+          <MainButton
+            to={portoData.figmaUrl}
+            className={twMerge(
+              "border-b-4 border-l-2 border-r-4 border-t-2 text-center text-[20px] max-md:text-sm",
+              !portoData.figmaUrl
+                ? "cursor-default border-zinc-400 bg-zinc-300 text-zinc-400 hover:opacity-100"
+                : "border-zinc-900 bg-transparent text-sky-700 hover:bg-zinc-950 hover:text-white",
+            )}
+          >
+            {portoData.figmaUrl ? "Lihat Figma" : "Figma Tidak Tersedia"}
           </MainButton>
           <MainButton
             to={portoData.webUrl}
-            className="border-retro bg-sky-700 text-center text-[20px] text-white max-md:text-sm"
+            className={twMerge(
+              "border-b-4 border-l-2 border-r-4 border-t-2 text-center text-[20px] max-md:text-sm",
+              !portoData.webUrl
+                ? "cursor-default border-zinc-400 bg-zinc-300 text-zinc-400 hover:opacity-100"
+                : "border-zinc-900 bg-sky-700 text-white",
+            )}
           >
-            Lihat Website
+            {portoData.webUrl ? "Lihat Website" : "Website Tidak Tersedia"}
           </MainButton>
         </div>
         {/* accordion */}

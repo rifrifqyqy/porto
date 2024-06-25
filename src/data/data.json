@@ -6,6 +6,7 @@
     "imageUrl": "/images/porto/instasmako.jpg",
     "description": "SMAKO is an application owned by a single company or wholesale groceries store. This application serves customers who wish to purchase groceries in large quantities. The SMAKO app is an ideal solution for grocery store owners looking to expand their business and for customers seeking a steady supply of groceries in bulk.",
     "label": "Website",
+    "figmaUrl": "https://www.figma.com/design/Da59P9eG9T1Ihc5IdVpFuj/Semako?node-id=1-3&t=HFvFeBggksRZCx2y-1",
     "webUrl": "https://rifrifqyqy.github.io/Smako-wholesale/",
     "tabs": [
       { "id": 1, "image": "/images/porto/instasmako.jpg" },
@@ -73,7 +74,7 @@
     "date": "22 Januari 2024",
     "imageUrl": "/images/porto1.png",
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate consequuntur illo eligendi sed fugit. Aut ducimus excepturi non illum autem.",
-    "label": "Figma",
+    "label": "Website",
     "tools": [
       { "id": 1, "toolthumb": "/images/skill/figma.svg" },
       { "id": 2, "toolthumb": "/images/skill/react.svg" },
