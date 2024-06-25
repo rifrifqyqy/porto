@@ -115,6 +115,108 @@
       { "id": 3, "image": "/images/porto/recything3.png" },
       { "id": 3, "image": "/images/porto/recything4.png" }
     ],
-    "tools": [{ "id": 3, "toolthumb": "/images/skill/figma.svg" }]
+    "tools": [{ "id": 1, "toolthumb": "/images/skill/figma.svg" }]
+  },
+  {
+    "id": 7,
+    "title": "Toupu tempat topup games",
+    "date": "26 Desember 2023",
+    "imageUrl": "/images/porto/toupu2.jpg",
+    "description": "Aplikasi tempat topup games favoritmu TOUPU!. desain dibuat dengan memerhatikan kenyamanan pengguna dan referensi berdasarkan berbagai layanan topup yang sudah ada, seperti meppostore dan lapak gaming",
+    "label": "Figma",
+    "figmaUrl": "https://www.figma.com/design/7irgz6RqIeJ5sSIgx7uFZ3/toUpu---Concept?node-id=0-1&t=L9dD4pbwy3jSS6k6-1",
+    "tabs": [
+      { "id": 1, "image": "/images/porto/toupu2.jpg" },
+      { "id": 2, "image": "/images/porto/toupu1.png" },
+      { "id": 3, "image": "/images/porto/toupu3.png" },
+      { "id": 3, "image": "/images/porto/toupu4.png" }
+    ],
+    "tools": [{ "id": 1, "toolthumb": "/images/skill/figma.svg" }]
+  },
+  {
+    "id": 8,
+    "title": "Genshin web toolkit",
+    "date": "20 Agustus 2023",
+    "imageUrl": "/images/porto/webjoki2.png",
+    "description": "Website tempat memantau statistik akun genshin mu! dengan dashboard untuk melihat guide materials, guide spiral dan event ongoing dalam genhin impact",
+    "label": "Figma",
+    "figmaUrl": "https://www.figma.com/design/8waLgtvt4EglR1vtUuGef4/WebJoki-Genshin-(Unfinished)-(Community)?node-id=0-1&t=WfGq9hY4m2ombSrV-1",
+    "tabs": [
+      { "id": 1, "image": "/images/porto/webjoki2.png" },
+      { "id": 2, "image": "/images/porto/webjoki1.png" },
+      { "id": 3, "image": "/images/porto/webjoki3.png" }
+    ],
+    "tools": [{ "id": 1, "toolthumb": "/images/skill/figma.svg" }]
+  },
+  {
+    "id": 9,
+    "title": "SMAKO LOGO",
+    "date": "30 Oktober 2020",
+    "imageUrl": "/images/porto/smakologo1.png",
+    "description": "SMAKO is a wholesale store owned by a single company or a wholesale grocery store. This establishment serves customers who wish to purchase groceries in large quantities. Logo SMAKO terlihat seperti dua orang yang sedang berjabat tangan dalam perspektif bird eye angle. Ini menunjukkan proses transaksi antara penjual dan pembeli selalu terjadi di tempat “SMAKO” ini. Bentuk persegi memberikan kesan stabil dan kokoh. Ini mengirimkan pesan kepada pemirsa bahwa perusahaan atau merek tersebut kuat dan dapat diandalkan dalam menjalankan bisnisnya.",
+    "label": "Design",
+    "figmaUrl": "",
+    "tabs": [
+      { "id": 1, "image": "/images/porto/smakologo1.png" },
+      { "id": 2, "image": "/images/porto/smakologo2.png" },
+      { "id": 3, "image": "/images/porto/smakologo3.png" },
+      { "id": 4, "image": "/images/porto/smakologo4.png" },
+      { "id": 5, "image": "/images/porto/smakologo6.png" }
+    ],
+    "tools": [
+      { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
+      { "id": 2, "toolthumb": "/images/skill/photoshop.svg" }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "PES Kit Design",
+    "date": "16 Agustus 2020",
+    "imageUrl": "/images/porto/peskit1.jpg",
+    "description": "Desain kit pes untuk kustomisasi. klub zenit st petersburg",
+    "label": "Design",
+    "figmaUrl": "",
+    "tabs": [
+      { "id": 1, "image": "/images/porto/peskit1.jpg" },
+      { "id": 2, "image": "/images/porto/peskit2.png" },
+      { "id": 3, "image": "/images/porto/peskit3.png" }
+    ],
+    "tools": [
+      { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
+      { "id": 2, "toolthumb": "/images/skill/photoshop.svg" }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Li-Play Internet Cafe Membership Card Design",
+    "date": "16 Januari 2021",
+    "imageUrl": "/images/porto/liplay.png",
+    "description": "Desain Membership Card Li-Play. Internet kafe (warnet)",
+    "label": "Design",
+    "figmaUrl": "",
+    "tabs": [
+      { "id": 1, "image": "/images/porto/liplay.png" },
+      { "id": 2, "image": "/images/porto/liplay1.png" },
+      { "id": 3, "image": "/images/porto/liplay2.png" },
+      { "id": 4, "image": "/images/porto/liplay3.png" }
+    ],
+    "tools": [
+      { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
+      { "id": 2, "toolthumb": "/images/skill/photoshop.svg" }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Majelis Flyer MT DAARUL KHOIR",
+    "date": "16 Januari 2019",
+    "imageUrl": "/images/porto/majlisflyer.png",
+    "description": "Flyer design untuk majelis mt daarul khoir teman saya",
+    "label": "Design",
+    "figmaUrl": "",
+    "tabs": [{ "id": 1, "image": "/images/porto/majlisflyer.png" }],
+    "tools": [
+      { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
+      { "id": 2, "toolthumb": "/images/skill/photoshop.svg" }
+    ]
   }
 ]

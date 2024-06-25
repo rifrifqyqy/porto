@@ -19,7 +19,7 @@ function PolaroidImg({ frame, label, labelstyle, coverStyle }) {
       <div className="relative aspect-square h-[280px] w-[280px] overflow-hidden border border-zinc-900">
         <div
           className={twMerge(
-            "absolute left-2 top-2 z-[2] w-fit bg-amber-200/60 px-4 py-1 text-amber-600",
+            "absolute left-2 top-2 z-[2] w-fit bg-red-500 px-4 py-1 text-white",
             labelstyle,
           )}
         >

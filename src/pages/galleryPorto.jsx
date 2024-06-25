@@ -48,10 +48,13 @@ export default function GalleryPorto() {
           {["All", "Coding", "Figma", "Design"].map((tab) => (
             <div
               key={tab}
-              className={`cursor-pointer px-4 py-2 font-semibold transition-all duration-500 ${activeTab === tab ? "bg-amber-500 text-white" : "text-zinc-700 hover:bg-zinc-200"}`}
+              className={`cursor-pointer px-4 py-2 font-semibold transition-all duration-500 ${activeTab === tab ? `bg-amber-500 text-white` : "text-zinc-700 hover:bg-zinc-200"} `}
               onClick={() => setActiveTab(tab)}
             >
-              {tab}
+              <div className="flex items-center gap-1">
+                <span>{tab}</span>
+                {activeTab === tab && <span>({filteredData.length})</span>}
+              </div>
             </div>
           ))}
         </main>
@@ -138,8 +141,8 @@ export default function GalleryPorto() {
                         frame={porto.imageUrl}
                         label={porto.label}
                         labelstyle={`
-                        ${porto.label === "Figma" ? "bg-emerald-300/40 text-emerald-600" : ""}
-                        ${porto.label === "Design" ? "bg-amber-300" : ""}
+                        ${porto.label === "Figma" ? "bg-emerald-500 text-white" : ""}
+                        ${porto.label === "Design" ? "bg-violet-600 text-white" : ""}
                         `}
                         coverStyle={`
                         ${porto.label === "Figma" ? "bg-amber-400/20" : ""}
