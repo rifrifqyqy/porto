@@ -84,9 +84,7 @@ export default function GalleryPorto() {
                       LA GALERIE
                     </p>
                     <p className="text-amber-300">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Sit, ipsa in. Consequuntur veniam maiores itaque ipsa
-                      impedit error architecto porro?
+                      Selamat datang di gallery portofolio saya!. Disini saya memajang semua portofolio saya terkait coding, desain dan juga ui desain.
                     </p>
                   </div>
                 </div>
