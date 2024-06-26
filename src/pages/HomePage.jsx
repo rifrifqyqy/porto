@@ -8,10 +8,18 @@ import NavigationBar from "@/components/navigationBar";
 
 export default function HomePage() {
   const aboutRef = useRef(null);
+  const homeref = useRef(null);
+  const contactRef = useRef(null);
+  const portoRef = useRef(null);
 
   const aboutScroll = () => {
     if (aboutRef.current) {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const scrollToRef = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -72,11 +80,16 @@ export default function HomePage() {
           className="fixed left-0 top-0 z-50 h-[100vh] w-[100vw] bg-white/100"
         />
         <motion.div variants={containVariants} exit="exit">
-          <NavigationBar />
-          <HeroSection aboutScroll={aboutScroll} />
+          <NavigationBar
+            scrolltoHome={() => scrollToRef(homeref)}
+            scrolltoAbout={() => scrollToRef(aboutRef)}
+            scrolltoContact={() => scrollToRef(contactRef)}
+            scrolltoPorto={() => scrollToRef(portoRef)}
+          />
+          <HeroSection aboutScroll={aboutScroll} ref={homeref} />
           <AboutSection ref={aboutRef} />
-          <ProjectSection />
-          <FooterSection />
+          <ProjectSection ref={portoRef} />
+          <FooterSection ref={contactRef} />
         </motion.div>
       </div>
     </>

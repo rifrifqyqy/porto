@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import PortoCardLayout from "./PortoDetailsLayout/PortoDetailsLayout";
-export default function ProjectSection() {
+import { forwardRef } from "react";
+import MainButton from "../Elements/Button/MainButton";
+function ProjectSection(props, ref) {
   // animation
   const containerMotion = {
     initial: {},
@@ -34,6 +36,8 @@ export default function ProjectSection() {
         whileHover="whileHover"
         whileInView="view"
         className="relative"
+        ref={ref}
+        {...props}
       >
         <main
           className="mt-24 flex flex-col gap-8 max-md:mt-8 max-md:items-center max-sm:mx-4 2xl:mx-32"
@@ -72,3 +76,4 @@ export default function ProjectSection() {
     </>
   );
 }
+export default forwardRef(ProjectSection);

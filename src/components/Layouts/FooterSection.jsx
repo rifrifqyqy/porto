@@ -3,8 +3,9 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Link } from "react-router-dom";
+import { forwardRef } from "react";
 
-export default function FooterSection() {
+function FooterSection(props, ref) {
   const headerStyle = "font-statliches text-[20px] max-md:text-[16px]";
   const sosmedStyl = "w-[48px] h-[48px] max-md:w-[32px]";
   let menuFooter = "hover:text-gray-50 transition-all duration-300";
@@ -19,9 +20,11 @@ export default function FooterSection() {
 
   return (
     <>
-      <footer
+      <div
         className="mt-16 grid grid-cols-2 justify-between gap-4 bg-[#0D1A22] px-24 py-10 text-white max-md:grid-cols-1 max-md:px-8 max-md:py-8"
         id="contact"
+        ref={ref}
+        {...props}
       >
         <h1
           className={twMerge(
@@ -129,7 +132,8 @@ export default function FooterSection() {
             </span>
           </h1>
         </div>
-      </footer>
+      </div>
     </>
   );
 }
+export default forwardRef(FooterSection);

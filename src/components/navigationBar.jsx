@@ -6,26 +6,37 @@ import {
   useScroll,
 } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export default function NavigationBar({ aboutScroll }) {
+export default function NavigationBar({
+  scrolltoAbout,
+  scrolltoContact,
+  scrolltoHome,
+  scrolltoPorto,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const menuNav = [
     {
       menu: "Home",
-      href: "#home",
+
+      click: scrolltoHome,
     },
     {
       menu: "About",
-      href: "#about",
+      click: scrolltoAbout,
     },
 
     {
       menu: "Portfolio",
-      href: "#porto",
+      click: scrolltoPorto,
+    },
+    {
+      menu: "Gallery",
+      to: "/gallery",
     },
     {
       menu: "Contacts",
-      href: "#contact",
+      click: scrolltoContact,
     },
   ];
 
@@ -87,20 +98,21 @@ export default function NavigationBar({ aboutScroll }) {
                 initital={{ y: 0 }}
                 whileHover={{ y: -24 }}
               >
-                <a href="" className="uppercase">
+                <Link href="" className="uppercase">
                   {menu.menu}
-                </a>
-                <a href={menu.href} className="uppercase text-sky-700">
+                </Link>
+                <Link
+                  onClick={menu.click}
+                  className="uppercase text-sky-700"
+                  to={menu.to}
+                >
                   {menu.menu}
-                </a>
+                </Link>
               </motion.div>
             </li>
           ))}
         </ul>
-        <MainButton
-          onClick={aboutScroll}
-          className="border-b-4 border-l-2 border-r-4 border-t-2 border-gray-900 bg-[#F8CC76] px-6 text-[20px] text-black active:scale-95 active:bg-[#ffc043] max-md:hidden"
-        >
+        <MainButton className="border-b-4 border-l-2 border-r-4 border-t-2 border-gray-900 bg-[#F8CC76] px-6 text-[20px] text-black active:scale-95 active:bg-[#ffc043] max-md:hidden">
           Recruit
         </MainButton>
         <AnimatePresence>
@@ -127,20 +139,26 @@ export default function NavigationBar({ aboutScroll }) {
                   initital={{ y: 0 }}
                   whileHover={{ y: -24 }}
                 >
-                  <a
+                  <Link
                     href={menu.href}
-                    onClick={handleMenuMobile}
+                    onClick={() => {
+                      menu.click();
+                      handleMenuMobile();
+                    }}
                     className="uppercase"
                   >
                     {menu.menu}
-                  </a>
-                  <a
-                    href={menu.href}
-                    onClick={handleMenuMobile}
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      menu.click();
+                      handleMenuMobile();
+                    }}
                     className="uppercase text-sky-700"
+                    to={menu.to}
                   >
                     {menu.menu}
-                  </a>
+                  </Link>
                 </motion.div>
               </li>
             ))}

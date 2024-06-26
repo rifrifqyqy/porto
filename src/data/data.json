@@ -72,13 +72,15 @@
     "id": 4,
     "title": "Homespot web revamp",
     "date": "22 Januari 2024",
-    "imageUrl": "/images/porto1.png",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate consequuntur illo eligendi sed fugit. Aut ducimus excepturi non illum autem.",
+    "imageUrl": "/images/porto/homespot.png",
+    "description": "Revamp website penyedia jasa pencarian properti Homespot. Tugas Hackaton #1 di Maxy Academy",
     "label": "Website",
+    "webUrl": "https://rifrifqyqy.github.io/Maxy-Homespot/",
+    "tabs": [{ "id": 1, "image": "/images/porto/homespot.png" }],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/figma.svg" },
-      { "id": 2, "toolthumb": "/images/skill/react.svg" },
-      { "id": 3, "toolthumb": "/images/skill/vitejs.svg" }
+      { "id": 1, "toolthumb": "/images/skill/css.svg" },
+      { "id": 2, "toolthumb": "/images/skill/butstrep.svg" },
+      { "id": 3, "toolthumb": "/images/skill/jquery.svg" }
     ]
   },
   {

@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import { forwardRef, useRef } from "react";
 import { delay, motion, stagger } from "framer-motion";
 import MainButton from "../Elements/Button/MainButton";
-export default function HeroSection({ aboutScroll }) {
+function HeroSection({ aboutScroll }, ref) {
   // animate logic
-  const constraintsRef = useRef(null);
+
   const homeAnimate = {
     initial: {
       opacity: 0,
@@ -114,7 +114,7 @@ export default function HeroSection({ aboutScroll }) {
     <>
       <motion.section
         variants={homeAnimate}
-        ref={constraintsRef}
+        ref={ref}
         whileInView="view"
         initial="initial"
         animate="animate"
@@ -232,3 +232,4 @@ export default function HeroSection({ aboutScroll }) {
     </>
   );
 }
+export default forwardRef(HeroSection);

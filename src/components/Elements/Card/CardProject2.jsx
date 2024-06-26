@@ -5,7 +5,7 @@ export default function CardProject2({ children, to }) {
   return (
     <>
       <Link to={to}>
-        <div className="group flex max-w-min flex-col border border-zinc-900 p-3 pt-8 transition-all duration-300 hover:bg-sky-600">
+        <div className="group flex max-w-min flex-col border border-zinc-900 p-3 pt-12 transition-all duration-300 hover:bg-sky-600">
           {children}
         </div>
       </Link>
@@ -44,7 +44,7 @@ function PolaroidImg({ frame, label, labelstyle, coverStyle }) {
 function PolaroidBody({ profile, title, desc }) {
   return (
     <>
-      <div className="mt-3 flex items-center gap-4">
+      <div className="mt-4 flex items-center gap-4">
         <img src={profile} alt="" className="h-[50px] w-[50px] rounded-full" />
         <article className="flex flex-col group-hover:text-white">
           <h1 className="line-clamp-1 font-semibold uppercase transition-all duration-300">
