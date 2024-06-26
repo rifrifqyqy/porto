@@ -113,7 +113,8 @@
       { "id": 1, "image": "/images/porto/recything.jpg" },
       { "id": 2, "image": "/images/porto/recything2.png" },
       { "id": 3, "image": "/images/porto/recything3.png" },
-      { "id": 3, "image": "/images/porto/recything4.png" }
+      { "id": 4, "image": "/images/porto/recything4.png" },
+      { "id": 5, "image": "/images/porto/sertifaltera.png" }
     ],
     "tools": [{ "id": 1, "toolthumb": "/images/skill/figma.svg" }]
   },
