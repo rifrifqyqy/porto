@@ -58,7 +58,7 @@ export default function ProjectPage() {
         exit="exit"
         className="-z-50 h-full w-full opacity-15"
       >
-        <NavigationPage projectTitle={portoData.title} to="/" />
+        <NavigationPage projectTitle={portoData.title} to="back" />
         <main className="mx-32 mt-16 max-md:mx-4 max-md:mt-4">
           <section className="grid grid-cols-2 gap-16 divide-x divide-zinc-800 max-md:grid-cols-1 max-md:divide-x-0 max-md:divide-y max-sm:gap-0">
             <TabsProject

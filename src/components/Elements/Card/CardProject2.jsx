@@ -27,7 +27,7 @@ function PolaroidImg({ frame, label, labelstyle, coverStyle }) {
         </div>
         <div
           className={twMerge(
-            "absolute h-full w-full bg-sky-500/20 transition-all duration-300 group-hover:opacity-0",
+            "absolute h-full w-full bg-red-500/20 transition-all duration-300 group-hover:opacity-0",
             coverStyle,
           )}
         ></div>

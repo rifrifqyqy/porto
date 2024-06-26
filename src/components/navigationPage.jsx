@@ -1,6 +1,7 @@
 import MainButton from "./Elements/Button/MainButton";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function NavigationPage({ projectTitle, to }) {
   const { scrollY } = useScroll();
   const [navHidden, setNavHidden] = useState(false);
@@ -12,6 +13,15 @@ export default function NavigationPage({ projectTitle, to }) {
       setNavHidden(false);
     }
   });
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    if (to === "back") {
+      navigate(-1); // Navigate back to the previous page
+    } else {
+      navigate(to); // Navigate to the specified path
+    }
+  };
   return (
     <>
       <motion.nav
@@ -28,6 +38,7 @@ export default function NavigationPage({ projectTitle, to }) {
       >
         <MainButton
           to={to}
+          onClick={handleNavigation}
           className="group flex items-center gap-4 bg-transparent text-zinc-900 hover:text-amber-500 max-md:gap-2 max-md:px-0 max-md:text-[16px]"
         >
           <svg
