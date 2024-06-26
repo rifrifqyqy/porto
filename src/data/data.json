@@ -193,7 +193,6 @@
     "imageUrl": "/images/porto/liplay.png",
     "description": "Desain Membership Card Li-Play. Internet kafe (warnet)",
     "label": "Design",
-    "figmaUrl": "",
     "tabs": [
       { "id": 1, "image": "/images/porto/liplay.png" },
       { "id": 2, "image": "/images/porto/liplay1.png" },
@@ -212,7 +211,6 @@
     "imageUrl": "/images/porto/majlisflyer.png",
     "description": "Flyer design untuk majelis mt daarul khoir teman saya",
     "label": "Design",
-    "figmaUrl": "",
     "tabs": [{ "id": 1, "image": "/images/porto/majlisflyer.png" }],
     "tools": [
       { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
