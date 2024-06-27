@@ -17,7 +17,9 @@ export default function ArticleProject({ toolIcon, portoData }) {
               {portoData.title}
             </h1>
             <div className="flex items-center gap-4 max-md:gap-3">
-              <label className="w-fit gap-2 bg-amber-300 px-4 py-2 font-medium text-zinc-600 max-md:px-2 max-md:py-1 max-md:text-[12px]">
+              <label
+                className={`w-fit gap-2 px-4 py-2 font-medium max-md:px-2 max-md:py-1 max-md:text-[12px] ${portoData.label === "Website" ? "bg-red-500 text-white" : ""} ${portoData.label === "Figma" ? "bg-emerald-500 text-white" : ""} ${portoData.label === "Design" ? "bg-violet-600 text-white" : ""}`}
+              >
                 {portoData.label}
               </label>
               <img
@@ -29,7 +31,7 @@ export default function ArticleProject({ toolIcon, portoData }) {
             </div>
           </div>
 
-          <p className="text-gray-500 max-md:text-[14px] line-clamp-4">
+          <p className="line-clamp-4 text-gray-500 max-md:text-[14px]">
             {portoData.description}
           </p>
         </header>

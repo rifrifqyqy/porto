@@ -65,6 +65,15 @@ export default function ProjectPage() {
               tabData={tabData}
               handleTabClick={handleTabClick}
               activeTab={activeTab}
+              tabImage={`
+              ${portoData.label === "Design" ? "bg-violet-500" : ""}
+              ${portoData.label === "Figma" ? "bg-emerald-500" : ""}
+              ${portoData.label === "Website" ? "bg-red-500" : ""}
+              `}
+              bgTabsImage={`
+              ${portoData.label === "Design" ? "bg-violet-500" : ""}
+              ${portoData.label === "Figma" ? "bg-emerald-500" : ""}
+              ${portoData.label === "Website" ? "bg-red-500" : ""}`}
             />
             <ArticleProject portoData={portoData} toolIcon={toolIcon} />
           </section>

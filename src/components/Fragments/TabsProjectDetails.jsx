@@ -1,10 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import "../../index.css";
-export default function TabsProject({ tabData, handleTabClick, activeTab }) {
+export default function TabsProject({ tabData, handleTabClick, activeTab, tabImage, bgTabsImage }) {
   return (
     <>
       <aside>
-        <div className="tabcontent border-retro aspect-video h-[390px] w-full overflow-hidden bg-amber-400 max-md:h-[249px] max-md:w-full">
+        <div className={`tabcontent border-retro aspect-video h-[390px] w-full overflow-hidden  max-md:h-[249px] max-md:w-full ${bgTabsImage}`}>
           <div></div>
           <AnimatePresence mode="wait">
             <motion.img
@@ -24,7 +24,7 @@ export default function TabsProject({ tabData, handleTabClick, activeTab }) {
             {tabData.map((tab, index) => (
               <AnimatePresence key={tab.id}>
                 <motion.div
-                  className={`tabheader h-16 w-16 cursor-pointer border-zinc-800 bg-[#FFBA34] transition-all duration-300 max-md:h-14 max-md:w-14 ${activeTab === index ? "border-retro-org -translate-y-2 scale-110" : "border-retro-sm"}`}
+                  className={`tabheader h-16 w-16 cursor-pointer border-zinc-800 transition-all duration-300 max-md:h-14 max-md:w-14 ${tabImage} ${activeTab === index ? "border-retro-org -translate-y-2 scale-110" : "border-retro-sm"} `}
                   onClick={() => handleTabClick(index)}
                 >
                   <img
