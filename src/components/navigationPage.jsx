@@ -56,7 +56,7 @@ export default function NavigationPage({ projectTitle, to }) {
           Kembali
         </MainButton>
 
-        <h2 className="border-retro cursor-pointer bg-amber-400 px-4 py-1 font-statliches text-2xl active:scale-110 max-md:text-lg">
+        <h2 className="border-retro line-clamp-1 cursor-pointer bg-amber-400 px-4 py-1 font-statliches text-2xl active:scale-110 max-md:text-lg max-sm:px-2 max-sm:max-w-[180px]">
           {projectTitle}
         </h2>
       </motion.nav>

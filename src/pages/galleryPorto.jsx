@@ -64,7 +64,7 @@ export default function GalleryPorto() {
 
   return (
     <>
-      <div>
+      <main>
         <div className="fixed left-0 top-0 z-[-9999] h-[100vh] w-[100vw] bg-black"></div>
         <motion.div
           variants={wrapAnimate}
@@ -75,16 +75,18 @@ export default function GalleryPorto() {
         />
         <motion.div variants={containVariants} exit="exit" className="bg-white">
           <NavigationPage projectTitle="La Project Galleria" to="back" />
-          <section className="mx-24 mt-12">
+          <section className="mx-24 mt-12 max-sm:mx-4 max-sm:mt-4">
             <div className="rounded-2xl border-2 border-zinc-900 p-2">
-              <div className="relative mx-auto h-[350px] overflow-hidden rounded-xl bg-slate-500">
+              <div className="relative mx-auto h-[350px] overflow-hidden rounded-xl bg-slate-500 max-sm:h-[200px]">
                 <div className="absolute z-10 flex h-full w-full">
                   <div className="m-auto h-fit">
-                    <p className="m-auto h-fit w-fit font-valorant text-[70px] text-amber-400">
+                    <p className="m-auto h-fit w-fit font-valorant text-[70px] text-amber-400 max-sm:text-4xl">
                       LA GALERIE
                     </p>
-                    <p className="text-amber-300">
-                      Selamat datang di gallery portofolio saya!. Disini saya memajang semua portofolio saya terkait coding, desain dan juga ui desain.
+                    <p className="text-center text-amber-300 max-sm:text-[12px]">
+                      Selamat datang di gallery portofolio saya!. Disini saya
+                      memajang semua portofolio saya terkait coding, desain dan
+                      juga ui desain.
                     </p>
                   </div>
                 </div>
@@ -92,18 +94,17 @@ export default function GalleryPorto() {
                 <img
                   src={furina2}
                   alt=""
-                  className="h-full w-full object-cover object-top brightness-[60%]"
-                  style={{ objectPosition: "center -160px" }}
+                  className="h-full w-full object-cover object-center brightness-[60%]"
                 />
               </div>
             </div>
           </section>
-          <section className="mx-24 my-8">
-            <main className="portotab flex w-fit gap-5 border-2 border-zinc-500 p-2">
+          <section className="sticky top-0 z-10 mx-24 py-8 max-sm:top-[24px] max-sm:mx-4 max-sm:py-4">
+            <main className="portotab flex w-fit gap-5 border-2 border-zinc-500 bg-white p-2 max-sm:gap-2 max-sm:p-1">
               {["All", "Coding", "Figma", "Design"].map((tab) => (
                 <div
                   key={tab}
-                  className={`cursor-pointer px-4 py-2 font-semibold transition-all duration-500 ${activeTab === tab ? `bg-amber-500 text-white` : "text-zinc-700 hover:bg-zinc-200"} `}
+                  className={`cursor-pointer px-4 py-2 font-semibold transition-all duration-500 max-sm:px-3 max-sm:py-1 max-sm:text-[14px] ${activeTab === tab ? `bg-amber-500 text-white` : "text-zinc-700 hover:bg-zinc-200"} `}
                   onClick={() => setActiveTab(tab)}
                 >
                   <div className="flex items-center gap-1">
@@ -114,9 +115,9 @@ export default function GalleryPorto() {
               ))}
             </main>
           </section>
-          <section className="mx-24 flex justify-between">
+          <section className="mx-24 flex justify-between max-sm:mx-4">
             <div
-              className={`grid w-full ${filteredData.length === 0 ? "grid-cols-1 justify-center" : "grid-cols-2 justify-start xl:grid-cols-3 2xl:grid-cols-4"} gap-8`}
+              className={`grid w-full ${filteredData.length === 0 ? "grid-cols-1 justify-center" : "grid-cols-2 justify-start xl:grid-cols-3 2xl:grid-cols-4"} gap-8 max-sm:gap-2`}
             >
               <AnimatePresence>
                 {filteredData.length === 0 ? (
@@ -222,7 +223,7 @@ export default function GalleryPorto() {
           </section>
           <FooterSection />
         </motion.div>
-      </div>
+      </main>
     </>
   );
 }
