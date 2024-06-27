@@ -73,7 +73,7 @@ export default function NavigationBar({
 
   return (
     <>
-      <div className=" w-full justify-center bg-gray-200 py-1 shadow-inset1 hidden">
+      <div className="hidden w-full justify-center bg-gray-200 py-1 shadow-inset1">
         <p className="text-amber-500">This web is under development</p>
       </div>
 
@@ -145,6 +145,7 @@ export default function NavigationBar({
                       menu.click();
                       handleMenuMobile();
                     }}
+                    to={menu.to}
                     className="uppercase"
                   >
                     {menu.menu}
