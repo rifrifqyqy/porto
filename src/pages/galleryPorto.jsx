@@ -76,14 +76,14 @@ export default function GalleryPorto() {
         <motion.div variants={containVariants} exit="exit" className="bg-white">
           <NavigationPage projectTitle="La Project Galleria" to="back" />
           <section className="mx-24 mt-12 max-sm:mx-4 max-sm:mt-4">
-            <div className="rounded-2xl border-2 border-zinc-900 p-2">
+            <div className="rounded-2xl border-2 border-zinc-900 p-2 max-sm:border max-sm:p-1">
               <div className="relative mx-auto h-[350px] overflow-hidden rounded-xl bg-slate-500 max-sm:h-[200px]">
                 <div className="absolute z-10 flex h-full w-full">
                   <div className="m-auto h-fit">
-                    <p className="m-auto h-fit w-fit font-valorant text-[70px] text-amber-400 max-sm:text-4xl">
+                    <p className="m-auto h-fit w-fit font-valorant text-[70px] text-amber-400 max-sm:text-4xl max-sm:font-medium">
                       LA GALERIE
                     </p>
-                    <p className="text-center text-amber-300 max-sm:text-[12px]">
+                    <p className="mx-4 text-center text-amber-300 max-sm:text-[12px]">
                       Selamat datang di gallery portofolio saya!. Disini saya
                       memajang semua portofolio saya terkait coding, desain dan
                       juga ui desain.
@@ -100,7 +100,7 @@ export default function GalleryPorto() {
             </div>
           </section>
           <section className="sticky top-0 z-10 mx-24 py-8 max-sm:top-[24px] max-sm:mx-4 max-sm:py-4">
-            <main className="portotab flex w-fit gap-5 border-2 border-zinc-500 bg-white p-2 max-sm:gap-2 max-sm:p-1">
+            <main className="portotab flex w-fit gap-5 border-2 border-zinc-500 bg-white p-2 max-sm:gap-2 max-sm:border max-sm:p-1">
               {["All", "Coding", "Figma", "Design"].map((tab) => (
                 <div
                   key={tab}
@@ -115,9 +115,9 @@ export default function GalleryPorto() {
               ))}
             </main>
           </section>
-          <section className="mx-24 flex justify-between max-sm:mx-4">
+          <section className="mx-24 flex max-sm:mx-4">
             <div
-              className={`grid w-full ${filteredData.length === 0 ? "grid-cols-1 justify-center" : "grid-cols-2 justify-start xl:grid-cols-3 2xl:grid-cols-4"} gap-8 max-sm:gap-2`}
+              className={`grid w-full ${filteredData.length === 0 ? "grid-cols-1 justify-center" : "grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"} gap-8 max-sm:gap-2`}
             >
               <AnimatePresence>
                 {filteredData.length === 0 ? (

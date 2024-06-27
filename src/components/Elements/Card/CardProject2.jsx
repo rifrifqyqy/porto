@@ -19,7 +19,7 @@ function PolaroidImg({ frame, label, labelstyle, coverStyle }) {
       <div className="relative aspect-square h-[280px] w-[280px] overflow-hidden border border-zinc-900 max-sm:h-[145px] max-sm:w-[145px]">
         <div
           className={twMerge(
-            "absolute left-2 top-2 z-[2] w-fit bg-red-500 px-4 py-1 text-white max-sm:left-1 max-sm:top-1 max-sm:px-3 max-sm:font-light max-sm:py-0 max-sm:text-[12px]",
+            "absolute left-2 top-2 z-[2] w-fit bg-red-500 px-4 py-1 text-white max-sm:left-1 max-sm:top-1 max-sm:px-2 max-sm:font-normal max-sm:py-0 max-sm:text-[12px]",
             labelstyle,
           )}
         >
@@ -51,7 +51,7 @@ function PolaroidBody({ profile, title, desc }) {
           className="h-[50px] w-[50px] rounded-full max-sm:h-[32px] max-sm:w-[32px]"
         />
         <article className="flex flex-col group-hover:text-white">
-          <h1 className="line-clamp-1 font-semibold uppercase transition-all duration-300 max-sm:text-[14px]">
+          <h1 className="line-clamp-1 font-semibold uppercase transition-all duration-300 max-sm:text-[14px] max-sm:leading-[120%]">
             {title}
           </h1>
           <p className="line-clamp-1 text-zinc-500 transition-all duration-300 group-hover:text-zinc-200 max-sm:text-[12px]">
