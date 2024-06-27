@@ -189,6 +189,11 @@ html {
   }
 }
 
+.Marquee {
+  img {
+    @apply max-sm:w-[32px]
+  }
+}
 .no-scrollbar {
   scrollbar-width: none;
 }

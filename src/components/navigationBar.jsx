@@ -73,7 +73,7 @@ export default function NavigationBar({
 
   return (
     <>
-      <div className="flex w-full justify-center bg-gray-200 py-1 shadow-inset1">
+      <div className=" w-full justify-center bg-gray-200 py-1 shadow-inset1 hidden">
         <p className="text-amber-500">This web is under development</p>
       </div>
 

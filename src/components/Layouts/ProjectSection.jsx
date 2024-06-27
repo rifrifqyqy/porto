@@ -72,6 +72,11 @@ function ProjectSection(props, ref) {
             className="-mt-24 ml-16"
           />
         </aside>
+        <div className="mx-auto mt-6 hidden w-fit max-sm:block">
+          <MainButton className="text-[14px]" to="/gallery">
+            SEE MORE
+          </MainButton>
+        </div>
       </motion.div>
     </>
   );

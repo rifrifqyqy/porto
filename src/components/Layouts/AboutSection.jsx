@@ -179,7 +179,7 @@ function AboutSection(props, ref) {
                 loop={0}
                 speed={50}
                 play
-                className="overflow-y-visible border-b-2 border-t-2 border-amber-500 py-4"
+                className="overflow-y-visible border-b-2 border-t-2 border-amber-500 py-4 max-sm:py-2"
                 autoFill
               >
                 <div className="Marquee mr-4 flex gap-4">
@@ -195,7 +195,7 @@ function AboutSection(props, ref) {
                 loop={0}
                 speed={50}
                 play
-                className="mt-8 border-b-2 border-t-2 border-amber-500 py-4"
+                className="mt-8 max-sm:mt-4 border-b-2 border-t-2 border-amber-500 py-4 max-sm:py-2"
                 autoFill
               >
                 <div className="Marquee mr-4 flex gap-4">

@@ -21,7 +21,7 @@ function FooterSection(props, ref) {
   return (
     <>
       <div
-        className="mt-16 grid grid-cols-2 justify-between gap-4 bg-[#0D1A22] px-24 py-10 text-white max-md:grid-cols-1 max-md:px-8 max-md:py-8"
+        className="mt-16 max-sm:mt-8 grid grid-cols-2 justify-between gap-4 bg-[#0D1A22] px-24 py-10 text-white max-md:grid-cols-1 max-md:px-8 max-md:py-8"
         id="contact"
         ref={ref}
         {...props}
