@@ -98,7 +98,7 @@ export default function GalleryPorto() {
                   loop
                   playsInline
                   type="video/x-matroska"
-                  className="brightness-[55%] object-cover h-full w-full"
+                  className="brightness-[55%] object-cover h-full w-full object-top"
                 ></video>
               </div>
             </div>
