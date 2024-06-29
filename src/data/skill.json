@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "skillthumb": "/images/skill/css.svg",
+    "title": "CSS"
+  },
+  {
+    "id": 2,
+    "skillthumb": "/images/skill/tailwind.svg",
+    "title": "Tailwind"
+  },
+  {
+    "id": 3,
+    "skillthumb": "/images/skill/butstrep.svg",
+    "title": "Bootstrap"
+  },
+  {
+    "id": 4,
+    "skillthumb": "/images/skill/shadcn.svg",
+    "title": "Shadcn"
+  },
+  {
+    "id": 5,
+    "skillthumb": "/images/skill/nuxtui.svg",
+    "title": "Nuxt UI"
+  },
+  {
+    "id": 6,
+    "skillthumb": "/images/skill/nuxt.svg",
+    "title": "Nuxt JS"
+  },
+  {
+    "id": 6,
+    "skillthumb": "/images/skill/vue.svg",
+    "title": "Vue JS"
+  },
+  {
+    "id": 7,
+    "skillthumb": "/images/skill/svelte.svg",
+    "title": "Sveltekit"
+  },
+  {
+    "id": 8,
+    "skillthumb": "/images/skill/gatsby.svg",
+    "title": "Gatsby"
+  },
+  {
+    "id": 9,
+    "skillthumb": "/images/skill/react.svg",
+    "title": "React"
+  },
+  {
+    "id": 10,
+    "skillthumb": "/images/skill/nextjs.svg",
+    "title": "Next JS"
+  },
+  {
+    "id": 11,
+    "skillthumb": "/images/skill/swiperjs.svg",
+    "title": "Swiper JS"
+  },
+  {
+    "id": 12,
+    "skillthumb": "/images/skill/vitejs.svg",
+    "title": "Vite JS"
+  },
+  {
+    "id": 13,
+    "skillthumb": "/images/skill/cignater.svg",
+    "title": "Codeignitter"
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "skillthumb": "/images/skill/clipstudio.svg",
+    "title": "Clip Studio"
+  },
+  {
+    "id": 2,
+    "skillthumb": "/images/skill/framer.svg",
+    "title": "Framer"
+  },
+  {
+    "id": 3,
+    "skillthumb": "/images/skill/figma.svg",
+    "title": "Figma"
+  },
+  {
+    "id": 4,
+    "skillthumb": "/images/skill/framermotion.svg",
+    "title": "FramerMotion"
+  },
+  {
+    "id": 5,
+    "skillthumb": "/images/skill/photoshop.svg",
+    "title": "Photoshop"
+  },
+
+  {
+    "id": 6,
+    "skillthumb": "/images/skill/illustrator.svg",
+    "title": "Illustrator"
+  }
+]

@@ -92,7 +92,7 @@ export default function GalleryPorto() {
                 </div>
 
                 <video
-                  src="/videos/furiwir.mkv"
+                  src="/videos/furiwir.mp4"
                   frameborder="0"
                   autoPlay
                   loop

@@ -191,7 +191,7 @@ html {
 
 .Marquee {
   img {
-    @apply max-sm:w-[32px]
+    @apply max-sm:w-[40px]
   }
 }
 .no-scrollbar {

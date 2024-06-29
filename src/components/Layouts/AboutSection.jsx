@@ -2,6 +2,8 @@ import { delay, motion } from "framer-motion";
 import { forwardRef, useState } from "react";
 import "../../index.css";
 import Marquee from "react-fast-marquee";
+import skillData from "../../data/skill.json";
+import designData from "../../data/designskill.json";
 function AboutSection(props, ref) {
   const [img, setImg] = useState("images/seongje.svg");
   const imgAnimate = {
@@ -179,39 +181,36 @@ function AboutSection(props, ref) {
                 loop={0}
                 speed={50}
                 play
-                className="overflow-y-visible border-b-2 border-t-2 border-amber-500 py-4 max-sm:py-2"
+                className="overflow-y-visible border-b-2 border-t-2 border-amber-500 py-5 max-sm:py-2"
                 autoFill
               >
                 <div className="Marquee mr-4 flex gap-4">
-                  <img src="images/skill/framermotion.svg" alt="" />
-                  <img src="images/skill/framer.svg" alt="" />
-                  <img src="images/skill/figma.svg" alt="" />
-                  <img src="images/skill/illustrator.svg" alt="" />
-                  <img src="images/skill/photoshop.svg" alt="" />
-                  <img src="images/skill/clipstudio.svg" alt="" />
+                  {designData.map((skill) => (
+                    <div className="group relative flex" key={skill.id}>
+                      <img src={skill.skillthumb} alt="" />
+                      <h1 className="absolute bottom-0 left-1 -z-10 text-[8px] font-semibold opacity-0 transition-all group-hover:translate-y-2 group-hover:scale-[160%] group-hover:opacity-100 max-sm:text-[6px]">
+                        {skill.title}
+                      </h1>
+                    </div>
+                  ))}
                 </div>
               </Marquee>
               <Marquee
                 loop={0}
                 speed={50}
                 play
-                className="mt-8 max-sm:mt-4 border-b-2 border-t-2 border-amber-500 py-4 max-sm:py-2"
+                className="mt-8 border-b-2 border-t-2 border-amber-500 py-4 max-sm:mt-4 max-sm:py-2"
                 autoFill
               >
                 <div className="Marquee mr-4 flex gap-4">
-                  <img src="images/skill/react.svg" alt="" />
-                  <img src="images/skill/vitejs.svg" alt="" />
-                  <img src="images/skill/shadcn.svg" alt="" />
-                  <img src="images/skill/css.svg" alt="" />
-                  <img src="images/skill/tailwind.svg" alt="" />
-                  <img src="images/skill/swiperjs.svg" alt="" />
-                  <img src="images/skill/butstrep.svg" alt="" />
-                  <img src="images/skill/nuxtui.svg" alt="" />
-                  <img src="images/skill/svelte.svg" alt="" />
-                  <img src="images/skill/vue.svg" alt="" />
-                  <img src="images/skill/nuxt.svg" alt="" />
-                  <img src="images/skill/nextjs.svg" alt="" />
-                  <img src="images/skill/cignater.svg" alt="" />
+                  {skillData.map((skill) => (
+                    <div className="group relative flex" key={skill.id}>
+                      <img src={skill.skillthumb} alt="" />
+                      <h1 className="absolute bottom-0 left-1 -z-10 text-[8px] font-semibold opacity-0 transition-all group-hover:translate-y-2 group-hover:scale-[160%] group-hover:opacity-100 max-sm:text-[6px]">
+                        {skill.title}
+                      </h1>
+                    </div>
+                  ))}
                 </div>
               </Marquee>
 
