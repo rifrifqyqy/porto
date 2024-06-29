@@ -129,7 +129,7 @@ function HeroSection({ aboutScroll }, ref) {
               variants={imageAnimate}
               className="relative z-10 origin-bottom-left"
             >
-              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:mr-0 max-sm:pb-12">
+              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:mr-0 max-sm:pb-12 pt-10">
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
                     src="/images/furina.jpg"
@@ -140,7 +140,7 @@ function HeroSection({ aboutScroll }, ref) {
               </div>
               <motion.div
                 variants={polaroidRotate}
-                className="absolute -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12"
+                className="absolute -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12 pt-10"
               >
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
@@ -152,7 +152,7 @@ function HeroSection({ aboutScroll }, ref) {
               </motion.div>
               <motion.div
                 variants={polaroidRotate2}
-                className="absolute -z-[3] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12"
+                className="absolute -z-[3] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12 pt-10"
               >
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
