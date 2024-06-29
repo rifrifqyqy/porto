@@ -91,11 +91,15 @@ export default function GalleryPorto() {
                   </div>
                 </div>
 
-                <img
-                  src={furina2}
-                  alt=""
-                  className="h-full w-full object-cover object-center brightness-[60%]"
-                />
+                <video
+                  src="/videos/furiwir.mkv"
+                  frameborder="0"
+                  autoPlay
+                  loop
+                  playsInline
+                  type="video/x-matroska"
+                  className="brightness-[55%]"
+                ></video>
               </div>
             </div>
           </section>
