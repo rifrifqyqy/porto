@@ -96,6 +96,7 @@ export default function GalleryPorto() {
                   frameborder="0"
                   autoPlay
                   loop
+                  muted
                   playsInline
                   type="video/x-matroska"
                   className="brightness-[55%] object-cover h-full w-full object-top"
