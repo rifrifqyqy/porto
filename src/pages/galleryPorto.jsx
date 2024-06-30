@@ -13,11 +13,20 @@ export default function GalleryPorto() {
   }, []);
 
   const filteredData = dataCard.filter((porto) => {
-    if (activeTab === "All") return true;
-    else if (activeTab === "Coding") return porto.label === "Website";
-    else if (activeTab === "Design") return porto.label === "Design";
-    return porto.label === activeTab;
+    switch (activeTab) {
+      case "All":
+        return true;
+      case "Coding":
+        return porto.label === "Website";
+      case "Design":
+        return porto.label === "Design";
+      case "Figma":
+        return porto.label === "Figma";
+      default:
+        return porto.label === activeTab;
+    }
   });
+
   const containVariants = {
     hidden: {
       scale: 0.9,
@@ -99,7 +108,7 @@ export default function GalleryPorto() {
                   muted
                   playsInline
                   type="video/x-matroska"
-                  className="brightness-[55%] object-cover h-full w-full object-top bg-zinc-100"
+                  className="h-full w-full bg-zinc-100 object-cover object-top brightness-[55%]"
                 ></video>
               </div>
             </div>
