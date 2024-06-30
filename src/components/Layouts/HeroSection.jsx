@@ -169,8 +169,8 @@ function HeroSection({ aboutScroll }, ref) {
               welcome to my site
             </p>
             <h1 className="relative -ml-2 font-valorant text-[180px] leading-[100%] tracking-[20px] max-md:ml-0 max-md:text-[52px]">
-              <span className="text-sky-700">L</span>I
-              <span className="text-sky-700">L</span>UO
+              <span className="text-sky-700">R</span>I
+              <span className="text-sky-700">F</span>QY
               <motion.div
                 variants={wrapAnimate}
                 className="absolute right-0 top-0 z-20 mr-40 h-[145px] bg-sky-700 max-md:left-0 max-md:mr-0 max-md:hidden max-md:h-[50px]"
@@ -182,8 +182,7 @@ function HeroSection({ aboutScroll }, ref) {
             </h1>
             <div className="relative">
               <p className="mt-[-24px] font-statliches text-2xl max-md:mt-0 max-md:text-lg max-md:leading-tight">
-                "The man who failed to enter the Faculty of Fine Arts and
-                Design."
+                "The man who passionate about design and frontend development"
               </p>
               <motion.div
                 variants={wrapAnimate}

@@ -2,71 +2,85 @@
   {
     "id": 1,
     "skillthumb": "/images/skill/css.svg",
-    "title": "CSS"
+    "title": "CSS",
+    "color": "#2062AF"
   },
   {
     "id": 2,
     "skillthumb": "/images/skill/tailwind.svg",
-    "title": "Tailwind"
+    "title": "Tailwind",
+    "color": "#43A3DE"
   },
   {
     "id": 3,
     "skillthumb": "/images/skill/butstrep.svg",
-    "title": "Bootstrap"
+    "title": "Bootstrap",
+    "color": "#7311F6"
   },
   {
     "id": 4,
     "skillthumb": "/images/skill/shadcn.svg",
-    "title": "Shadcn"
+    "title": "Shadcn",
+    "color": "#2E2E2E"
   },
   {
     "id": 5,
     "skillthumb": "/images/skill/nuxtui.svg",
-    "title": "Nuxt UI"
+    "title": "Nuxt UI",
+    "color": "#00AF68"
   },
   {
     "id": 6,
     "skillthumb": "/images/skill/nuxt.svg",
-    "title": "Nuxt JS"
+    "title": "Nuxt JS",
+    "color": "#00AF68"
   },
   {
     "id": 6,
     "skillthumb": "/images/skill/vue.svg",
-    "title": "Vue JS"
+    "title": "Vue JS",
+    "color": "#00AF68"
   },
   {
     "id": 7,
     "skillthumb": "/images/skill/svelte.svg",
-    "title": "Sveltekit"
+    "title": "Sveltekit",
+    "color": "#FF3E00"
   },
   {
     "id": 8,
     "skillthumb": "/images/skill/gatsby.svg",
-    "title": "Gatsby"
+    "title": "Gatsby",
+    "color": "#663399"
   },
   {
     "id": 9,
     "skillthumb": "/images/skill/react.svg",
-    "title": "React"
+    "title": "React",
+    "color": "#61DBFB"
   },
   {
     "id": 10,
     "skillthumb": "/images/skill/nextjs.svg",
-    "title": "Next JS"
+    "title": "Next JS",
+    "color": "#2b2b2b"
   },
   {
     "id": 11,
     "skillthumb": "/images/skill/swiperjs.svg",
-    "title": "Swiper JS"
+    "title": "Swiper JS",
+    "color": "#0162FF"
   },
   {
     "id": 12,
     "skillthumb": "/images/skill/vitejs.svg",
-    "title": "Vite JS"
+    "title": "Vite JS",
+    "color": "#A94DFE"
   },
   {
     "id": 13,
     "skillthumb": "/images/skill/cignater.svg",
-    "title": "Codeignitter"
+    "title": "Codeignitter",
+    "color": "#F24E1E"
   }
 ]

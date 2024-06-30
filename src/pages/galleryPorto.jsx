@@ -99,7 +99,7 @@ export default function GalleryPorto() {
                   muted
                   playsInline
                   type="video/x-matroska"
-                  className="brightness-[55%] object-cover h-full w-full object-top"
+                  className="brightness-[55%] object-cover h-full w-full object-top bg-zinc-100"
                 ></video>
               </div>
             </div>

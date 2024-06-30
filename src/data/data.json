@@ -111,6 +111,7 @@
     "description": "Aplikasi Inovatif untuk membantu & mengatasi permasalahan seputar sampah daur ulang dan pelaporan tumpukan serta pelanggaran pembuangan sampah. Meningkatkan Kesadaran Masyarakat, Meminimalisir Pembuangan Sampah Sembarangan, Meningkatkan Partisipasi Masyarakat. Metode yang digunakan yaitu Design Thinking.masalah banyak sampah timbunan dan samapah yang tidak terkelola. Recything dikerjakan dengan 9 uiux, 10 frontend, 5 backend, 4 mobile dan 2 QA engineer",
     "label": "Figma",
     "figmaUrl": "https://www.figma.com/design/MNMdvvfmCZVFc6HRsjrcCy/Recything-Design?node-id=8576-50678&t=8R0AalSkWIkuJ1La-1",
+    "webUrl": "https://recything.my.id/",
     "tabs": [
       { "id": 1, "image": "/images/porto/recything.jpg" },
       { "id": 2, "image": "/images/porto/recything2.png" },

@@ -188,7 +188,10 @@ function AboutSection(props, ref) {
                   {designData.map((skill) => (
                     <div className="group relative flex" key={skill.id}>
                       <img src={skill.skillthumb} alt="" />
-                      <h1 className="absolute bottom-0 left-1 -z-10 text-[8px] font-semibold opacity-0 transition-all group-hover:translate-y-2 group-hover:scale-[160%] group-hover:opacity-100 max-sm:text-[6px]">
+                      <h1
+                        className={`absolute bottom-0 left-1 -z-10 text-[8px] font-semibold opacity-0 transition-all group-hover:translate-y-2 group-hover:scale-[160%] group-hover:opacity-100 max-sm:text-[6px]`}
+                        style={{ color: skill.color }}
+                      >
                         {skill.title}
                       </h1>
                     </div>
@@ -206,7 +209,10 @@ function AboutSection(props, ref) {
                   {skillData.map((skill) => (
                     <div className="group relative flex" key={skill.id}>
                       <img src={skill.skillthumb} alt="" />
-                      <h1 className="absolute bottom-0 left-1 -z-10 text-[8px] font-semibold opacity-0 transition-all group-hover:translate-y-2 group-hover:scale-[160%] group-hover:opacity-100 max-sm:text-[6px]">
+                      <h1
+                        className={`absolute bottom-0 left-1 -z-10 text-[8px] font-semibold opacity-0 transition-all group-hover:translate-y-2 group-hover:scale-[160%] group-hover:opacity-100 max-sm:text-[6px]`}
+                        style={{ color: skill.color }}
+                      >
                         {skill.title}
                       </h1>
                     </div>

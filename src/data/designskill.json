@@ -2,32 +2,38 @@
   {
     "id": 1,
     "skillthumb": "/images/skill/clipstudio.svg",
-    "title": "Clip Studio"
+    "title": "Clip Studio",
+    "color": "#2b2b2b"
   },
   {
     "id": 2,
     "skillthumb": "/images/skill/framer.svg",
-    "title": "Framer"
+    "title": "Framer",
+    "color": "#008EDE"
   },
   {
     "id": 3,
     "skillthumb": "/images/skill/figma.svg",
-    "title": "Figma"
+    "title": "Figma",
+    "color": "#A259FF"
   },
   {
     "id": 4,
     "skillthumb": "/images/skill/framermotion.svg",
-    "title": "FramerMotion"
+    "title": "FramerMotion",
+    "color": "#6E08FF"
   },
   {
     "id": 5,
     "skillthumb": "/images/skill/photoshop.svg",
-    "title": "Photoshop"
+    "title": "Photoshop",
+    "color": "#008EDE"
   },
 
   {
     "id": 6,
     "skillthumb": "/images/skill/illustrator.svg",
-    "title": "Illustrator"
+    "title": "Illustrator",
+    "color": "#F24E1E"
   }
 ]
