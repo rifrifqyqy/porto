@@ -10,18 +10,27 @@ function FooterSection(props, ref) {
   const sosmedStyl = "w-[48px] h-[48px] max-md:w-[32px]";
   let menuFooter = "hover:text-gray-50 transition-all duration-300";
   // fungsi email
+  // const [message, setMessage] = useState("Hello, I'm interested in hiring you");
+  // const handleEmailButtonClick = () => {
+  //   const subject = "Kami Tertarik Menyambut Anda di Tim Kami";
+  //   const body = encodeURIComponent(message);
+  //   const gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rifqyh22@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
+  //   window.open(gmailLink, "_blank");
+  // };
   const [message, setMessage] = useState("Hello, I'm interested in hiring you");
+
   const handleEmailButtonClick = () => {
+    const email = "rifqyh22@gmail.com";
     const subject = "Kami Tertarik Menyambut Anda di Tim Kami";
     const body = encodeURIComponent(message);
-    const gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rifqyh22@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
-    window.open(gmailLink, "_blank");
-  };
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
 
+    window.location.href = mailtoLink;
+  };
   return (
     <>
       <div
-        className="mt-16 max-sm:mt-8 grid grid-cols-2 justify-between gap-4 bg-[#0D1A22] px-24 py-10 text-white max-md:grid-cols-1 max-md:px-8 max-md:py-8"
+        className="mt-16 grid grid-cols-2 justify-between gap-4 bg-[#0D1A22] px-24 py-10 text-white max-md:grid-cols-1 max-md:px-8 max-md:py-8 max-sm:mt-8"
         id="contact"
         ref={ref}
         {...props}
@@ -56,11 +65,14 @@ function FooterSection(props, ref) {
             <div className="flex flex-col gap-2 max-md:gap-0">
               <h1 className={`${headerStyle}`}>CONTACT ME</h1>
               <div className="flex gap-3">
-                <img
-                  src="/images/sosmed/facebook.svg"
-                  alt=""
-                  className={sosmedStyl}
-                />
+                <Link to="https://www.facebook.com/rifqy.hamdani.9?mibextid=ZbWKwL">
+                  <img
+                    src="/images/sosmed/facebook.svg"
+                    alt=""
+                    className={sosmedStyl}
+                  />
+                </Link>
+
                 <Link to="https://www.instagram.com/rifrifqyqy/">
                   <img
                     src="/images/sosmed/insta.svg"
@@ -68,17 +80,28 @@ function FooterSection(props, ref) {
                     className={sosmedStyl}
                   />
                 </Link>
+                <Link to="https://wa.me/6281288233054">
+                  <img
+                    src="/images/sosmed/whatsapp.svg"
+                    alt=""
+                    className={sosmedStyl}
+                  />
+                </Link>
+                <Link onClick={handleEmailButtonClick}>
+                  <img
+                    src="/images/sosmed/gmail.svg"
+                    alt=""
+                    className={sosmedStyl}
+                  />
+                </Link>
 
-                <img
-                  src="/images/sosmed/whatsapp.svg"
-                  alt=""
-                  className={sosmedStyl}
-                />
-                <img
-                  src="/images/sosmed/gmail.svg"
-                  alt=""
-                  className={sosmedStyl}
-                />
+                <Link to="https://github.com/rifrifqyqy">
+                  <img
+                    src="/images/sosmed/github.svg"
+                    alt=""
+                    className={sosmedStyl}
+                  />
+                </Link>
               </div>
             </div>
             <div className="flex flex-col gap-2">

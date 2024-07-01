@@ -70,6 +70,25 @@ export default function GalleryPorto() {
       },
     },
   };
+  // tab category
+  const tabCategory = [
+    {
+      id: 1,
+      name: "All",
+    },
+    {
+      id: 2,
+      name: "Coding",
+    },
+    {
+      id: 3,
+      name: "Figma",
+    },
+    {
+      id: 4,
+      name: "Design",
+    },
+  ];
 
   return (
     <>
@@ -115,15 +134,17 @@ export default function GalleryPorto() {
           </section>
           <section className="sticky top-0 z-10 mx-24 py-8 max-sm:top-[24px] max-sm:mx-4 max-sm:py-4">
             <main className="portotab flex w-fit gap-5 border-2 border-zinc-500 bg-white p-2 max-sm:gap-2 max-sm:border max-sm:p-1">
-              {["All", "Coding", "Figma", "Design"].map((tab) => (
+              {tabCategory.map((tab) => (
                 <div
-                  key={tab}
-                  className={`cursor-pointer px-4 py-2 font-semibold transition-all duration-500 max-sm:px-3 max-sm:py-1 max-sm:text-[14px] ${activeTab === tab ? `bg-amber-500 text-white` : "text-zinc-700 hover:bg-zinc-200"} `}
-                  onClick={() => setActiveTab(tab)}
+                  key={tab.id}
+                  className={`cursor-pointer px-4 py-2 font-semibold transition-all duration-500 max-sm:px-3 max-sm:py-1 max-sm:text-[14px] ${activeTab === tab.name ? `bg-amber-500 text-white` : "text-zinc-700 hover:bg-zinc-200"} `}
+                  onClick={() => setActiveTab(tab.name)}
                 >
                   <div className="flex items-center gap-1">
-                    <span>{tab}</span>
-                    {activeTab === tab && <span>({filteredData.length})</span>}
+                    <span>{tab.name}</span>
+                    {activeTab === tab.name && (
+                      <span>({filteredData.length})</span>
+                    )}
                   </div>
                 </div>
               ))}
@@ -133,8 +154,8 @@ export default function GalleryPorto() {
             <div
               className={`grid w-full ${filteredData.length === 0 ? "grid-cols-1 justify-center" : "grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"} gap-8 max-sm:gap-2`}
             >
-              <AnimatePresence>
-                {filteredData.length === 0 ? (
+              <AnimatePresence mode="wait">
+                { filteredData.length === 0 ? (
                   <PortoEmpty />
                 ) : (
                   filteredData.map((porto, index) => {
@@ -214,12 +235,12 @@ export default function GalleryPorto() {
                             frame={porto.imageUrl}
                             label={porto.label}
                             labelstyle={`
-                        ${porto.label === "Figma" ? "bg-emerald-500 text-white" : ""}
-                        ${porto.label === "Design" ? "bg-violet-600 text-white" : ""}
-                        `}
+                            ${porto.label === "Figma" ? "bg-emerald-500 text-white" : ""}
+                            ${porto.label === "Design" ? "bg-violet-600 text-white" : ""}
+                          `}
                             coverStyle={`
-                        ${porto.label === "Figma" ? "bg-emerald-400/20" : ""}
-                        ${porto.label === "Design" ? "bg-violet-500/20" : ""}
+                            ${porto.label === "Figma" ? "bg-emerald-400/20" : ""}
+                            ${porto.label === "Design" ? "bg-violet-500/20" : ""}
                           `}
                           />
                           <CardProject2.PolaroidBody
