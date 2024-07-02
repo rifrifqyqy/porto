@@ -137,22 +137,6 @@ function FooterSection(props, ref) {
         <div className="col-span-2 mt-8 flex h-full items-center justify-center border-t-2">
           <h1 className="flex items-center text-center max-md:text-[12px] max-sm:text-[8px]">
             <span>© 2024 Rifqy Portfolio. All rights reserved</span>
-            <span className="mx-4 max-sm:mx-2">|</span>
-            <span className="flex items-center">
-              Made w Reactjs
-              <img
-                src="/images/skill/react.svg"
-                alt=""
-                className="mx-2 w-8 max-sm:mx-1 max-sm:w-5"
-              />
-              <span className="mx-4 max-sm:mx-2">|</span> Animation by
-              FramerMotion
-              <img
-                src="/images/skill/framermotion.svg"
-                alt=""
-                className="mx-2 w-8 max-sm:mx-1 max-sm:w-5"
-              />
-            </span>
           </h1>
         </div>
       </div>
