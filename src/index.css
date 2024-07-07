@@ -156,13 +156,13 @@ html {
   }
 }
 .border-retro {
-  @apply border-t-2 border-l-2 border-b-4 border-r-4 border-black;
+  @apply border-b-4 border-l-2 border-r-4 border-t-2 border-black;
 }
 .border-retro-org {
-  @apply border-t-2 border-l-2 border-b-4 border-r-4;
+  @apply border-b-4 border-l-2 border-r-4 border-t-2;
 }
 .border-retro-sm {
-  @apply border-t-[1px] border-l-[1px] border-b-2 border-r-2;
+  @apply border-b-2 border-l-[1px] border-r-2 border-t-[1px];
 }
 .accordion-title {
   @apply text-[20px] hover:no-underline;
@@ -191,9 +191,24 @@ html {
 
 .Marquee {
   img {
-    @apply max-sm:w-[40px]
+    @apply max-sm:w-[40px];
   }
 }
 .no-scrollbar {
   scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid black;
+  background: #ffb949;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(37, 100%, 54%);
 }

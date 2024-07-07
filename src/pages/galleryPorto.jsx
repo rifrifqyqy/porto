@@ -29,13 +29,10 @@ export default function GalleryPorto() {
 
   const containVariants = {
     hidden: {
-      scale: 0.9,
-      y: -100,
-      opacity: 0.5,
+      y: 300,
     },
     visible: {
-      opacity: 1,
-      scale: 1,
+      y: 0,
       transition: {
         duration: 1,
         ease: [0.76, 0, 0.24, 1],
@@ -92,7 +89,7 @@ export default function GalleryPorto() {
 
   return (
     <>
-      <main>
+      <motion.main>
         <div className="fixed left-0 top-0 z-[-9999] h-[100vh] w-[100vw] bg-black"></div>
         <motion.div
           variants={wrapAnimate}
@@ -101,7 +98,7 @@ export default function GalleryPorto() {
           exit="exit"
           className="fixed left-0 top-0 z-50 h-[100vh] w-[100vw] bg-white/100"
         />
-        <motion.div variants={containVariants} exit="exit" className="bg-white">
+        <motion.div variants={containVariants} initial="hidden" animate="visible" exit="exit" className="bg-white">
           <NavigationPage projectTitle="La Project Galleria" to="back" />
           <section className="mx-24 mt-12 max-sm:mx-4 max-sm:mt-4">
             <div className="rounded-2xl border-2 border-zinc-900 p-2 max-sm:border max-sm:p-1">
@@ -120,7 +117,7 @@ export default function GalleryPorto() {
                 </div>
 
                 <video
-                  src="/videos/furiwir.mp4"
+                  src="/videos/furiwir_3.mp4"
                   frameborder="0"
                   autoPlay
                   loop
@@ -155,7 +152,7 @@ export default function GalleryPorto() {
               className={`grid w-full ${filteredData.length === 0 ? "grid-cols-1 justify-center" : "grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"} gap-8 max-sm:gap-2`}
             >
               <AnimatePresence mode="wait">
-                { filteredData.length === 0 ? (
+                {filteredData.length === 0 ? (
                   <PortoEmpty />
                 ) : (
                   filteredData.map((porto, index) => {
@@ -258,7 +255,7 @@ export default function GalleryPorto() {
           </section>
           <FooterSection />
         </motion.div>
-      </main>
+      </motion.main>
     </>
   );
 }

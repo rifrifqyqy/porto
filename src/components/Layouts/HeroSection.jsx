@@ -129,22 +129,22 @@ function HeroSection({ aboutScroll }, ref) {
               variants={imageAnimate}
               className="relative z-10 origin-bottom-left"
             >
-              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 max-sm:mr-0 max-sm:pb-12 pt-10">
+              <div className="mr-24 h-fit w-fit border-2 border-black bg-white p-4 pb-16 pt-10 max-sm:mr-0 max-sm:pb-12">
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
-                    src="/images/furina.jpg"
+                    src="/images/wolfkeum.jpg"
                     alt=""
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover grayscale "
                   />
                 </div>
               </div>
               <motion.div
                 variants={polaroidRotate}
-                className="absolute -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12 pt-10"
+                className="absolute -z-[2] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 pt-10 max-sm:pb-12"
               >
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
-                    src="/images/wolfkeum.jpg"
+                    src="/images/picture2.png"
                     alt=""
                     className="h-full w-full object-cover"
                   />
@@ -152,11 +152,11 @@ function HeroSection({ aboutScroll }, ref) {
               </motion.div>
               <motion.div
                 variants={polaroidRotate2}
-                className="absolute -z-[3] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 max-sm:pb-12 pt-10"
+                className="absolute -z-[3] mr-24 h-fit w-fit origin-bottom-left border-2 border-black bg-white p-4 pb-16 pt-10 max-sm:pb-12"
               >
                 <div className="h-[400px] w-[300px] border-2 border-zinc-800 max-sm:h-[300px] max-sm:w-[250px]">
                   <img
-                    src="/images/furina2.jpg"
+                    src="/images/picture1.png"
                     alt=""
                     className="h-full w-full object-cover"
                   />

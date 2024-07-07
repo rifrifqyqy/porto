@@ -5,7 +5,7 @@ import ProjectSection from "@/components/Layouts/ProjectSection";
 import FooterSection from "@/components/Layouts/FooterSection";
 import { motion } from "framer-motion";
 import NavigationBar from "@/components/navigationBar";
-
+import "../index.css";
 export default function HomePage() {
   const aboutRef = useRef(null);
   const homeref = useRef(null);
