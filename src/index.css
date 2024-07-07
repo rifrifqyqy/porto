@@ -201,8 +201,7 @@ html {
   width: 12px;
 }
 ::-webkit-scrollbar-track {
-  border-left: 1px black solid;
-  border-right: 1px black solid;
+  background: #f0f0f0;
 }
 
 ::-webkit-scrollbar-thumb {
