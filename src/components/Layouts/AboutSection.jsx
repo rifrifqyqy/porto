@@ -1,6 +1,7 @@
 import { delay, motion } from "framer-motion";
 import { forwardRef, useState } from "react";
 import "../../index.css";
+import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import skillData from "../../data/skill.json";
 import designData from "../../data/designskill.json";
@@ -186,7 +187,11 @@ function AboutSection(props, ref) {
               >
                 <div className="Marquee mr-4 flex gap-4">
                   {designData.map((skill) => (
-                    <div className="group relative flex" key={skill.id}>
+                    <Link
+                      to={skill.site}
+                      className="group relative flex"
+                      key={skill.id}
+                    >
                       <img src={skill.skillthumb} alt="" />
                       <h1
                         className={`absolute bottom-0 left-1 -z-10 text-[8px] font-semibold opacity-0 transition-all group-hover:translate-y-2 group-hover:scale-[160%] group-hover:opacity-100 max-sm:text-[6px]`}
@@ -194,7 +199,7 @@ function AboutSection(props, ref) {
                       >
                         {skill.title}
                       </h1>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </Marquee>
@@ -207,7 +212,11 @@ function AboutSection(props, ref) {
               >
                 <div className="Marquee mr-4 flex gap-4">
                   {skillData.map((skill) => (
-                    <div className="group relative flex" key={skill.id}>
+                    <Link
+                      to={skill.site}
+                      className="group relative flex"
+                      key={skill.id}
+                    >
                       <img src={skill.skillthumb} alt="" />
                       <h1
                         className={`absolute bottom-0 left-1 -z-10 text-[8px] font-semibold opacity-0 transition-all group-hover:translate-y-2 group-hover:scale-[160%] group-hover:opacity-100 max-sm:text-[6px]`}
@@ -215,7 +224,7 @@ function AboutSection(props, ref) {
                       >
                         {skill.title}
                       </h1>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </Marquee>

@@ -3,37 +3,49 @@
     "id": 1,
     "skillthumb": "/images/skill/clipstudio.svg",
     "title": "Clip Studio",
-    "color": "#2b2b2b"
+    "color": "#2b2b2b",
+
+    "site": "https://www.clipstudio.net"
   },
   {
     "id": 2,
     "skillthumb": "/images/skill/framer.svg",
     "title": "Framer",
-    "color": "#008EDE"
+    "color": "#008EDE",
+
+    "site": "https://www.framer.com"
   },
   {
     "id": 3,
     "skillthumb": "/images/skill/figma.svg",
     "title": "Figma",
-    "color": "#A259FF"
+    "color": "#A259FF",
+
+    "site": "https://www.figma.com"
   },
   {
     "id": 4,
     "skillthumb": "/images/skill/framermotion.svg",
     "title": "FramerMotion",
-    "color": "#6E08FF"
+    "color": "#6E08FF",
+
+    "site": "https://www.framer.com/motion/"
   },
   {
     "id": 5,
     "skillthumb": "/images/skill/photoshop.svg",
     "title": "Photoshop",
-    "color": "#008EDE"
+    "color": "#008EDE",
+
+    "site": "https://www.adobe.com"
   },
 
   {
     "id": 6,
     "skillthumb": "/images/skill/illustrator.svg",
     "title": "Illustrator",
-    "color": "#F24E1E"
+    "color": "#F24E1E",
+
+    "site": "https://www.adobe.com"
   }
 ]
