@@ -1,5 +1,5 @@
 import CardProject2 from "@/components/Elements/Card/CardProject2";
-import { furina1, furina2, pfp } from "@/components/imageImport";
+import { pfp } from "@/components/imageImport";
 import NavigationPage from "@/components/navigationPage";
 import dataCard from "../data/data.json";
 import { AnimatePresence, motion } from "framer-motion";
@@ -98,7 +98,13 @@ export default function GalleryPorto() {
           exit="exit"
           className="fixed left-0 top-0 z-50 h-[100vh] w-[100vw] bg-white/100"
         />
-        <motion.div variants={containVariants} initial="hidden" animate="visible" exit="exit" className="bg-white">
+        <motion.div
+          variants={containVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="bg-white"
+        >
           <NavigationPage projectTitle="La Project Galleria" to="back" />
           <section className="mx-24 mt-12 max-sm:mx-4 max-sm:mt-4">
             <div className="rounded-2xl border-2 border-zinc-900 p-2 max-sm:border max-sm:p-1">
@@ -118,7 +124,7 @@ export default function GalleryPorto() {
 
                 <video
                   src="/videos/furiwir_3.mp4"
-                  frameborder="0"
+                  frameBorder="0"
                   autoPlay
                   loop
                   muted
@@ -226,7 +232,7 @@ export default function GalleryPorto() {
                       >
                         <CardProject2
                           key={porto.id}
-                          to={`/projects/${porto.id}`}
+                          to={`/gallery/${porto.id}`}
                         >
                           <CardProject2.PolaroidImg
                             frame={porto.imageUrl}

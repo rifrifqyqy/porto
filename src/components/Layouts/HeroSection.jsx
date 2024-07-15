@@ -1,5 +1,5 @@
-import { forwardRef, useRef } from "react";
-import { delay, motion, stagger } from "framer-motion";
+import { forwardRef } from "react";
+import { motion } from "framer-motion";
 import MainButton from "../Elements/Button/MainButton";
 function HeroSection({ aboutScroll }, ref) {
   // animate logic
@@ -109,7 +109,10 @@ function HeroSection({ aboutScroll }, ref) {
     },
   };
   //   animate logic end
-
+  const gradientStyle = {
+    background:
+      "linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, #FFF 90%)",
+  };
   return (
     <>
       <motion.section
@@ -134,7 +137,7 @@ function HeroSection({ aboutScroll }, ref) {
                   <img
                     src="/images/wolfkeum.jpg"
                     alt=""
-                    className="h-full w-full object-cover grayscale "
+                    className="h-full w-full object-cover grayscale"
                   />
                 </div>
               </div>
@@ -204,8 +207,8 @@ function HeroSection({ aboutScroll }, ref) {
             </div>
           </motion.div>
         </div>
-        <div className="absolute left-0 top-96 -z-10 h-12 w-[100%] rotate-45 border-[1px] border-gray-800 max-md:-left-20 max-md:top-40 max-md:w-[600px]">
-          <marquee className="pt-2 opacity-30" scrollamount="20" loop="-1">
+        {/* <div className="absolute left-0 top-96 -z-10 h-12 w-[100%] rotate-45 border-[1px] border-gray-800 max-md:-left-20 max-md:top-40 max-md:w-[600px]">
+          <marquee className="pt-2 opacity-30">
             Rifqy Hamdani. 21 years old Enthusiast in design
             <span className="mx-96">
               Rifqy Hamdani. 21 years old Enthusiast in design{" "}
@@ -225,8 +228,24 @@ function HeroSection({ aboutScroll }, ref) {
 
         <div className="absolute top-[30%] -z-20 -ml-24 w-[100vw] translate-x-28 overflow-x-hidden text-[280px] text-white opacity-60">
           <img src="images/EGAMEDIEV.svg" alt="" />
-        </div>
+        </div> */}
         <div className="fixed left-0 top-0 z-[-99] h-[100%] w-[100%] bg-white"></div>
+        <div className="absolute top-0 -z-10 h-dvh w-dvw">
+          <video
+            src="/videos/miku.mp4"
+            frameBorder="0"
+            autoPlay
+            loop
+            muted
+            playsInline
+            type="video/x-matroska"
+            className=""
+          ></video>
+        </div>
+        <div
+          className="absolute top-0 -z-[9] h-dvh w-dvw bg-white/85"
+          style={gradientStyle}
+        ></div>
       </motion.section>
     </>
   );

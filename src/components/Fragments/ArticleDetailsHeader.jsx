@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Accordion,
   AccordionContent,
@@ -77,6 +78,7 @@ export default function ArticleProject({ toolIcon, portoData }) {
               <div className="flex gap-4 max-md:gap-2">
                 {toolIcon.map((tool) => (
                   <img
+                    key={tool.id}
                     src={tool.toolthumb}
                     alt=""
                     className="max-md:w-[28px]"

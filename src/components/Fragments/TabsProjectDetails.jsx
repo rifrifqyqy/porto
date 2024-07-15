@@ -1,10 +1,19 @@
+/* eslint-disable react/prop-types */
 import { motion, AnimatePresence } from "framer-motion";
 import "../../index.css";
-export default function TabsProject({ tabData, handleTabClick, activeTab, tabImage, bgTabsImage }) {
+export default function TabsProject({
+  tabData,
+  handleTabClick,
+  activeTab,
+  tabImage,
+  bgTabsImage,
+}) {
   return (
     <>
       <aside>
-        <div className={`tabcontent border-retro aspect-video h-[390px] w-full overflow-hidden  max-md:h-[249px] max-md:w-full ${bgTabsImage}`}>
+        <div
+          className={`tabcontent border-retro aspect-video h-[390px] w-full overflow-hidden max-md:h-[249px] max-md:w-full ${bgTabsImage}`}
+        >
           <div></div>
           <AnimatePresence mode="wait">
             <motion.img

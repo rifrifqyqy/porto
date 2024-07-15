@@ -50,7 +50,7 @@ export default function PortoCardLayout() {
             whileInView={animation.view}
             className="flex"
           >
-            <CardProject key={data.id} to={`/projects/${data.id}`}>
+            <CardProject key={data.id} to={`/gallery/${data.id}`}>
               <CardProject.CardHeader
                 labelTag={data.label}
                 labelLink={data.webUrl}

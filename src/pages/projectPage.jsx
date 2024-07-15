@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../index.css";
 import NavigationPage from "@/components/navigationPage";
-import PortoCardLayout, {
-  PortoDetailsLayout,
-} from "@/components/Layouts/PortoDetailsLayout/PortoDetailsLayout";
+import PortoCardLayout from "@/components/Layouts/PortoDetailsLayout/PortoDetailsLayout";
 import FooterSection from "@/components/Layouts/FooterSection";
 import TabsProject from "@/components/Fragments/TabsProjectDetails";
 import ArticleProject from "@/components/Fragments/ArticleDetailsHeader";
