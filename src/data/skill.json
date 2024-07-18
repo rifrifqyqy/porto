@@ -96,5 +96,12 @@
     "title": "Codeignitter",
     "color": "#F24E1E",
     "site": "https://codeigniter.com/"
+  },
+  {
+    "id": 14,
+    "skillthumb": "/images/skill/node.svg",
+    "title": "Node JS",
+    "color": "#44A350",
+    "site": "https://nodejs.org/id"
   }
 ]
