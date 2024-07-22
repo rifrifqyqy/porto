@@ -158,14 +158,14 @@ function AboutSection(props, ref) {
                 variants={textShow}
                 className="mt-8 w-[570px] text-slate-500 max-md:mt-4 max-md:w-fit max-md:text-[14px]"
               >
-                "Passionate about art and design, Rifqy Hamdani is an
+                &quot;Passionate about art and design, Rifqy Hamdani is an
                 enthusiastic college student pursuing his dreams in the world of
                 design. With a fondness for UI design and a keen interest in UX
                 research, Rifqy brings dedication and creativity to every
                 project he faces. With arts thinking and logic as his
                 foundation, he delves into the complexities of frontend web
                 design diligently, crafting captivating user experiences and
-                stunning aesthetics.
+                stunning aesthetics.&quot;
               </motion.p>
               <motion.div
                 variants={coverAnimate}
@@ -210,11 +210,11 @@ function AboutSection(props, ref) {
                 className="mt-8 border-b-2 border-t-2 border-amber-500 py-4 max-sm:mt-4 max-sm:py-2"
                 autoFill
               >
-                <div className="Marquee mr-4 flex gap-4">
+                <div className="Marquee  mr-4 flex gap-4">
                   {skillData.map((skill) => (
                     <Link
                       to={skill.site}
-                      className="group relative flex"
+                      className="group relative flex "
                       key={skill.id}
                     >
                       <img src={skill.skillthumb} alt="" />

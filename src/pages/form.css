@@ -1,0 +1,87 @@
+.input-file,
+.input-thumb,
+.input-file-tools {
+  color: transparent;
+  background-color: rgb(240, 240, 240);
+
+  &:hover {
+    opacity: 80%;
+  }
+  &:active {
+    scale: 95%;
+  }
+  transition: all 100ms;
+  -webkit-transition: all 100ms;
+  -moz-transition: all 100ms;
+  -ms-transition: all 100ms;
+  -o-transition: all 100ms;
+}
+
+.input-file::-webkit-file-upload-button,
+.input-thumb::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.input-file::before {
+  content: "Tambah Gambar Porto";
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  background: #f0ac00;
+  padding: 5px 10px;
+  outline: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 4px;
+}
+
+.input-file:hover::before,
+.input-thumb:hover::before {
+  border-color: black;
+}
+
+.input-file-tools::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.input-file-tools::before {
+  content: "Tambah Tools";
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  background: #f0ac00;
+  padding: 5px 10px;
+  outline: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 4px;
+}
+
+.input-form {
+  @apply border bg-gray-50 p-2 text-left text-gray-800 placeholder:font-light placeholder:italic focus:outline-none focus:ring-2 focus:ring-amber-500;
+}
+.input-thumb::before {
+  content: "Tambah Thumbnail";
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  background: #f0ac00;
+
+  padding: 5px 10px;
+  outline: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 4px;
+}
+
+.asterisk {
+  color: rgb(199, 0, 0);
+  font-size: 20px;
+  margin-left: 4px;
+}

@@ -57,51 +57,58 @@
   },
   {
     "id": 8,
-    "skillthumb": "/images/skill/gatsby.svg",
-    "title": "Gatsby",
-    "color": "#663399",
-    "site": "https://www.gatsbyjs.com/"
-  },
-  {
-    "id": 9,
-    "skillthumb": "/images/skill/react.svg",
-    "title": "React",
-    "color": "#61DBFB",
-    "site": "https://reactjs.org/"
-  },
-  {
-    "id": 10,
-    "skillthumb": "/images/skill/next.svg",
-    "title": "Next JS",
-    "color": "#2b2b2b",
-    "site": "https://nextjs.org/"
-  },
-  {
-    "id": 11,
-    "skillthumb": "/images/skill/swiperjs.svg",
-    "title": "Swiper JS",
-    "color": "#0162FF",
-    "site": "https://swiperjs.com/"
-  },
-  {
-    "id": 12,
-    "skillthumb": "/images/skill/vitejs.svg",
-    "title": "Vite JS",
-    "color": "#A94DFE",
-    "site": "https://vitejs.dev/"
-  },
-  {
-    "id": 13,
     "skillthumb": "/images/skill/cignater.svg",
     "title": "Codeignitter",
     "color": "#F24E1E",
     "site": "https://codeigniter.com/"
   },
   {
-    "id": 14,
+    "id": 9,
+    "skillthumb": "/images/skill/mongodb.svg",
+    "title": "Mongo DB",
+    "color": "#639D57",
+    "site": "https://www.mongodb.com/"
+  },
+  {
+    "id": 10,
+    "skillthumb": "/images/skill/express.svg",
+    "title": "Express JS",
+    "color": "#FF4680",
+    "site": "https://expressjs.com/"
+  },
+  {
+    "id": 11,
+    "skillthumb": "/images/skill/react.svg",
+    "title": "React",
+    "color": "#61DBFB",
+    "site": "https://reactjs.org/"
+  },
+  {
+    "id": 12,
     "skillthumb": "/images/skill/node.svg",
     "title": "Node JS",
-    "color": "#44A350",
+    "color": "#639D57",
     "site": "https://nodejs.org/id"
+  },
+  {
+    "id": 13,
+    "skillthumb": "/images/skill/next.svg",
+    "title": "Next JS",
+    "color": "#2b2b2b",
+    "site": "https://nextjs.org/"
+  },
+  {
+    "id": 14,
+    "skillthumb": "/images/skill/swiperjs.svg",
+    "title": "Swiper JS",
+    "color": "#0162FF",
+    "site": "https://swiperjs.com/"
+  },
+  {
+    "id": 15,
+    "skillthumb": "/images/skill/vitejs.svg",
+    "title": "Vite JS",
+    "color": "#A94DFE",
+    "site": "https://vitejs.dev/"
   }
 ]

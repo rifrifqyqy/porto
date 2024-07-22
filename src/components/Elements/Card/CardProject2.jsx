@@ -50,7 +50,7 @@ function PolaroidBody({ profile, title, desc }) {
           alt=""
           className="h-[50px] w-[50px] rounded-full max-sm:h-[32px] max-sm:w-[32px]"
         />
-        <article className="flex flex-col group-hover:text-white">
+        <article className="flex flex-col group-hover:text-white max-w-[210px]">
           <h1 className="line-clamp-1 font-semibold uppercase transition-all duration-300 max-sm:text-[14px] max-sm:leading-[120%]">
             {title}
           </h1>

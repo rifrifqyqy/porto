@@ -111,7 +111,7 @@ function HeroSection({ aboutScroll }, ref) {
   //   animate logic end
   const gradientStyle = {
     background:
-      "linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, #FFF 90%)",
+      "linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, #FFF 85%)",
   };
   return (
     <>
@@ -185,7 +185,8 @@ function HeroSection({ aboutScroll }, ref) {
             </h1>
             <div className="relative">
               <p className="mt-[-24px] font-statliches text-2xl max-md:mt-0 max-md:text-lg max-md:leading-tight">
-                "The man who passionate about design and frontend development"
+                &quot;The man who passionate about design and frontend
+                development&quot;
               </p>
               <motion.div
                 variants={wrapAnimate}
@@ -232,7 +233,7 @@ function HeroSection({ aboutScroll }, ref) {
         <div className="fixed left-0 top-0 z-[-99] h-[100%] w-[100%] bg-white"></div>
         <div className="absolute top-0 -z-10 h-dvh w-dvw">
           <video
-            src="/videos/miku.mp4"
+            src="/videos/gridtech.mp4"
             frameBorder="0"
             autoPlay
             loop
@@ -243,7 +244,7 @@ function HeroSection({ aboutScroll }, ref) {
           ></video>
         </div>
         <div
-          className="absolute top-0 -z-[9] h-dvh w-dvw bg-white/85"
+          className="absolute top-0 -z-[9] h-dvh w-dvw bg-black/80"
           style={gradientStyle}
         ></div>
       </motion.section>
