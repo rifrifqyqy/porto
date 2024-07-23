@@ -1,4 +1,4 @@
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { forwardRef, useState } from "react";
 import "../../index.css";
 import { Link } from "react-router-dom";
@@ -210,11 +210,11 @@ function AboutSection(props, ref) {
                 className="mt-8 border-b-2 border-t-2 border-amber-500 py-4 max-sm:mt-4 max-sm:py-2"
                 autoFill
               >
-                <div className="Marquee  mr-4 flex gap-4">
+                <div className="Marquee mr-4 flex gap-4">
                   {skillData.map((skill) => (
                     <Link
                       to={skill.site}
-                      className="group relative flex "
+                      className="group relative flex"
                       key={skill.id}
                     >
                       <img src={skill.skillthumb} alt="" />
