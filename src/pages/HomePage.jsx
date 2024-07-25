@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, Fragment } from "react";
 import HeroSection from "@/components/Layouts/HeroSection";
 import AboutSection from "@/components/Layouts/AboutSection";
 import ProjectSection from "@/components/Layouts/ProjectSection";
@@ -67,8 +67,8 @@ export default function HomePage() {
     },
   };
   return (
-    <>
-      <div className="">
+    <Fragment>
+      <Fragment>
         {/* bg black menjadi tatakan homepage yang di scale 0.9 */}
         <div className="fixed left-0 top-0 z-[-9999] h-[100vh] w-[100vw] bg-black"></div>
         {/* bg putih diseret keatas */}
@@ -91,7 +91,7 @@ export default function HomePage() {
           <ProjectSection ref={portoRef} />
           <FooterSection ref={contactRef} />
         </motion.div>
-      </div>
-    </>
+      </Fragment>
+    </Fragment>
   );
 }

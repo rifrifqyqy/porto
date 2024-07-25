@@ -6,7 +6,7 @@ export default function PortoEmpty() {
           <img src="/images/nodata.svg" alt="" className="h-[200px]" />
           <div className="flex flex-col items-center gap-2">
             <h1 className="text-xl font-semibold text-sky-700">No Data</h1>
-            <p>Portfolio tidak tersedia</p>
+            <>Portfolio tidak tersedia</>
           </div>
         </div>
       </section>

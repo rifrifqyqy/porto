@@ -91,8 +91,11 @@ export default function NavigationBar({
       >
         <h1 className="font-statliches text-xl">Rifqy Hamdani</h1>
         <ul className="flex gap-10 max-md:hidden">
-          {menuNav.map((menu) => (
-            <li className="flex h-[26px] flex-col overflow-y-hidden">
+          {menuNav.map((menu, index) => (
+            <li
+              key={index}
+              className="flex h-[26px] flex-col overflow-y-hidden"
+            >
               <motion.div
                 className="flex flex-col"
                 initital={{ y: 0 }}
@@ -132,8 +135,11 @@ export default function NavigationBar({
       {isOpen && (
         <nav className="fixed top-[65px] z-20 h-[100vh] w-full bg-gray-400 bg-opacity-55 backdrop-blur-sm">
           <ul className="border-retro m-4 flex h-[650px] w-[60%] flex-col gap-4 bg-white px-4 pt-4">
-            {menuNav.map((menu) => (
-              <li className="flex h-[26px] flex-col overflow-y-hidden">
+            {menuNav.map((menu, index) => (
+              <li
+                key={index}
+                className="flex h-[26px] flex-col overflow-y-hidden"
+              >
                 <motion.div
                   className="flex flex-col"
                   initital={{ y: 0 }}

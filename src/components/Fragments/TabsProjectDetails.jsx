@@ -14,7 +14,6 @@ export default function TabsProject({
         <div
           className={`tabcontent border-retro aspect-video h-[390px] w-full overflow-hidden max-md:h-[249px] max-md:w-full ${bgTabsImage}`}
         >
-          <div></div>
           <AnimatePresence mode="wait">
             <motion.img
               key={tabData[activeTab].image}

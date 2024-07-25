@@ -4,7 +4,7 @@ import NavigationPage from "@/components/navigationPage";
 import dataCard from "../data/data.json";
 import { AnimatePresence, motion } from "framer-motion";
 import FooterSection from "@/components/Layouts/FooterSection";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import PortoEmpty from "@/components/Fragments/PortoEmpty";
 export default function GalleryPorto() {
   const [activeTab, setActiveTab] = useState("All");
@@ -89,7 +89,7 @@ export default function GalleryPorto() {
 
   return (
     <>
-      <motion.main>
+      <Fragment>
         <div className="fixed left-0 top-0 z-[-9999] h-[100vh] w-[100vw] bg-black"></div>
         <motion.div
           variants={wrapAnimate}
@@ -144,9 +144,9 @@ export default function GalleryPorto() {
                   onClick={() => setActiveTab(tab.name)}
                 >
                   <div className="flex items-center gap-1">
-                    <span>{tab.name}</span>
+                    <Fragment>{tab.name}</Fragment>
                     {activeTab === tab.name && (
-                      <span>({filteredData.length})</span>
+                      <Fragment>({filteredData.length})</Fragment>
                     )}
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export default function GalleryPorto() {
           </section>
           <FooterSection />
         </motion.div>
-      </motion.main>
+      </Fragment>
     </>
   );
 }

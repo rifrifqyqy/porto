@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Link } from "react-router-dom";
-import { forwardRef } from "react";
+import { forwardRef, Fragment } from "react";
 
 function FooterSection(props, ref) {
   const headerStyle = "font-statliches text-[20px] max-md:text-[16px]";
@@ -136,7 +136,7 @@ function FooterSection(props, ref) {
         </section>
         <div className="col-span-2 mt-8 flex h-full items-center justify-center border-t-2">
           <h1 className="flex items-center text-center max-md:text-[12px] max-sm:text-[8px]">
-            <span>© 2024 Rifqy Portfolio. All rights reserved</span>
+            <Fragment>© 2024 Rifqy Portfolio. All rights reserved</Fragment>
           </h1>
         </div>
       </div>

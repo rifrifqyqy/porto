@@ -7,13 +7,14 @@ import {
 } from "@/components/ui/accordion";
 import MainButton from "../Elements/Button/MainButton";
 import { twMerge } from "tailwind-merge";
+import { Fragment } from "react";
 
 export default function ArticleProject({ toolIcon, portoData }) {
   return (
     <>
       <article className="flex flex-col gap-4 pl-12 max-md:mt-4 max-md:pl-0 max-md:pt-4">
         <header className="flex flex-col gap-4">
-          <div>
+          <Fragment>
             <h1 className="font-statliches text-[36px] max-md:text-2xl">
               {portoData.title}
             </h1>
@@ -30,7 +31,7 @@ export default function ArticleProject({ toolIcon, portoData }) {
               />
               <p className="max-md:text-[12px]">{portoData.date}</p>
             </div>
-          </div>
+          </Fragment>
 
           <p className="line-clamp-4 text-gray-500 max-md:text-[14px]">
             {portoData.description}
