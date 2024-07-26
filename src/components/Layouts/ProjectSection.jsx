@@ -52,10 +52,9 @@ function ProjectSection(props, ref) {
                 Projects Gallery
               </h1>
               <p className="text-gray-500 max-md:text-[14px]">
-                Selamat datang di GALLERY Imajinasi saya! Di sini, saya akan
-                menampilkan hasil kreativitas saya. Mulai dari karya pixel
-                hingga website dengan barisan code, yang menunjukkan kreativitas
-                saya dalam desain UI/UX dan pengembangan web.
+                Welcome to my Imagination GALLERY! Here, I showcase my creative
+                works. From pixel art to websites coded line by line, displaying
+                my creativity in UI/UX design and web development.
               </p>
             </motion.article>
           </header>

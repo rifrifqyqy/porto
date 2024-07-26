@@ -17,7 +17,7 @@ export default function CardProject({ children, className, buttonStyle, to }) {
         <MainButton
           to={to}
           className={twMerge(
-            "border-retro bg-sky-700 text-center font-statliches text-[20px] tracking-wider hover:opacity-100 group-hover:bg-white group-hover:text-gray-900 max-md:text-[14px]",
+            "border-retro bg-sky-700 text-center font-statliches text-[20px] tracking-wider hover:opacity-100 group-hover:bg-white group-hover:text-gray-900 max-md:mt-2 max-md:py-1 max-md:text-[14px]",
             buttonStyle,
             transitionStyle,
           )}
@@ -126,20 +126,26 @@ function CardImg({ imgFilter, imageUrl, imgBox, videoUrl }) {
   );
 }
 
-function CardBody({ title, children }) {
+function CardBody({ title, children, label }) {
   return (
     <article>
-      <h1
-        className={twMerge(
-          "font-statliches text-[24px] group-hover:text-white max-md:text-[20px]",
-          transitionStyle,
-        )}
-      >
-        {title}
-      </h1>
+      <div className="flex flex-col">
+        <h1
+          className={twMerge(
+            "font-statliches text-[24px] leading-tight group-hover:text-white max-md:text-[20px]",
+            transitionStyle,
+          )}
+        >
+          {title}
+        </h1>
+        <p className="w-fit bg-amber-200 px-3 font-normal lowercase text-amber-600 max-md:text-sm">
+          {label}
+        </p>
+      </div>
+
       <p
         className={twMerge(
-          "line-clamp-5 text-gray-500 group-hover:text-white max-md:line-clamp-3 max-md:text-[14px]",
+          "mt-2 line-clamp-3 text-gray-500 group-hover:text-white max-md:text-[14px]",
           transitionStyle,
         )}
       >

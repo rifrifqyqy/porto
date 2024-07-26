@@ -34,7 +34,7 @@ export default function NavigationPage({ projectTitle, to }) {
           duration: 0.5,
           ease: "easeInOut",
         }}
-        className="sticky top-0 z-40 flex w-full items-center justify-between border-b-[1px] border-slate-800 bg-white/80 px-12 py-4 backdrop-blur max-md:px-4"
+        className="sticky top-0 z-40 flex w-full items-center justify-between border-b-[1px] border-slate-800 bg-white/80 px-12 py-4 backdrop-blur max-md:px-4 max-sm:py-2"
       >
         <MainButton
           to={to}

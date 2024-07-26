@@ -51,17 +51,12 @@ export default function PortoCardLayout() {
             className="flex"
           >
             <CardProject key={data.id} to={`/gallery/${data.id}`}>
-              <CardProject.CardHeader
-                labelTag={data.label}
-                labelLink={data.webUrl}
-              >
-                {data.date}
-              </CardProject.CardHeader>
+              <span className="py-2" />
               <CardProject.CardImg
                 imageUrl={data.imageUrl}
                 videoUrl={data.videoUrl}
               ></CardProject.CardImg>
-              <CardProject.CardBody title={data.title}>
+              <CardProject.CardBody label={data.label} title={data.title}>
                 {data.description}
               </CardProject.CardBody>
             </CardProject>

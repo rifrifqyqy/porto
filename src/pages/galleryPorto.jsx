@@ -106,7 +106,7 @@ export default function GalleryPorto() {
           className="bg-white"
         >
           <NavigationPage projectTitle="La Project Galleria" to="back" />
-          <section className="mx-24 mt-12 max-sm:mx-4 max-sm:mt-4">
+          <section className="mx-24 mt-12 max-md:mx-8 max-sm:mx-4 max-sm:mt-4">
             <div className="rounded-2xl border-2 border-zinc-900 p-2 max-sm:border max-sm:p-1">
               <div className="relative mx-auto h-[350px] overflow-hidden rounded-xl bg-slate-500 max-sm:h-[200px]">
                 <div className="absolute z-10 flex h-full w-full">
@@ -115,9 +115,8 @@ export default function GalleryPorto() {
                       LA GALERIE
                     </p>
                     <p className="mx-4 text-center text-amber-300 max-sm:text-[12px]">
-                      Selamat datang di gallery portofolio saya!. Disini saya
-                      memajang semua portofolio saya terkait coding, desain dan
-                      juga ui desain.
+                      Welcome to my portfolio gallery! Here, I showcase all my
+                      portfolios related to coding, design, and UI design.
                     </p>
                   </div>
                 </div>
@@ -135,8 +134,8 @@ export default function GalleryPorto() {
               </div>
             </div>
           </section>
-          <section className="sticky top-0 z-10 mx-24 py-8 max-sm:top-[24px] max-sm:mx-4 max-sm:py-4">
-            <main className="portotab flex w-fit gap-5 border-2 border-zinc-500 bg-white p-2 max-sm:gap-2 max-sm:border max-sm:p-1">
+          <section className="sticky top-8 z-10 mx-24 -mt-[32px] mb-16 flex justify-center max-md:mx-8 max-sm:top-[24px] max-sm:mx-4 max-sm:mb-4 max-sm:py-4">
+            <main className="portotab flex w-fit items-center justify-between gap-5 border-2 border-zinc-500 bg-white p-2 max-sm:gap-2 max-sm:border max-sm:p-1">
               {tabCategory.map((tab) => (
                 <div
                   key={tab.id}
@@ -144,18 +143,22 @@ export default function GalleryPorto() {
                   onClick={() => setActiveTab(tab.name)}
                 >
                   <div className="flex items-center gap-1">
-                    <Fragment>{tab.name}</Fragment>
+                    <p>{tab.name}</p>
                     {activeTab === tab.name && (
                       <Fragment>({filteredData.length})</Fragment>
                     )}
                   </div>
                 </div>
               ))}
+
+              <h1 className="mr-4 font-statliches text-2xl text-amber-500 max-md:hidden max-sm:ml-4 xl:ml-52">
+                La project galleria
+              </h1>
             </main>
           </section>
-          <section className="mx-24 flex max-sm:mx-4">
+          <section className="mx-24 flex max-md:mx-8 max-sm:mx-4">
             <div
-              className={`grid w-full ${filteredData.length === 0 ? "grid-cols-1 justify-center" : "grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"} gap-8 max-sm:gap-2`}
+              className={`grid w-full ${filteredData.length === 0 ? "grid-cols-1 justify-center" : "grid-cols-2 max-md:grid-cols-3 max-sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"} gap-8 max-sm:gap-x-2 max-sm:gap-y-4`}
             >
               <AnimatePresence mode="wait">
                 {filteredData.length === 0 ? (
@@ -228,7 +231,7 @@ export default function GalleryPorto() {
                         initial={animation.initial}
                         animate={animation.view}
                         exit={animation.exit}
-                        className="flex"
+                        className="flex justify-center"
                       >
                         <CardProject2
                           key={porto.id}

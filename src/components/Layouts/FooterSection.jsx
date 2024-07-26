@@ -8,7 +8,7 @@ import { forwardRef, Fragment } from "react";
 function FooterSection(props, ref) {
   const headerStyle = "font-statliches text-[20px] max-md:text-[16px]";
   const sosmedStyl = "w-[48px] h-[48px] max-md:w-[32px]";
-  let menuFooter = "hover:text-gray-50 transition-all duration-300";
+  let menuFooter = "hover:text-gray-50 transition-all duration-300 max-sm:text-[12px]";
   // fungsi email
   // const [message, setMessage] = useState("Hello, I'm interested in hiring you");
   // const handleEmailButtonClick = () => {
