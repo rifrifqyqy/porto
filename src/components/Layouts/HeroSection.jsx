@@ -231,7 +231,7 @@ function HeroSection({ aboutScroll }, ref) {
           <img src="images/EGAMEDIEV.svg" alt="" />
         </div> */}
         <div className="fixed left-0 top-0 z-[-99] h-[100%] w-[100%] bg-white"></div>
-        <div className="absolute top-0 -z-10 h-dvh w-dvw">
+        <div className="absolute top-0 -z-10 h-dvh w-dvw max-sm:hidden ">
           <video
             src="/videos/gridtech.mp4"
             frameBorder="0"

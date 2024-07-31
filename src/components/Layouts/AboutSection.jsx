@@ -177,12 +177,14 @@ function AboutSection(props, ref) {
               ></motion.div>
             </motion.div>
 
-            <div className="mx-auto mt-16 w-[350px] max-md:mt-4 max-md:w-[300px]">
+            <div className="mx-auto mt-16 w-[380px] max-md:mt-4 max-md:w-[300px]">
               <Marquee
                 loop={0}
                 speed={50}
                 play
-                className="overflow-y-visible border-b-2 border-t-2 border-amber-500 py-5 max-sm:py-2"
+                gradient
+                gradientWidth={50}
+                className="overflow-y-hidden border-b-2 border-t-2 border-amber-500 h-24 max-sm:h-16"
                 autoFill
               >
                 <div className="Marquee mr-4 flex gap-4">
@@ -207,7 +209,9 @@ function AboutSection(props, ref) {
                 loop={0}
                 speed={50}
                 play
-                className="mt-8 border-b-2 border-t-2 border-amber-500 py-4 max-sm:mt-4 max-sm:py-2"
+                gradient
+                gradientWidth={50}
+                className="mt-8 border-b-2 border-t-2 border-amber-500 h-24 max-sm:mt-4 max-sm:h-16"
                 autoFill
               >
                 <div className="Marquee mr-4 flex gap-4">
