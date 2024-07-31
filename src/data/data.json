@@ -16,9 +16,9 @@
       { "id": 5, "image": "/images/porto/smako2.png" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/css.svg" },
-      { "id": 2, "toolthumb": "/images/skill/javascript.svg" },
-      { "id": 3, "toolthumb": "/images/skill/figma.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/css.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/js.svg" },
+      { "id": 3, "toolthumb": "/images/skill/sketch/figma.svg" }
     ]
   },
   {
@@ -36,11 +36,11 @@
       { "id": 3, "image": "/images/porto/subway4.png" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/nuxt.svg" },
-      { "id": 2, "toolthumb": "/images/skill/nuxtui.svg" },
-      { "id": 3, "toolthumb": "/images/skill/vue.svg" },
-      { "id": 4, "toolthumb": "/images/skill/tailwind.svg" },
-      { "id": 5, "toolthumb": "/images/skill/css.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/nuxt.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/nuxtui.svg" },
+      { "id": 3, "toolthumb": "/images/skill/sketch/vue.svg" },
+      { "id": 4, "toolthumb": "/images/skill/sketch/tailwind.svg" },
+      { "id": 5, "toolthumb": "/images/skill/sketch/css.svg" }
     ]
   },
 
@@ -61,11 +61,11 @@
       { "id": 6, "image": "/images/porto/tbn5.png" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/figma.svg" },
-      { "id": 2, "toolthumb": "/images/skill/react.svg" },
-      { "id": 3, "toolthumb": "/images/skill/vitejs.svg" },
-      { "id": 4, "toolthumb": "/images/skill/tailwind.svg" },
-      { "id": 5, "toolthumb": "/images/skill/framermotion.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/figma.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/react.svg" },
+      { "id": 3, "toolthumb": "/images/skill/sketch/vitejs.svg" },
+      { "id": 4, "toolthumb": "/images/skill/sketch/tailwind.svg" },
+      { "id": 5, "toolthumb": "/images/skill/sketch/framermotion.svg" }
     ]
   },
   {
@@ -78,9 +78,9 @@
     "webUrl": "https://rifrifqyqy.github.io/Maxy-Homespot/",
     "tabs": [{ "id": 1, "image": "/images/porto/homespot.png" }],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/css.svg" },
-      { "id": 2, "toolthumb": "/images/skill/butstrep.svg" },
-      { "id": 3, "toolthumb": "/images/skill/jquery.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/css.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/bootstrap.svg" },
+      { "id": 3, "toolthumb": "/images/skill/sketch/jquery.svg" }
     ]
   },
   {
@@ -97,10 +97,10 @@
       { "id": 2, "image": "/images/porto/sertifgdsc.jpg" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/css.svg" },
-      { "id": 2, "toolthumb": "/images/skill/javascript.svg" },
-      { "id": 3, "toolthumb": "/images/skill/jquery.svg" },
-      { "id": 4, "toolthumb": "/images/skill/figma.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/css.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/js.svg" },
+      { "id": 3, "toolthumb": "/images/skill/sketch/jquery.svg" },
+      { "id": 4, "toolthumb": "/images/skill/sketch/figma.svg" }
     ]
   },
   {
@@ -120,8 +120,8 @@
       { "id": 5, "image": "/images/porto/sertifaltera.png" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/figma.svg" },
-      { "id": 2, "toolthumb": "/images/skill/useberry.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/figma.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/useberry.svg" }
     ]
   },
   {
@@ -138,7 +138,7 @@
       { "id": 3, "image": "/images/porto/toupu3.png" },
       { "id": 3, "image": "/images/porto/toupu4.png" }
     ],
-    "tools": [{ "id": 1, "toolthumb": "/images/skill/figma.svg" }]
+    "tools": [{ "id": 1, "toolthumb": "/images/skill/sketch/figma.svg" }]
   },
   {
     "id": 8,
@@ -153,7 +153,7 @@
       { "id": 2, "image": "/images/porto/webjoki1.png" },
       { "id": 3, "image": "/images/porto/webjoki3.png" }
     ],
-    "tools": [{ "id": 1, "toolthumb": "/images/skill/figma.svg" }]
+    "tools": [{ "id": 1, "toolthumb": "/images/skill/sketch/figma.svg" }]
   },
   {
     "id": 9,
@@ -171,8 +171,8 @@
       { "id": 5, "image": "/images/porto/smakologo6.png" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
-      { "id": 2, "toolthumb": "/images/skill/photoshop.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/illustrator.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/photoshop.svg" }
     ]
   },
   {
@@ -189,8 +189,8 @@
       { "id": 3, "image": "/images/porto/peskit3.png" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
-      { "id": 2, "toolthumb": "/images/skill/photoshop.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/illustrator.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/photoshop.svg" }
     ]
   },
   {
@@ -207,8 +207,8 @@
       { "id": 4, "image": "/images/porto/liplay3.png" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
-      { "id": 2, "toolthumb": "/images/skill/photoshop.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/illustrator.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/photoshop.svg" }
     ]
   },
   {
@@ -220,8 +220,8 @@
     "label": "Design",
     "tabs": [{ "id": 1, "image": "/images/porto/majlisflyer.png" }],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/illustrator.svg" },
-      { "id": 2, "toolthumb": "/images/skill/photoshop.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/illustrator.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/photoshop.svg" }
     ]
   },
   {
@@ -238,11 +238,11 @@
       { "id": 3, "image": "/images/porto/toutour2.jpg" }
     ],
     "tools": [
-      { "id": 1, "toolthumb": "/images/skill/vue.svg" },
-      { "id": 2, "toolthumb": "/images/skill/nuxt.svg" },
-      { "id": 3, "toolthumb": "/images/skill/tailwind.svg" },
-      { "id": 4, "toolthumb": "/images/skill/swiperjs.svg" },
-      { "id": 5, "toolthumb": "/images/skill/nuxtui.svg" }
+      { "id": 1, "toolthumb": "/images/skill/sketch/vue.svg" },
+      { "id": 2, "toolthumb": "/images/skill/sketch/nuxt.svg" },
+      { "id": 3, "toolthumb": "/images/skill/sketch/tailwind.svg" },
+      { "id": 4, "toolthumb": "/images/skill/sketch/swiperjs.svg" },
+      { "id": 5, "toolthumb": "/images/skill/sketch/nuxtui.svg" }
     ]
   }
 ]
