@@ -138,6 +138,7 @@ function HeroSection({ aboutScroll }, ref) {
                     src="/images/wolfkeum.jpg"
                     alt=""
                     className="h-full w-full object-cover grayscale"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -150,6 +151,7 @@ function HeroSection({ aboutScroll }, ref) {
                     src="/images/picture2.png"
                     alt=""
                     className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </motion.div>
@@ -162,6 +164,7 @@ function HeroSection({ aboutScroll }, ref) {
                     src="/images/picture1.png"
                     alt=""
                     className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </motion.div>

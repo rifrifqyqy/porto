@@ -1,11 +1,18 @@
 import CardProject2 from "@/components/Elements/Card/CardProject2";
 import { pfp } from "@/components/imageImport";
-import NavigationPage from "@/components/navigationPage";
 import dataCard from "../data/data.json";
 import { AnimatePresence, motion } from "framer-motion";
-import FooterSection from "@/components/Layouts/FooterSection";
-import { useState, useEffect, Fragment } from "react";
-import PortoEmpty from "@/components/Fragments/PortoEmpty";
+import { useState, useEffect, Fragment, Suspense, lazy } from "react";
+const PortoEmpty = lazy(() => import("@/components/Fragments/PortoEmpty"));
+const FooterSection = lazy(() => import("@/components/Layouts/FooterSection"));
+const NavigationPage = lazy(() => import("@/components/navigationPage"));
+// const LazyItem = lazy(() =>
+//   Wait(1000).then(() =>
+//     import("@/components/LazyComponent").then((module) => ({
+//       default: module.LazyItem,
+//     })),
+//   ),
+// );
 export default function GalleryPorto() {
   const [activeTab, setActiveTab] = useState("All");
   useEffect(() => {
@@ -26,6 +33,15 @@ export default function GalleryPorto() {
         return porto.label === activeTab;
     }
   });
+
+  const [loading, setLoading] = useState(true);
+  const [loadVideo, setLoadVideo] = useState(true);
+  const handleLoadedData = () => {
+    setLoading(false);
+  };
+  const handleLoadVideo = () => {
+    setLoadVideo(false);
+  };
 
   const containVariants = {
     hidden: {
@@ -91,6 +107,7 @@ export default function GalleryPorto() {
     <>
       <Fragment>
         <div className="fixed left-0 top-0 z-[-9999] h-[100vh] w-[100vw] bg-black"></div>
+
         <motion.div
           variants={wrapAnimate}
           initial="hidden"
@@ -121,6 +138,13 @@ export default function GalleryPorto() {
                   </div>
                 </div>
 
+                {loadVideo && (
+                  <img
+                    src="/images/banner-placeholder.jpg"
+                    alt="Loading..."
+                    className="inset-0 h-full w-full object-cover object-top brightness-[55%]"
+                  />
+                )}
                 <video
                   src="/videos/furiwir_3.mp4"
                   frameBorder="0"
@@ -128,9 +152,9 @@ export default function GalleryPorto() {
                   loop
                   muted
                   playsInline
-                  type="video/x-matroska"
-                  className="h-full w-full bg-zinc-100 object-cover object-top brightness-[55%]"
-                ></video>
+                  onLoadedData={handleLoadVideo} // Call the handler when video data is loaded
+                  className="h-full w-full object-cover object-top brightness-[55%]"
+                />
               </div>
             </div>
           </section>
@@ -233,28 +257,37 @@ export default function GalleryPorto() {
                         exit={animation.exit}
                         className="flex justify-center"
                       >
-                        <CardProject2
-                          key={porto.id}
-                          to={`/gallery/${porto.id}`}
-                        >
-                          <CardProject2.PolaroidImg
-                            frame={porto.imageUrl}
-                            label={porto.label}
-                            labelstyle={`
+                        <Suspense fallback={<h1>Loading</h1>}>
+                          <CardProject2
+                            key={porto.id}
+                            to={`/gallery/${porto.id}`}
+                          >
+                            <Suspense fallback={<h1>Loading</h1>}>
+                              <CardProject2.PolaroidImg
+                                frame={
+                                  loading
+                                    ? "/images/placeholder_image.png"
+                                    : porto.imageUrl
+                                }
+                                label={porto.label}
+                                labelstyle={`
                             ${porto.label === "Figma" ? "bg-emerald-500 text-white" : ""}
                             ${porto.label === "Design" ? "bg-violet-600 text-white" : ""}
                           `}
-                            coverStyle={`
+                                coverStyle={`
                             ${porto.label === "Figma" ? "bg-emerald-400/20" : ""}
                             ${porto.label === "Design" ? "bg-violet-500/20" : ""}
                           `}
-                          />
-                          <CardProject2.PolaroidBody
-                            profile={pfp}
-                            title={porto.title}
-                            desc={porto.description}
-                          />
-                        </CardProject2>
+                                onLoad={handleLoadedData}
+                              />
+                            </Suspense>
+                            <CardProject2.PolaroidBody
+                              profile={pfp}
+                              title={porto.title || "Loading....."}
+                              desc={porto.description}
+                            />
+                          </CardProject2>
+                        </Suspense>
                       </motion.div>
                     );
                   })

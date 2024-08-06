@@ -13,7 +13,7 @@ export default function CardProject2({ children, to }) {
   );
 }
 
-function PolaroidImg({ frame, label, labelstyle, coverStyle }) {
+export function PolaroidImg({ frame, label, labelstyle, coverStyle, onLoad }) {
   return (
     <>
       <div className="relative aspect-square h-[280px] w-[280px] overflow-hidden border border-zinc-900 max-md:h-[145px] max-md:w-[145px]">
@@ -35,13 +35,15 @@ function PolaroidImg({ frame, label, labelstyle, coverStyle }) {
           src={frame}
           alt=""
           className="h-full w-full object-cover object-center"
+          onLoad={onLoad}
+          loading="lazy"
         />
       </div>
     </>
   );
 }
 
-function PolaroidBody({ profile, title, desc }) {
+export function PolaroidBody({ profile, title, desc }) {
   return (
     <>
       <div className="mt-4 flex items-center gap-4 max-md:mt-2 max-md:gap-2">
